@@ -1,39 +1,24 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        Hakooi
-      </h1>
-      <h2 class="subtitle">
-        Hakooi Studio company profile
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="leading-normal tracking-normal text-white gradient">
+    <Navbar />
+    <Hero />
+    <Service />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Navbar from '~/components/Nav/Nav'
+import Hero from '~/components/Hero/Hero'
+import Service from '~/components/Content/Service'
+import Footer from '~/components/Footer/Footer'
 
 export default {
   components: {
-    Logo
+    Navbar,
+    Hero,
+    Service,
+    Footer
   }
 }
 </script>
@@ -44,13 +29,19 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
+
+/* .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+} */
+
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  opacity: 0.96;
 }
 
 .title {
