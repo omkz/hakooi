@@ -44,8 +44,8 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    'nuxt-webfontloader',
-    'nuxt-purgecss'
+    'nuxt-webfontloader'
+    // 'nuxt-purgecss'
   ],
   /*
    ** Axios module configuration
@@ -65,28 +65,7 @@ export default {
     }
   },
   /* Purge CSS */
-  purgeCSS: {
-    //enabled: ({ isDev, isClient }) => !isDev && isClient, // or `false` when in dev/debug mode
-    enabled: process.env.NODE_ENV == 'production' ? true : false,
-    paths: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js'
-    ],
-    styleExtensions: ['.css'],
-    whitelist: ['body', 'html', 'nuxt-progress'],
-    extractors: [
-      {
-        extractor: class {
-          static extract(content) {
-            return content.match(/[A-z0-9-:\\/]+/g)
-          }
-        },
-        extensions: ['html', 'vue', 'js']
-      }
-    ]
-  },
+
   /*
    ** Build configuration
    */
