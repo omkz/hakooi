@@ -40,7 +40,7 @@ export default {
 } */
 
 .gradient {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: linear-gradient(90deg, #c54a4a 0%, #f2d043 100%);
   opacity: 0.96;
 }
 
