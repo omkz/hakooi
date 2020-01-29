@@ -4,7 +4,7 @@ const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: '/hakooi.github.io/'
+          base: '/hakooi.com/'
         }
       }
     : {}
