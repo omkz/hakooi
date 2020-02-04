@@ -1,13 +1,11 @@
 {
 	"version": 2,
-
+	"name": "hakooi",
 	"builds": [
 		{
 			"src": "nuxt.config.js",
 			"use": "@nuxtjs/now-builder",
-			"config": {
-				"name": "hakooi"
-			}
+			"config": {}
 		}
 	]
 }
