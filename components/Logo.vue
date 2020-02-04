@@ -20,6 +20,12 @@
         fill="#2F495E"
         fill-rule="nonzero"
       />
+      <div class="testing-footer">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, alias
+        asperiores, autem blanditiis commodi consectetur consequuntur dolore
+        earum expedita in, laudantium officiis quo reiciendis sapiente sit
+        soluta tenetur vitae voluptas.
+      </div>
     </g>
   </svg>
 </template>

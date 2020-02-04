@@ -1,4 +1,7 @@
 {
-  "semi": false,
-  "singleQuote": true
+  "useTabs":true,
+  "semi":false,
+  "singleQuote":true,
+  "bracketSpacing":true,
+  "arrowParens":"always"
 }
