@@ -2,30 +2,20 @@
 	<div>
 		<section class="bg-white border-b py-8">
 			<div class="max-w-5xl mx-auto m-8">
-				<h1
-					class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
-				>
-					Title
-				</h1>
+				<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Title</h1>
 				<div class="w-full mb-4">
-					<div
-						class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-					></div>
+					<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 				</div>
 
 				<div class="flex flex-wrap">
 					<div class="w-5/6 sm:w-1/2 p-6">
-						<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-							Lorem ipsum dolor sit amet
-						</h3>
+						<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 						<p class="text-gray-600 mb-8">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 							at ipsum eu nunc commodo posuere et sit amet ligula.
 							<br />
 							<br />Images from:
-							<a class="text-orange-500 underline" href="https://undraw.co/"
-								>undraw.co</a
-							>
+							<a class="text-orange-500 underline" href="https://undraw.co/">undraw.co</a>
 						</p>
 					</div>
 					<div class="w-full sm:w-1/2 p-6">
@@ -40,13 +30,7 @@
 								d="M274.63,501l-6.29-3.91c-.6-.37-1.19-.77-1.79-1.15a59.86,59.86,0,0,0,6.05-116.62l.31,24.66-13.55-26.83h-.17a59.87,59.87,0,0,0-62.58,57c-.06,1.15,0,2.27,0,3.4-4.71-5.38-9-11.15-11.83-17.47-5.73-12.79-5.84-27.28-5.39-44.9.9-34.9,2.41-70.08,4.37-105.14a59.85,59.85,0,0,0,53.16-56.64c.08-1.83,0-3.63,0-5.43,0-.45,0-.89-.07-1.34-.12-1.74-.28-3.46-.55-5.16,0-.28-.1-.55-.15-.82-.24-1.44-.54-2.86-.88-4.26-.13-.53-.26-1-.4-1.57-.42-1.53-.88-3-1.42-4.52-.18-.49-.39-1-.58-1.46-.42-1.09-.88-2.17-1.37-3.23-.26-.56-.51-1.12-.78-1.67-.08-.14-.13-.29-.21-.43l0,0a59.84,59.84,0,0,0-70.28-30.36l.4,32.1-13.4-26.52a59.57,59.57,0,0,0-28.55,64.51h-.06c.09.43.22.84.32,1.26.19.79.39,1.57.61,2.35.28,1,.6,2,.93,3,.25.74.49,1.47.77,2.2.41,1.06.87,2.09,1.33,3.12.27.6.51,1.22.8,1.81q1.14,2.33,2.48,4.53c.31.52.66,1,1,1.51.64,1,1.28,2,2,2.93.43.59.89,1.16,1.34,1.73.66.83,1.33,1.65,2,2.44.49.57,1,1.12,1.51,1.66.74.78,1.49,1.53,2.27,2.26.52.49,1,1,1.57,1.46.88.79,1.8,1.53,2.73,2.26.47.37.93.75,1.41,1.11,1.42,1,2.88,2,4.39,3,.28.17.59.31.87.48,1.27.74,2.55,1.45,3.87,2.09.57.28,1.15.53,1.73.79,1.08.48,2.17.95,3.29,1.38l2,.7c1.1.37,2.22.72,3.35,1,.66.18,1.33.37,2,.53,1.22.29,2.47.53,3.73.75l.24.05q-1.23,22.19-2.2,44.39a59.83,59.83,0,0,0-83.07-26l10.58,29-21.77-20.9a59.66,59.66,0,0,0-19.34,41.34A58.5,58.5,0,0,0,52.8,354a59.84,59.84,0,0,0,110.06,16.3c0,1.5-.1,3-.14,4.51-.4,15.54-.9,34.88,6.85,52.15,5.25,11.7,13.69,21.21,22,29.73,5.43,5.54,11.06,10.91,16.83,16.1a60.09,60.09,0,0,0,21.62,18c9.48,7.3,19.3,14.17,29.45,20.51l6.34,3.94c5.7,3.53,11.54,7.16,17.26,10.93-1-.1-2-.21-3-.26a59.89,59.89,0,0,0-58.94,39l37.4,30.43-41.14-9.54a59.89,59.89,0,0,0,85.82,53.92l-2.78,3.45q-2.76,3.43-5.45,6.82c-24.34,30.83-31.11,60.09-19.06,82.4l14.66-7.91c-11.73-21.72,5.91-49.52,17.47-64.16q2.64-3.33,5.36-6.7c15.55-19.32,33.17-41.22,32.74-68.08C345.52,545,306.21,520.6,274.63,501Z"
 								fill="#f2f2f2"
 							/>
-							<ellipse
-								cx="588.5"
-								cy="577.5"
-								rx="588.5"
-								ry="21"
-								fill="#3f3d56"
-							/>
+							<ellipse cx="588.5" cy="577.5" rx="588.5" ry="21" fill="#3f3d56" />
 							<path
 								transform="translate(-11.5 -150.75)"
 								d="M119.9,721.42c-3-5.51.4-12.27,4.29-17.18s8.61-10,8.51-16.29c-.15-9-9.7-14.31-17.33-19.09a84,84,0,0,1-15.56-12.51A22.8,22.8,0,0,1,95,650c-1.58-3.52-1.54-7.52-1.44-11.37q.51-19.26,1.91-38.49"
@@ -105,14 +89,7 @@
 								d="m104.42 728.69c12.51 0.1 29.06-2 32.39-4 2.54-1.55 3.55-7.09 3.89-9.65h0.37s-0.7 8.94-4 11-19.89 4.07-32.4 4c-3.61 0-4.85-1.31-4.78-3.21 0.47 1.17 1.84 1.83 4.53 1.86z"
 								opacity=".2"
 							/>
-							<rect
-								x="171.5"
-								y="111.25"
-								width="834"
-								height="456"
-								rx="20.42"
-								fill="#f2f2f2"
-							/>
+							<rect x="171.5" y="111.25" width="834" height="456" rx="20.42" fill="#f2f2f2" />
 							<path
 								d="m172 133.75h268v434h-247.58a20.42 20.42 0 0 1 -20.42 -20.42v-413.58z"
 								fill="#ff6347"
@@ -189,40 +166,10 @@
 								d="M568.69,543.05l-19.23-15.41a2.23,2.23,0,0,0-1.39-.48,2.26,2.26,0,0,0-1.4.48l-8.37,6.81v-4.29a.2.2,0,0,0-.2-.21H532a.2.2,0,0,0-.2.21v9.38l-4.34,3.57a1.41,1.41,0,0,0-.54,1,1.45,1.45,0,0,0,.41,1.09,1.41,1.41,0,0,0,1,.42,1.47,1.47,0,0,0,.9-.31l18.7-15.06a.22.22,0,0,1,.14,0,.24.24,0,0,1,.13,0l18.71,15a1.44,1.44,0,0,0,2.33-1.19,1.45,1.45,0,0,0-.55-1Z"
 								fill="#3f3d56"
 							/>
-							<rect
-								x="604"
-								y="260.14"
-								width="347"
-								height="11"
-								rx="1.24"
-								fill="#ff6347"
-								opacity=".3"
-							/>
-							<rect
-								x="604"
-								y="392.07"
-								width="347"
-								height="11"
-								rx="1.24"
-								fill="#ff6347"
-								opacity=".3"
-							/>
-							<rect
-								x="878"
-								y="279.75"
-								width="73"
-								height="25"
-								rx="1.24"
-								fill="#ff6347"
-							/>
-							<rect
-								x="878"
-								y="411.75"
-								width="73"
-								height="25"
-								rx="1.24"
-								fill="#ff6347"
-							/>
+							<rect x="604" y="260.14" width="347" height="11" rx="1.24" fill="#ff6347" opacity=".3" />
+							<rect x="604" y="392.07" width="347" height="11" rx="1.24" fill="#ff6347" opacity=".3" />
+							<rect x="878" y="279.75" width="73" height="25" rx="1.24" fill="#ff6347" />
+							<rect x="878" y="411.75" width="73" height="25" rx="1.24" fill="#ff6347" />
 							<path
 								transform="translate(-11.5 -150.75)"
 								d="m978.18 606.93l-1.73 2s-21.05 2-20.2 5.39 25.35-4.55 25.35-4.55z"
@@ -463,17 +410,13 @@
 					</div>
 					<div class="w-full sm:w-1/2 p-6 mt-6">
 						<div class="align-middle">
-							<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-								Lorem ipsum dolor sit amet
-							</h3>
+							<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 							<p class="text-gray-600 mb-8">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 								at ipsum eu nunc commodo posuere et sit amet ligula.
 								<br />
 								<br />Images from:
-								<a class="text-orange-500 underline" href="https://undraw.co/"
-									>undraw.co</a
-								>
+								<a class="text-orange-500 underline" href="https://undraw.co/">undraw.co</a>
 							</p>
 						</div>
 					</div>
@@ -482,103 +425,67 @@
 		</section>
 		<section class="bg-white border-b py-8">
 			<div class="mx-auto flex flex-wrap pt-4 pb-12">
-				<h1
-					class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
-				>
-					Title
-				</h1>
+				<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Title</h1>
 				<div class="w-full mb-4">
-					<div
-						class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-					></div>
+					<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 				</div>
 
 				<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-					<div
-						class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-					>
+					<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 						<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-							<p class="w-full text-gray-600 text-xs md:text-sm px-6">
-								xGETTING STARTED
-							</p>
-							<div class="w-full font-bold text-xl text-gray-800 px-6">
-								Lorem ipsum dolor sit amet.
-							</div>
+							<p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
+							<div class="w-full font-bold text-xl text-gray-800 px-6">Lorem ipsum dolor sit amet.</div>
 							<p class="text-gray-800 text-base px-6 mb-5">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 								at ipsum eu nunc commodo posuere et sit amet ligula.
 							</p>
 						</a>
 					</div>
-					<div
-						class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-					>
+					<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 						<div class="flex items-center justify-start">
 							<button
 								class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-							>
-								Action
-							</button>
+							>Action</button>
 						</div>
 					</div>
 				</div>
 
 				<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-					<div
-						class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-					>
+					<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 						<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-							<p class="w-full text-gray-600 text-xs md:text-sm px-6">
-								xGETTING STARTED
-							</p>
-							<div class="w-full font-bold text-xl text-gray-800 px-6">
-								Lorem ipsum dolor sit amet.
-							</div>
+							<p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
+							<div class="w-full font-bold text-xl text-gray-800 px-6">Lorem ipsum dolor sit amet.</div>
 							<p class="text-gray-800 text-base px-6 mb-5">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 								at ipsum eu nunc commodo posuere et sit amet ligula.
 							</p>
 						</a>
 					</div>
-					<div
-						class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-					>
+					<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 						<div class="flex items-center justify-center">
 							<button
 								class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-							>
-								Action
-							</button>
+							>Action</button>
 						</div>
 					</div>
 				</div>
 
 				<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-					<div
-						class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-					>
+					<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 						<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-							<p class="w-full text-gray-600 text-xs md:text-sm px-6">
-								xGETTING STARTED
-							</p>
-							<div class="w-full font-bold text-xl text-gray-800 px-6">
-								Lorem ipsum dolor sit amet.
-							</div>
+							<p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
+							<div class="w-full font-bold text-xl text-gray-800 px-6">Lorem ipsum dolor sit amet.</div>
 							<p class="text-gray-800 text-base px-6 mb-5">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
 								at ipsum eu nunc commodo posuere et sit amet ligula.
 							</p>
 						</a>
 					</div>
-					<div
-						class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-					>
+					<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 						<div class="flex items-center justify-end">
 							<button
 								class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-							>
-								Action
-							</button>
+							>Action</button>
 						</div>
 					</div>
 				</div>
@@ -587,50 +494,32 @@
 
 		<section class="bg-gray-100 py-8">
 			<div class="mx-auto px-2 pt-4 pb-12 text-gray-800">
-				<h1
-					class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
-				>
-					Pricing
-				</h1>
+				<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Pricing</h1>
 				<div class="w-full mb-4">
-					<div
-						class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-					></div>
+					<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 				</div>
 
-				<div
-					class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4"
-				>
+				<div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
 					<div
 						class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
 					>
-						<div
-							class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
-						>
-							<div class="p-8 text-3xl font-bold text-center border-b-4">
-								Free
-							</div>
+						<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+							<div class="p-8 text-3xl font-bold text-center border-b-4">Free</div>
 							<ul class="w-full text-center text-sm">
 								<li class="border-b py-4">Thing</li>
 								<li class="border-b py-4">Thing</li>
 								<li class="border-b py-4">Thing</li>
 							</ul>
 						</div>
-						<div
-							class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-						>
-							<div
-								class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
-							>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+							<div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
 								£0
 								<span class="text-base">for one user</span>
 							</div>
 							<div class="flex items-center justify-center">
 								<button
 									class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-								>
-									Sign Up
-								</button>
+								>Sign Up</button>
 							</div>
 						</div>
 					</div>
@@ -638,9 +527,7 @@
 					<div
 						class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10"
 					>
-						<div
-							class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-						>
+						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 							<div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
 							<div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
 							<ul class="w-full text-center text-base font-bold">
@@ -650,9 +537,7 @@
 								<li class="border-b py-4">Thing</li>
 							</ul>
 						</div>
-						<div
-							class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-						>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 							<div class="w-full pt-6 text-4xl font-bold text-center">
 								£x.99
 								<span class="text-base">/ per user</span>
@@ -660,9 +545,7 @@
 							<div class="flex items-center justify-center">
 								<button
 									class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-								>
-									Sign Up
-								</button>
+								>Sign Up</button>
 							</div>
 						</div>
 					</div>
@@ -670,33 +553,23 @@
 					<div
 						class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"
 					>
-						<div
-							class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
-						>
-							<div class="p-8 text-3xl font-bold text-center border-b-4">
-								Pro
-							</div>
+						<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+							<div class="p-8 text-3xl font-bold text-center border-b-4">Pro</div>
 							<ul class="w-full text-center text-sm">
 								<li class="border-b py-4">Thing</li>
 								<li class="border-b py-4">Thing</li>
 								<li class="border-b py-4">Thing</li>
 							</ul>
 						</div>
-						<div
-							class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
-						>
-							<div
-								class="w-full pt-6 text-3xl text-gray-600 font-bold text-center"
-							>
+						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+							<div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
 								£x.99
 								<span class="text-base">/ per user</span>
 							</div>
 							<div class="flex items-center justify-center">
 								<button
 									class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-								>
-									Sign Up
-								</button>
+								>Sign Up</button>
 							</div>
 						</div>
 					</div>
@@ -742,25 +615,15 @@
 		</svg>
 
 		<section class="mx-auto text-center py-6 mb-12">
-			<h1
-				class="w-full my-2 text-5xl font-bold leading-tight text-center text-white"
-			>
-				Call to Action
-			</h1>
+			<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">Call to Action</h1>
 			<div class="w-full mb-4">
-				<div
-					class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
-				></div>
+				<div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
 			</div>
-			<h3 class="my-4 text-3xl leading-tight">
-				Main Hero Message to sell yourself!
-			</h3>
+			<h3 class="my-4 text-3xl leading-tight">Main Hero Message to sell yourself!</h3>
 
 			<button
 				class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-			>
-				Action!
-			</button>
+			>Action!</button>
 		</section>
 	</div>
 </template>

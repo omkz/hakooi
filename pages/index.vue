@@ -1,6 +1,6 @@
 <template>
-	<div class="leading-normal tracking-normal text-white gradient">
-		<Navbar />
+	<div class="leading-normal tracking-normal gradient">
+		<!-- <Navbar /> -->
 		<Hero />
 		<Service />
 		<Footer />
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import Navbar from '~/components/Nav/Nav'
+// import Navbar from '~/components/Nav/Nav'
 import Hero from '~/components/Hero/Hero'
 import Service from '~/components/Content/Service'
 import Footer from '~/components/Footer/Footer'
 
 export default {
 	components: {
-		Navbar,
+		// Navbar,
 		Hero,
 		Service,
 		Footer

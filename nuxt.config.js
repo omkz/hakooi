@@ -26,7 +26,7 @@ export default {
 				content: process.env.npm_package_description || ''
 			}
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -56,8 +56,8 @@ export default {
 		'@nuxtjs/pwa',
 		// Doc: https://github.com/nuxt-community/dotenv-module
 		'@nuxtjs/dotenv',
-		'nuxt-webfontloader'
-		// 'nuxt-purgecss'
+		'nuxt-webfontloader',
+		'nuxt-purgecss'
 	],
 	/*
 	 ** Axios module configuration
@@ -67,17 +67,26 @@ export default {
 	/* Google fonts */
 	webfontloader: {
 		custom: {
-			families: ['Source Sans Pro:n3,n4', 'Roboto:n3,n7'],
+			families: ['Bebas Neue', 'Montserrat:n6'],
 			urls: [
 				// for each Google Fonts add url + options you want
 				// here add font-display option
-				'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap',
-				'https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap'
+				'https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat:600&display=swap'
 			]
 		}
 	},
 	/* Purge CSS */
-
+	purgeCSS: {
+		// your settings here
+		extractors: [
+			{
+				extractor(content) {
+					return content.match(/[A-Za-z0-9-_:\\/]+/g) || []
+				},
+				extensions: ['html', 'vue', 'js']
+			}
+		]
+	},
 	/*
 	 ** Build configuration
 	 */

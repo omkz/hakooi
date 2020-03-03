@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="197px" height="111px" viewBox="0 0 197 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Element/Logo-Text</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Prototype-planning" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1080.000000, -66.000000)" fill="#FFFFFF">
+            <g id="Element/Logo-Text" transform="translate(1078.000000, 66.000000)">
+                <g id="Logo">
+                    <polygon id="Path" fill-rule="nonzero" points="80 51 80 24 94 24 94 36.6273919"></polygon>
+                    <path d="M80,54.8077494 L80,80 L93.5430917,80 L93.5430917,53.0160333 C93.5430917,39.7084323 107,26 107,26 L80,54.8077494 Z" id="Path" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill-rule="nonzero" points="122 29 122 56 108 56 108 43.3726081"></polygon>
+                    <path d="M122,25.1818451 L122,0 L108.45279,0 L108.45279,27.0080095 C108.45279,40.3077722 95,54 95,54 L122,25.1818451 Z" id="Path" fill-rule="nonzero"></path>
+                    <text id="HAKOOI-STUDIO" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold">
+                        <tspan x="0" y="110">HAKOOI STUDIO</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

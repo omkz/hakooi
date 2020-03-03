@@ -7,7 +7,7 @@
 module.exports = {
 	theme: {
 		colors: {
-			'hakooi-blue': {
+			hakooi: {
 				default: '#3341FF',
 				'100': '#FFFFFF',
 				'200': '#CCCFFF',
