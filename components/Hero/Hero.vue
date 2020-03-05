@@ -8,7 +8,7 @@
 						<img class="h-48 w-full object-contain" src="~/static/images/hakooi-logo.png" />
 					</div>
 				</div>
-				<div class="w-full leading-relaxed text-6xl justify-center text-center md:text-left">
+				<div class="mt-24 w-full leading-relaxed text-6xl justify-center text-center md:text-left">
 					<!-- <p class="uppercase tracking-loose w-full">Premium Ruby on Rails Website Studio</p> -->
 					<h1 class="font-bold text-white">Hakooi</h1>
 					<h1 class="font-bold text-white">Web design studio</h1>
