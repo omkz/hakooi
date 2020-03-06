@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="bg-hakooi">
-			<div class="container px-3 mx-auto h-screen flex flex-wrap flex-col">
+			<div class="container mx-auto h-screen flex flex-wrap flex-col">
 				<!--Left Col-->
 				<div class="flex justify-end">
 					<div class="hakooi-image pb-2/3 h-full">
@@ -18,7 +18,7 @@
 				<!--Right Col-->
 			</div>
 		</div>
-		<div class="relative -mt-12 lg:-mt-24">
+		<!-- <div class="relative -mt-12 lg:-mt-24">
 			<svg
 				viewBox="0 0 1428 174"
 				version="1.1"
@@ -48,20 +48,6 @@
 					</g>
 				</g>
 			</svg>
-		</div>
+		</div>-->
 	</div>
 </template>
-<style>
-.NuxtLogo {
-	animation: 1s appear;
-}
-
-@keyframes appear {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-</style>
