@@ -5,7 +5,11 @@
 				<!--Left Col-->
 				<div class="flex justify-end">
 					<div class="hakooi-image pb-2/3 h-full">
-						<img class="h-48 w-full object-contain" src="~/static/images/hakooi-logo.png" />
+						<img
+							alt="hakooi-logo"
+							class="h-48 w-full object-contain"
+							src="~/static/images/hakooi-logo.png"
+						/>
 					</div>
 				</div>
 				<div class="w-full leading-relaxed text-6xl justify-center text-center md:text-left">

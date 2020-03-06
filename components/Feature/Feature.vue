@@ -9,7 +9,12 @@
 					>HAKOOI STUDIO</a>
 				</div>
 
-				<div class="flex-1 text-xl">
+				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+					<p class="text-gray-600 mb-8">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+						at ipsum eu nunc commodo posuere et sit amet ligula.
+					</p>
 					<p class="uppercase text-white md:mb-6">Links</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
@@ -32,7 +37,12 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl">
+				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+					<p class="text-gray-600 mb-8">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+						at ipsum eu nunc commodo posuere et sit amet ligula.
+					</p>
 					<p class="uppercase text-white md:mb-6">Legal</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
@@ -55,7 +65,12 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl">
+				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+					<p class="text-gray-600 mb-8">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+						at ipsum eu nunc commodo posuere et sit amet ligula.
+					</p>
 					<p class="uppercase text-white md:mb-6">Social</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
