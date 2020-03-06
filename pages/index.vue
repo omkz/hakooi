@@ -2,6 +2,7 @@
 	<div class="leading-normal tracking-normal gradient">
 		<!-- <Navbar /> -->
 		<Hero />
+		<Feature />
 		<Service />
 		<Footer />
 	</div>
@@ -10,6 +11,7 @@
 <script>
 // import Navbar from '~/components/Nav/Nav'
 import Hero from '~/components/Hero/Hero'
+import Feature from '~/components/Feature/Feature'
 import Service from '~/components/Content/Service'
 import Footer from '~/components/Footer/Footer'
 
@@ -17,6 +19,7 @@ export default {
 	components: {
 		// Navbar,
 		Hero,
+		Feature,
 		Service,
 		Footer
 	}
@@ -40,7 +43,7 @@ export default {
 } */
 
 .gradient {
-	background: linear-gradient(90deg, #c54a4a 0%, #f2d043 100%);
+	background: linear-gradient(90deg, #99a0ff 0%, #3341ff 100%);
 	opacity: 0.96;
 }
 
