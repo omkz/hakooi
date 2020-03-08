@@ -10,6 +10,11 @@
 				</div>
 
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+					<img
+						class="fill-current text-white"
+						src="~/static/images/networking.svg"
+						alt="hakooi-networking"
+					/>
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 					<p class="text-gray-600 mb-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -38,6 +43,7 @@
 					</ul>
 				</div>
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+					<img class="fill-current text-white" src="~/static/images/craft.svg" alt="craft" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 					<p class="text-gray-600 mb-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -66,6 +72,7 @@
 					</ul>
 				</div>
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+					<img class="fill-current text-white" src="~/static/images/branding.svg" alt="branding" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 					<p class="text-gray-600 mb-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
