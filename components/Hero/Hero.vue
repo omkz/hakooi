@@ -14,12 +14,14 @@
 							<img
 								class="h-48 w-full object-contain"
 								alt="hakooi-logo"
-								src="~/static/images/hakooi-logo.webp"
+								src="/static/images/hakooi-logo.webp"
 							/>
 						</picture>
 					</div>
 				</div>
-				<div class="w-full leading-relaxed text-6xl justify-center text-center md:text-left">
+				<div
+					class="w-full leading-relaxed text-6xl justify-center text-center md:text-left"
+				>
 					<!-- <p class="uppercase tracking-loose w-full">Premium Ruby on Rails Website Studio</p> -->
 					<h1 class="font-bold text-white">Hakooi</h1>
 					<h1 class="font-bold text-white">Web design studio</h1>
