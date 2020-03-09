@@ -1,7 +1,7 @@
 <template>
 	<section class="bg-hakooi h-screen">
-		<div class="mx-auto container">
-			<div class="w-full flex flex-col py-6 text-white h-screen">
+		<div class="mx-auto">
+			<div class="w-full flex flex-col py-6 text-white">
 				<p
 					class="uppercase text-white leading-tight text-3xl"
 				>We are Duo freelancers whom focus on creating better problem solving while strive to perfecting our craft in web development industry especially on custom handcrafted ruby on rails</p>
