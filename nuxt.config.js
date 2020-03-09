@@ -57,7 +57,8 @@ export default {
 		// Doc: https://github.com/nuxt-community/dotenv-module
 		'@nuxtjs/dotenv',
 		'nuxt-webfontloader',
-		'nuxt-purgecss'
+		'nuxt-purgecss',
+		'nuxt-svg-loader'
 	],
 	/*
 	 ** Axios module configuration
