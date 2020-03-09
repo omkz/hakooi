@@ -3,7 +3,7 @@
 		<!-- <Navbar /> -->
 		<Hero />
 		<Feature />
-		<Service />
+		<Team />
 		<Footer />
 	</div>
 </template>
@@ -12,15 +12,15 @@
 // import Navbar from '~/components/Nav/Nav'
 import Hero from '~/components/Hero/Hero'
 import Feature from '~/components/Feature/Feature'
-import Service from '~/components/Content/Service'
 import Footer from '~/components/Footer/Footer'
+import Team from '~/components/Team/Team'
 
 export default {
 	components: {
 		// Navbar,
 		Hero,
 		Feature,
-		Service,
+		Team,
 		Footer
 	}
 }
