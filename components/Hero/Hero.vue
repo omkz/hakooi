@@ -14,7 +14,7 @@
 							<img
 								class="h-48 w-full object-contain"
 								alt="hakooi-logo"
-								src="/static/images/hakooi-logo.webp"
+								src="~/static/images/hakooi-logo.webp"
 							/>
 						</picture>
 					</div>
