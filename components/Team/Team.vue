@@ -1,6 +1,6 @@
 <template>
 	<section class="bg-hakooi h-screen">
-		<div class="mx-auto">
+		<div class="mx-auto container">
 			<div class="w-full flex flex-col py-6 text-white">
 				<p
 					class="uppercase text-white leading-tight text-3xl"
