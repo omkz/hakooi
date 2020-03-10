@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-hakooi h-screen">
+	<section class="bg-hakooi">
 		<div class="mx-auto container">
 			<div class="w-full flex flex-col py-6 text-white">
 				<p
