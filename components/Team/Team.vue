@@ -24,8 +24,8 @@
 								src="~/assets/images/alfianjau.jpeg"
 							/>
 						</picture>
-						<h3 class="text-4xl text-white font-bold leading-none mt-12">Komeng</h3>
-						<h4 class="text-3xl text-white font-bold leading-none mt-6">lead Engineer</h4>
+						<h3 class="text-4xl text-white font-bold leading-none mt-12">Joe</h3>
+						<h4 class="text-3xl text-white font-bold leading-none mt-6">Creative director</h4>
 						<p
 							class="my-6"
 						>A project manager is a professional in the field of project management. Project managers have the responsibility of the planning, procurement and execution of a project, in any undertaking that has a defined scope, defined start and a defined finish; regardless of industry. Project managers are first point of contact for any issues or discrepancies arising from within the heads of various departments in an organization before the problem escalates to higher authorities.</p>
