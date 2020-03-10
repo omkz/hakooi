@@ -8,11 +8,7 @@
 				<div class="container flex flex-wrap flex-row py-12">
 					<div class="flex-1 team-card">
 						<picture>
-							<img
-								class="h-48 w-full object-contain"
-								alt="hakooi-logo"
-								src="~/assets/images/hakooi-logo.webp"
-							/>
+							<img class="h-48 w-full object-contain" alt="hakooi-logo" src="~/assets/images/komeng.jpeg" />
 						</picture>
 						<h3 class="text-4xl text-white font-bold leading-none mt-12">Komeng</h3>
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">lead Engineer</h4>
@@ -25,7 +21,7 @@
 							<img
 								class="h-48 w-full object-contain"
 								alt="hakooi-logo"
-								src="~/assets/images/hakooi-logo.webp"
+								src="~/assets/images/alfianjau.jpeg"
 							/>
 						</picture>
 						<h3 class="text-4xl text-white font-bold leading-none mt-12">Komeng</h3>
