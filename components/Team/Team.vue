@@ -24,7 +24,7 @@
 								src="~/assets/images/alfianjau.jpeg"
 							/>
 						</picture>
-						<h3 class="text-4xl text-white font-bold leading-none mt-12">Joe</h3>
+						<h3 class="text-4xl text-white font-bold leading-none mt-12">Alfianjau</h3>
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">Creative director</h4>
 						<p
 							class="my-6"
