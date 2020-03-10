@@ -11,10 +11,9 @@
 
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
 					<NetworkIcon class="fill-current text-white h-32 w-32 mb-10" />
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Web Application</h3>
 					<p class="text-gray-600 mb-8">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
-						ipsum eu nunc commodo posuere et sit amet ligula.
+						We build scalable web applications with Ruby on Rails, Javascript and related technologies.
 					</p>
 					<p class="uppercase text-white md:mb-6">Links</p>
 					<ul class="list-reset mb-6">
@@ -40,7 +39,7 @@
 				</div>
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
 					<CraftIcon class="fill-current text-white h-32 w-32 mb-10" />
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Mobile Application</h3>
 					<p class="text-gray-600 mb-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
 						ipsum eu nunc commodo posuere et sit amet ligula.
@@ -69,7 +68,7 @@
 				</div>
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
 					<BrandingIcon class="fill-current text-white h-32 w-32 mb-10" />
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">UI/UX</h3>
 					<p class="text-gray-600 mb-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
 						ipsum eu nunc commodo posuere et sit amet ligula.

@@ -24,8 +24,8 @@
 				>
 					<!-- <p class="uppercase tracking-loose w-full">Premium Ruby on Rails Website Studio</p> -->
 					<h1 class="font-bold text-white">Hakooi</h1>
-					<h1 class="font-bold text-white">Web design studio</h1>
-					<h1 class="font-bold text-white">Premium Ruby on Rails Crafter</h1>
+					<h1 class="font-bold text-white">Premium Web design studio</h1>
+					<h1 class="font-bold text-white">Ruby on Rails Crafter</h1>
 					<!-- <p class="leading-normal text-2xl mb-8">Creative and Freethinking made up our crafts</p> -->
 				</div>
 				<!--Right Col-->
