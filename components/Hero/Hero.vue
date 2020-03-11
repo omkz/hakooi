@@ -4,7 +4,7 @@
 			<div class="container mx-auto h-screen flex flex-wrap flex-col">
 				<!--Left Col-->
 				<div class="flex justify-end">
-					<div class="hakooi-image pb-2/3 h-full sm:w-full">
+					<div class="hakooi-image pb-2/3 h-full sm:w-full md:w-auto">
 						<!-- <img
 							alt="hakooi-logo"
 							class="h-48 w-full object-contain"
