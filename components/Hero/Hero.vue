@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="bg-hakooi">
-			<div class="container mx-auto h-screen flex flex-wrap flex-col">
+			<div class="container md:h-screen flex flex-wrap flex-col p-6">
 				<!--Left Col-->
 				<div class="flex justify-end">
 					<div class="hakooi-image pb-2/3 h-full sm:w-full md:w-auto">
