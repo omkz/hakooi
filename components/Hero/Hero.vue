@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<div class="bg-hakooi">
-			<div class="container md:h-screen flex flex-wrap flex-col p-6">
+			<div class="mx-auto container md:h-screen flex flex-wrap flex-col">
 				<!--Left Col-->
-				<div class="flex justify-end">
-					<div class="hakooi-image pb-2/3 h-full sm:w-full md:w-auto">
+				<div class="flex justify-end md:-mx-6">
+					<div class="hakooi-image md:px-6 pb-2/3 h-full sm:w-full md:w-auto">
 						<!-- <img
 							alt="hakooi-logo"
 							class="h-48 w-full object-contain"
@@ -19,11 +19,11 @@
 						</picture>
 					</div>
 				</div>
-				<div class="w-full leading-relaxed text-6xl justify-center text-center md:text-left">
+				<div class="w-full md:-mx-6 leading-relaxed text-6xl justify-center text-center md:text-left">
 					<!-- <p class="uppercase tracking-loose w-full">Premium Ruby on Rails Website Studio</p> -->
-					<h1 class="font-bold text-white">Hakooi</h1>
-					<h1 class="font-bold text-white">Premium Web design studio</h1>
-					<h1 class="font-bold text-white">Ruby on Rails Crafter</h1>
+					<h3 class="font-bold md:px-6 text-white">Hakooi</h3>
+					<h3 class="font-bold md:px-6 text-white">Premium Web design studio</h3>
+					<h3 class="font-bold md:px-6 text-white">Ruby on Rails Crafter</h3>
 					<!-- <p class="leading-normal text-2xl mb-8">Creative and Freethinking made up our crafts</p> -->
 				</div>
 				<!--Right Col-->

@@ -1,8 +1,8 @@
 <template>
 	<footer class="bg-hakooi">
 		<div class="mx-auto container">
-			<div class="w-full flex flex-col md:flex-row p-6 text-white md:h-screen md:items-center">
-				<div class="flex-1 mb-6">
+			<div class="w-full flex flex-col md:flex-row -mx-6 text-white md:h-screen md:items-center">
+				<div class="flex-1 mb-6 px-6">
 					<a class="no-underline hover:no-underline font-bold" href="#">
 						<picture>
 							<img
@@ -14,7 +14,7 @@
 					</a>
 				</div>
 
-				<div class="flex-1 text-xl">
+				<div class="flex-1 text-xl px-6">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">General Enquiry</h3>
 					<p class="uppercase text-white md:mb-6">Links</p>
 					<ul class="list-reset mb-6">
@@ -38,7 +38,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl">
+				<div class="flex-1 text-xl px-6">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Projects</h3>
 					<p class="uppercase text-white md:mb-6">Our Showcase</p>
 					<ul class="list-reset mb-6">
@@ -62,18 +62,27 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl">
+				<div class="flex-1 text-xl px-6">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Visit Us</h3>
 					<p class="uppercase text-white md:mb-6">Social</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
-							<a href="https://www.facebook.com/Hakooi-Studio-111255730493012" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Facebook</a>
+							<a
+								href="https://www.facebook.com/Hakooi-Studio-111255730493012"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+							>Facebook</a>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
-							<a href="twitter.com/HakooiStudio" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Linkedin</a>
+							<a
+								href="twitter.com/HakooiStudio"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+							>Linkedin</a>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
-							<a href="twitter.com/HakooiStudio" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Twitter</a>
+							<a
+								href="twitter.com/HakooiStudio"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+							>Twitter</a>
 						</li>
 					</ul>
 				</div>
