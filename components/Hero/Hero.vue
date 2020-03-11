@@ -4,7 +4,7 @@
 			<div class="container mx-auto h-screen flex flex-wrap flex-col">
 				<!--Left Col-->
 				<div class="flex justify-end">
-					<div class="hakooi-image pb-2/3 h-full">
+					<div class="hakooi-image pb-2/3 h-full sm:w-full">
 						<!-- <img
 							alt="hakooi-logo"
 							class="h-48 w-full object-contain"
@@ -19,9 +19,7 @@
 						</picture>
 					</div>
 				</div>
-				<div
-					class="w-full leading-relaxed text-6xl justify-center text-center md:text-left"
-				>
+				<div class="w-full leading-relaxed text-6xl justify-center text-center md:text-left">
 					<!-- <p class="uppercase tracking-loose w-full">Premium Ruby on Rails Website Studio</p> -->
 					<h1 class="font-bold text-white">Hakooi</h1>
 					<h1 class="font-bold text-white">Premium Web design studio</h1>

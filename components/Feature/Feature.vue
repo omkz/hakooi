@@ -1,7 +1,7 @@
 <template>
 	<section class="bg-hakooi">
 		<div class="mx-auto container">
-			<div class="w-full flex flex-col md:flex-row py-6 text-white h-screen items-center">
+			<div class="w-full flex flex-col md:flex-row py-6 text-white md:h-screen items-center">
 				<div class="flex-1 mb-6">
 					<a
 						class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
