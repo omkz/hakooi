@@ -1,16 +1,16 @@
 /* nuxt.config.js */
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase =
+/* const routerBase =
 	process.env.DEPLOY_ENV === 'GH_PAGES'
 		? {
 				router: {
 					base: '/hakooi.github.io/'
 				}
 		  }
-		: {}
+		: {} */
 
 export default {
-	...routerBase,
+	// ...routerBase,
 	mode: 'universal',
 	/*
 	 ** Headers of the page
