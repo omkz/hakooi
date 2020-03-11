@@ -10,8 +10,13 @@
 				</div>
 
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+<<<<<<< Updated upstream
 					<NetworkIcon class="fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Web Application</h3>
+=======
+					<NetworkIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+>>>>>>> Stashed changes
 					<p class="text-gray-600 mb-8">
 						We build scalable web applications with Ruby on Rails, Javascript and related technologies.
 					</p>
@@ -38,8 +43,13 @@
 					</ul>
 				</div>
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+<<<<<<< Updated upstream
 					<CraftIcon class="fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Mobile Application</h3>
+=======
+					<CraftIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+>>>>>>> Stashed changes
 					<p class="text-gray-600 mb-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
 						ipsum eu nunc commodo posuere et sit amet ligula.
@@ -67,8 +77,13 @@
 					</ul>
 				</div>
 				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+<<<<<<< Updated upstream
 					<BrandingIcon class="fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">UI/UX</h3>
+=======
+					<BrandingIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+>>>>>>> Stashed changes
 					<p class="text-gray-600 mb-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
 						ipsum eu nunc commodo posuere et sit amet ligula.
@@ -102,3 +117,37 @@ export default {
 	}
 }
 </script>
+<style>
+.svg-asset {
+	stroke-dasharray: 10;
+	stroke: #ffffff;
+	fill: rgba(255, 255, 255, 1);
+	opacity: 60;
+	animation: svg-animation 2s ease infinite;
+	/* animation: svg-animation 3s cubic-bezier(0, 0.23, 1, 0.1) infinite; */
+}
+
+@keyframes svg-animation {
+	0% {
+		opacity: 10;
+		fill: none;
+		stroke-dashoffset: 100;
+	}
+	30% {
+		opacity: 10;
+		fill: none;
+		stroke-dashoffset: 100;
+	}
+	90% {
+		/* fill: rgba(255, 255, 255, 0); */
+		opacity: 60;
+		/* fill: none; */
+		stroke-dashoffset: 100;
+	}
+	100% {
+		opacity: 60;
+		/* fill: rgba(255, 255, 255, 1); */
+		stroke-dashoffset: 10;
+	}
+}
+</style>
