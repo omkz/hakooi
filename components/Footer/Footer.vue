@@ -1,7 +1,7 @@
 <template>
 	<footer class="bg-hakooi">
 		<div class="mx-auto container">
-			<div class="w-full flex flex-col md:flex-row py-6 text-white md:h-screen items-center">
+			<div class="w-full flex flex-col md:flex-row p-6 text-white md:h-screen md:items-center">
 				<div class="flex-1 mb-6">
 					<a class="no-underline hover:no-underline font-bold" href="#">
 						<picture>
@@ -14,7 +14,7 @@
 					</a>
 				</div>
 
-				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+				<div class="flex-1 text-xl">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">General Enquiry</h3>
 					<p class="uppercase text-white md:mb-6">Links</p>
 					<ul class="list-reset mb-6">
@@ -38,7 +38,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+				<div class="flex-1 text-xl">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Projects</h3>
 					<p class="uppercase text-white md:mb-6">Our Showcase</p>
 					<ul class="list-reset mb-6">
@@ -62,7 +62,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+				<div class="flex-1 text-xl">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Visit Us</h3>
 					<p class="uppercase text-white md:mb-6">Social</p>
 					<ul class="list-reset mb-6">

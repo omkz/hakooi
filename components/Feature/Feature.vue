@@ -1,7 +1,7 @@
 <template>
 	<section class="bg-hakooi">
 		<div class="mx-auto container">
-			<div class="w-full flex flex-col md:flex-row py-6 text-white md:h-screen items-center">
+			<div class="w-full flex flex-col md:flex-row p-6 text-white md:h-screen items-center">
 				<div class="flex-1 mb-6">
 					<a
 						class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
@@ -9,7 +9,7 @@
 					>HAKOOI STUDIO</a>
 				</div>
 
-				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+				<div class="flex-1 text-xl">
 					<NetworkIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 					<p
@@ -37,7 +37,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+				<div class="flex-1 text-xl">
 					<CraftIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 					<p class="text-gray-600 mb-8">
@@ -66,7 +66,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl w-5/6 sm:w-1/2 p-6">
+				<div class="flex-1 text-xl">
 					<BrandingIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
 					<p class="text-gray-600 mb-8">
