@@ -67,13 +67,13 @@
 					<p class="uppercase text-white md:mb-6">Social</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
-							<a href="#" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Facebook</a>
+							<a href="https://www.facebook.com/Hakooi-Studio-111255730493012" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Facebook</a>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
-							<a href="#" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Linkedin</a>
+							<a href="twitter.com/HakooiStudio" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Linkedin</a>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
-							<a href="#" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Twitter</a>
+							<a href="twitter.com/HakooiStudio" class="transitions duration-300 ease-in underline hover:text-hakooi-800">Twitter</a>
 						</li>
 					</ul>
 				</div>
