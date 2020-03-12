@@ -222,9 +222,9 @@ $transition--length: 0.8;
 	}
 	.menu {
 		position: fixed;
-		top: 0;
-		transform: translate(0, -250%);
-		transition: transform 2s ease;
+		top: -45px;
+		transform: translate(0, -150%);
+		transition: transform 1.5s ease;
 	}
 }
 
@@ -257,7 +257,7 @@ body.nav-active {
 		}
 		&__content {
 			position: fixed;
-			top: 50%;
+			/* top: 50%; */
 			transform: translate(0%, -50%);
 			width: 100%;
 			text-align: center;
@@ -270,7 +270,8 @@ body.nav-active {
 	}
 	//common style
 	.menu {
-		position: relative;
+		position: fixed;
+		top: 0;
 		z-index: 10;
 		display: block;
 		transform: translate(0, 0);
@@ -347,7 +348,6 @@ body.nav-active {
 					width: 100%;
 					margin: 0.5em 0 0 1.5em;
 					white-space: pre;
-					/* color: #000000; */
 					span {
 						display: inline-block;
 					}
