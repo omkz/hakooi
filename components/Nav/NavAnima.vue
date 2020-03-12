@@ -119,7 +119,7 @@ export default {
 							{ value: 1, duration: 150, easing: 'linear' }
 						],
 						color: {
-							value: this.colors.initial,
+							value: this.colors.active,
 							duration: 1,
 							delay: (t, i, l) => (l - i - 1) * 7 + 150
 						}
