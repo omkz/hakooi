@@ -52,7 +52,7 @@ export default {
 $background--color: #3341ff;
 $icon--color: #3341ff;
 $font--color: #ffffff;
-$font--color--active: #000000;
+$font--color--active: #3341ff;
 $font--primary: 'Montserrat', sans-serif;
 $transition--length: 0.8;
 
@@ -132,6 +132,7 @@ $transition--length: 0.8;
 		display: inline-block;
 		transition-delay: $transition--length + s;
 		opacity: 0;
+		color: $background--color;
 		transform: translate(0%, 100%);
 		transition: opacity 0.2s ease, transform 0.3s ease;
 		margin-right: 25px;
