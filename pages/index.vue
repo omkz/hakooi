@@ -9,7 +9,8 @@
 </template>
 
 <script>
-import Navbar from '~/components/Nav/Nav'
+// import Navbar from '~/components/Nav/Nav'
+import Navbar from '~/components/Nav/NavAnima'
 import Hero from '~/components/Hero/Hero'
 import Service from '~/components/Service/Service'
 import Footer from '~/components/Footer/Footer'
