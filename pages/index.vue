@@ -1,25 +1,25 @@
 <template>
 	<div class="leading-normal tracking-normal gradient">
-		<!-- <Navbar /> -->
+		<Navbar />
 		<Hero />
-		<Feature />
+		<Service />
 		<Team />
 		<Footer />
 	</div>
 </template>
 
 <script>
-// import Navbar from '~/components/Nav/Nav'
+import Navbar from '~/components/Nav/Nav'
 import Hero from '~/components/Hero/Hero'
-import Feature from '~/components/Feature/Feature'
+import Service from '~/components/Service/Service'
 import Footer from '~/components/Footer/Footer'
 import Team from '~/components/Team/Team'
 
 export default {
 	components: {
-		// Navbar,
+		Navbar,
 		Hero,
-		Feature,
+		Service,
 		Team,
 		Footer
 	}
@@ -48,8 +48,8 @@ export default {
 }
 
 .title {
-	font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	/* font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
 	display: block;
 	font-weight: 300;
 	font-size: 100px;

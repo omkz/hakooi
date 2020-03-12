@@ -1,8 +1,8 @@
 <template>
 	<section class="bg-hakooi">
 		<div class="mx-auto container">
-			<div class="w-full flex flex-col md:flex-row md:-mx-6 text-white md:h-screen">
-				<div class="flex-1 text-xl md:px-6">
+			<div class="flex md:flex-row flex-col -mx-6 text-white md:h-screen">
+				<div class="flex-1 text-xl px-6">
 					<NetworkIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Web Application</h3>
 					<p
@@ -30,7 +30,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl md:px-6">
+				<div class="flex-1 text-xl px-6">
 					<CraftIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Mobile Application</h3>
 					<p class="text-gray-600 mb-8">We deliver mobile applicatios using native or hybrid technolgies.</p>
@@ -56,7 +56,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex-1 text-xl md:px-6">
+				<div class="flex-1 text-xl px-6">
 					<BrandingIcon class="svg-assets fill-current text-white h-32 w-32 mb-10" />
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">UI/UX Design</h3>
 					<p class="text-gray-600 mb-8">We not only make beautiful designs, but also simple-to-use.</p>

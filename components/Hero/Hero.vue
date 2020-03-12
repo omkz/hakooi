@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="bg-hakooi">
-			<div class="mx-auto container md:h-screen flex flex-wrap flex-col">
+			<div class="mx-auto container md:h-screen flex flex-wrap flex-col py-6">
 				<!--Left Col-->
 				<div class="flex justify-end md:-mx-6">
 					<div class="hakooi-image md:px-6 pb-2/3 h-full sm:w-full md:w-auto">
@@ -19,7 +19,9 @@
 						</picture>
 					</div>
 				</div>
-				<div class="w-full md:-mx-6 leading-relaxed text-6xl justify-center text-center md:text-left">
+				<div
+					class="w-full md:-mx-6 leading-relaxed sm:text-2xl md:text-6xl justify-center text-center md:text-left"
+				>
 					<!-- <p class="uppercase tracking-loose w-full">Premium Ruby on Rails Website Studio</p> -->
 					<h3 class="font-bold md:px-6 text-white">Hakooi</h3>
 					<h3 class="font-bold md:px-6 text-white">Premium Web design studio</h3>
