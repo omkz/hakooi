@@ -126,10 +126,18 @@ export default {
 					})
 				}
 
-				this.DOM.el.addEventListener('mouseenter', this.mouseenterFn)
-				this.DOM.el.addEventListener('touchstart', this.mouseenterFn)
-				this.DOM.el.addEventListener('mouseleave', this.mouseleaveFn)
-				this.DOM.el.addEventListener('touchend', this.mouseleaveFn)
+				this.DOM.el.addEventListener('mouseenter', this.mouseenterFn, {
+					passive: true
+				})
+				this.DOM.el.addEventListener('touchstart', this.mouseenterFn, {
+					passive: true
+				})
+				this.DOM.el.addEventListener('mouseleave', this.mouseleaveFn, {
+					passive: true
+				})
+				this.DOM.el.addEventListener('touchend', this.mouseleaveFn, {
+					passive: true
+				})
 			}
 		}
 
