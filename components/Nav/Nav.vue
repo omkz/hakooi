@@ -10,9 +10,9 @@
 			<div class="nav__content">
 				<ul class="nav__list">
 					<li class="nav__list-item">Home</li>
-					<li class="nav__list-item">About</li>
-					<li class="nav__list-item">Projects</li>
-					<li class="nav__list-item">Contact</li>
+					<li class="nav__list-item">Services</li>
+					<li class="nav__list-item">Team</li>
+					<li class="nav__list-item">Reach Us</li>
 				</ul>
 			</div>
 		</div>
@@ -66,6 +66,15 @@ $transition--length: 0.8;
 	right: 50px;
 	top: 30px;
 	cursor: pointer;
+	&::before {
+		content: 'MENU';
+		color: white;
+		position: absolute;
+		right: calc(100% + 10px);
+		top: 0;
+		font-size: 1.5rem;
+		line-height: 1.2rem;
+	}
 	&__line {
 		height: 2px;
 		width: $size;
