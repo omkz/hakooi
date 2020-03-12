@@ -222,7 +222,7 @@ $transition--length: 0.8;
 	}
 	.menu {
 		position: fixed;
-		top: -45px;
+		top: -1em;
 		transform: translate(0, -150%);
 		transition: transform 1.5s ease;
 	}
@@ -271,7 +271,7 @@ body.nav-active {
 	//common style
 	.menu {
 		position: fixed;
-		top: 0;
+		top: 1em;
 		z-index: 10;
 		display: block;
 		transform: translate(0, 0);
