@@ -66,6 +66,7 @@ $transition--length: 0.8;
 	right: 50px;
 	top: 30px;
 	cursor: pointer;
+	transform: scale(1.5);
 	&::before {
 		content: 'MENU';
 		color: white;
@@ -160,7 +161,7 @@ body.nav-active {
 	$menu--items--count: 4;
 	.menu-icon {
 		&__line {
-			background-color: #000;
+			background-color: $background--color;
 			transform: translateX(0px) rotate(-45deg);
 		}
 		&__line-left {
