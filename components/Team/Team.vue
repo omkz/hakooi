@@ -1,6 +1,6 @@
 <template>
 	<section class="team bg-hakooi">
-		<div class="mx-auto container p-6">
+		<div class="mx-auto container p-6 md:py-24">
 			<div class="w-full flex flex-col text-white">
 				<p class="uppercase text-white leading-tight text-3xl">
 					We are a small team whom focus on creating better problem solving
@@ -20,7 +20,7 @@
 							muhammad kurnia
 						</h3>
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">
-							lead Engineer
+							Tech Lead
 						</h4>
 						<p class="my-6">
 							A lead engineer is a professional in the field of project
@@ -45,7 +45,7 @@
 							Alfian
 						</h3>
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">
-							Creative director
+							Design director
 						</h4>
 						<p class="my-6">
 							A creative director is a professional in the field of project

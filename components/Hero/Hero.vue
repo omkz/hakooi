@@ -1,6 +1,8 @@
 <template>
 	<section class="home bg-hakooi">
-		<div class="mx-auto container md:h-screen flex flex-wrap flex-col py-6">
+		<div
+			class="mx-auto container md:h-screen flex flex-wrap flex-col py-6 md:py-24"
+		>
 			<!--Left Col-->
 			<div class="flex justify-end">
 				<div class="hakooi-image px-6 pb-2/3 h-full sm:w-full md:w-auto">
