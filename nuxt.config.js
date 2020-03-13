@@ -73,9 +73,10 @@ export default {
 		'@nuxtjs/tailwindcss'
 	],
 	//Static folder config
-	static: {
+	/* static: {
 		maxAge: 1000 * 60 * 60 * 24 * 7
-	},
+	}, */
+	// serverMiddleware: ['/middleware/headers.js'],
 	/*
 	 ** Nuxt.js modules
 	 */
