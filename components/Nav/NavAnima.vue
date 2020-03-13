@@ -154,7 +154,7 @@ export default {
 </script>
 <style lang="scss">
 $background--color: #3341ff;
-$hakooi--subtle: #6670ff;
+/* $hakooi--subtle: #99a0ff; */
 $hakooi--darken: #000ecc;
 $icon--color: #3341ff;
 $font--color: #ffffff;
@@ -306,13 +306,7 @@ body.nav-active {
 				flex-wrap: wrap;
 				align-items: flex-end;
 				margin: 2em 0;
-				--menu-item-color: #6670ff;
-				&:first-child {
-					--menu-item-color: #6670ff;
-				}
-				&:nth-child(2) {
-					--menu-item-color: #6670ff;
-				}
+				--menu-item-color: #cccfff;
 				&:hover {
 					color: $background--color;
 					.menu__item-name {

@@ -56,7 +56,7 @@ export default {
 		'@nuxtjs/pwa',
 		// Doc: https://github.com/nuxt-community/dotenv-module
 		'@nuxtjs/dotenv',
-		['vue-scrollto/nuxt', { duration: 300 }],
+		['vue-scrollto/nuxt', { duration: 1500 }],
 		'nuxt-webfontloader',
 		'nuxt-purgecss',
 		'nuxt-svg-loader'

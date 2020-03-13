@@ -1,6 +1,6 @@
 <template>
 	<section class="services bg-hakooi">
-		<div class="mx-auto container">
+		<div class="mx-auto container py-6">
 			<div class="flex md:flex-row flex-col text-white md:h-screen">
 				<div class="flex-1 text-xl px-6">
 					<NetworkIcon
