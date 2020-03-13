@@ -7,7 +7,7 @@
 		</div>
 		<div class="nav">
 			<div class="nav__content">
-				<div class="menu menu--salal">
+				<div class="menu menu--sleek">
 					<a class="menu__item" href="#" v-scroll-to="'.home'">
 						<span class="menu__item-name">Home</span>
 						<span class="menu__item-label">Explore our landing page</span>
@@ -300,7 +300,7 @@ body.nav-active {
 				margin: 0 0 0 0.5em;
 			}
 		}
-		&--salal {
+		&--sleek {
 			.menu__item {
 				display: flex;
 				flex-wrap: wrap;
@@ -356,7 +356,7 @@ body.nav-active {
 			}
 		}
 		@media screen and (max-width: 50em) {
-			.menu--salal {
+			.menu--sleek {
 				.menu__item-label {
 					font-size: 0.6em;
 					margin-left: 0.25em;
