@@ -123,7 +123,29 @@ export default {
 		NetworkIcon,
 		BrandingIcon,
 		CraftIcon
+	},
+	mounted() {
+		const targets = '.svg-asset'
+		this.$anime({
+			targets,
+			strokeDasharray: 20,
+			strokeDashoffset: 20,
+			easing: 'steps',
+			duration: 3000,
+			delay: function(el, i) {
+				return i * 250
+			},
+			direction: 'alternate',
+			loop: true
+		})
 	}
 }
 </script>
-<style></style>
+<style>
+.svg-asset {
+	stroke: #ffffff;
+	stroke-dasharray: 10;
+	stroke-dashoffset: 10;
+	fill: none;
+}
+</style>
