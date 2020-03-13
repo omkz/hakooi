@@ -114,7 +114,7 @@
 	</section>
 </template>
 <script>
-import Anime from 'animejs'
+// import Anime from 'animejs'
 import NetworkIcon from '@/assets/svg/networking.svg'
 import BrandingIcon from '@/assets/svg/branding.svg'
 import CraftIcon from '@/assets/svg/craft.svg'
@@ -123,25 +123,7 @@ export default {
 		NetworkIcon,
 		BrandingIcon,
 		CraftIcon
-	},
-	mounted() {
-		Anime({
-			targets: '.svg-assets',
-			strokeDashoffset: [Anime.setDashoffset, 0],
-			easing: 'easeInOutSine',
-			duration: 1500,
-			delay: function(el, i) {
-				return i * 250
-			},
-			direction: 'alternate',
-			loop: true
-		})
 	}
 }
 </script>
-<style>
-.svg-assets {
-	stroke-dasharray: 100;
-	stroke-dashoffset: 0;
-}
-</style>
+<style></style>
