@@ -85,7 +85,7 @@
 						UI/UX Design
 					</h3>
 					<p class="text-gray-600 mb-8">
-						We're not only create beautiful designs, but also highly usable and intuitive designs.
+						We're not only create beautiful designs, but also highly usable, intuitive and simple-to-use.
 						Our attention to detail and UX design expertise is what makes us one of the top UX design firms in Indonesia. 
 						Together, we’ll improve the usability and usefulness of your applications for an optimal user experience.
 					</p>
