@@ -76,7 +76,7 @@ export default {
 	/* static: {
 		maxAge: 1000 * 60 * 60 * 24 * 7
 	}, */
-	// serverMiddleware: ['/middleware/headers.js'],
+	serverMiddleware: ['~/api/headers.js'],
 	/*
 	 ** Nuxt.js modules
 	 */
