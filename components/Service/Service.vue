@@ -49,7 +49,7 @@
 					<p class="text-gray-600 mb-8">
 						We help our clients deliver world-class, beautiful, engaging iOS and Android applications. 
 						Our team knows these platforms inside out. Depending on your requirements, 
-						it can be a native iOS/Android app, a cross-platform, or a hybrid app.
+						it can be a native iOS/Android, a cross-platform, or a hybrid applications.
 					</p>
 					<p class="uppercase text-white md:mb-6">Legal</p>
 					<ul class="list-reset mb-6">
