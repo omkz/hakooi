@@ -1,7 +1,7 @@
 <template>
 	<section class="services bg-hakooi">
 		<div class="mx-auto container md:py-24">
-			<div class="flex md:flex-row flex-col text-white md:h-screen">
+			<div class="flex md:flex-row flex-col text-white ">
 				<div class="flex-1 text-xl px-6">
 					<NetworkIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
