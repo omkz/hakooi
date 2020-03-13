@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-hakooi">
+	<section class="home bg-hakooi">
 		<div class="mx-auto container md:h-screen flex flex-wrap flex-col py-6">
 			<!--Left Col-->
 			<div class="flex justify-end">
@@ -18,7 +18,9 @@
 					</picture>
 				</div>
 			</div>
-			<div class="w-full leading-relaxed text-4xl md:text-6xl justify-center text-center md:text-left">
+			<div
+				class="w-full leading-relaxed text-4xl md:text-6xl justify-center text-center md:text-left"
+			>
 				<!-- <p class="uppercase tracking-loose w-full">Premium Ruby on Rails Website Studio</p> -->
 				<h3 class="font-bold px-6 text-white">Hakooi</h3>
 				<h3 class="font-bold px-6 text-white">Premium Web design studio</h3>

@@ -8,19 +8,19 @@
 		<div class="nav">
 			<div class="nav__content">
 				<div class="menu menu--salal">
-					<a class="menu__item" href="#">
+					<a class="menu__item" href="#" v-scroll-to="'.home'">
 						<span class="menu__item-name">Home</span>
 						<span class="menu__item-label">Explore our landing page</span>
 					</a>
-					<a class="menu__item" href="#">
+					<a class="menu__item" href="#" v-scroll-to="'.services'">
 						<span class="menu__item-name">Services</span>
 						<span class="menu__item-label">Our problem solving services</span>
 					</a>
-					<a class="menu__item" href="#">
+					<a class="menu__item" href="#" v-scroll-to="'.team'">
 						<span class="menu__item-name">Team</span>
 						<span class="menu__item-label">Meet our badass team</span>
 					</a>
-					<a class="menu__item" href="#">
+					<a class="menu__item" href="#" v-scroll-to="'footer'">
 						<span class="menu__item-name">Reach Us</span>
 						<span class="menu__item-label">Catch up to us</span>
 					</a>
@@ -37,22 +37,29 @@ export default {
 	mounted() {
 		let body
 		let menu
+		let menuItems
 
 		const init = () => {
 			body = document.querySelector('body')
 			menu = document.querySelector('.menu-icon')
+			menuItems = document.querySelector('.menu')
 
 			applyListeners()
 		}
 
 		const applyListeners = () => {
 			menu.addEventListener('click', () => toggleClass(body, 'nav-active'))
+			menuItems.addEventListener('click', () => removeClass(body, 'nav-active'))
 		}
 
 		const toggleClass = (element, stringClass) => {
 			if (element.classList.contains(stringClass))
 				element.classList.remove(stringClass)
 			else element.classList.add(stringClass)
+		}
+		const removeClass = (element, stringClass) => {
+			if (element.classList.contains(stringClass))
+				element.classList.remove(stringClass)
 		}
 
 		init()

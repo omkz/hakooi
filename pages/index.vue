@@ -10,6 +10,7 @@
 
 <script>
 // import Navbar from '~/components/Nav/Nav'
+import anime from 'animejs'
 import Navbar from '~/components/Nav/NavAnima'
 import Hero from '~/components/Hero/Hero'
 import Service from '~/components/Service/Service'
@@ -23,6 +24,27 @@ export default {
 		Service,
 		Team,
 		Footer
+	},
+	methods: {
+		scroll(arg) {
+			let el = document.querySelector(arg.to),
+				offset = parseInt(arg.offset) || 0,
+				duration = arg.duration || 800,
+				easing = arg.easing || 'easeOutExpo',
+				callback = arg.callback || null
+
+			if (el) {
+				anime({
+					targets: ['html', 'body'],
+					scrollTop: el.offsetTop - offset,
+					duration: duration,
+					easing: easing,
+					complete: callback
+				}).finished.then(() => {
+					bus.$emit('scroll:finished', true)
+				})
+			}
+		}
 	}
 }
 </script>
