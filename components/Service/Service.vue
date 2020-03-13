@@ -10,8 +10,9 @@
 						Web Application
 					</h3>
 					<p class="text-gray-600 mb-8">
-						We build scalable web applications with Ruby on Rails, Javascript
-						and related technologies.
+						We specialize in the scalable web applications with complex and rich functionality
+						using Ruby on Rails, Javascript, and related technologies.
+				        We can handle heavy loads and are happy to undertake the solution of complex problems.
 					</p>
 					<p class="uppercase text-white md:mb-6">Links</p>
 					<ul class="list-reset mb-6">
@@ -46,7 +47,9 @@
 						Mobile Application
 					</h3>
 					<p class="text-gray-600 mb-8">
-						We deliver mobile applicatios using native or hybrid technolgies.
+						We help our clients deliver world-class, beautiful, engaging iOS and Android applications. 
+						Our team knows these platforms inside out. Depending on your requirements, 
+						it can be a native iOS/Android app, a cross-platform, or a hybrid app.
 					</p>
 					<p class="uppercase text-white md:mb-6">Legal</p>
 					<ul class="list-reset mb-6">
@@ -82,7 +85,9 @@
 						UI/UX Design
 					</h3>
 					<p class="text-gray-600 mb-8">
-						We're not only make beautiful designs, but also simple-to-use.
+						We're not only create beautiful designs, but also highly usable and intuitive designs.
+						Our attention to detail and UX design expertise is what makes us one of the top UX design firms in Indonesia. 
+						Together, we’ll improve the usability and usefulness of your applications for an optimal user experience.
 					</p>
 					<p class="uppercase text-white md:mb-6">Social</p>
 					<ul class="list-reset mb-6">
