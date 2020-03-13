@@ -1,7 +1,7 @@
 {
-  "name": "hakooi",
+  "name": "Hakooi",
   "version": "1.0.0",
-  "description": "Hakooi Studio company profile",
+  "description": "Hakooi Studio Ruby on rails crafter",
   "author": "alfianjau",
   "private": true,
   "scripts": {

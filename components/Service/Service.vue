@@ -130,7 +130,7 @@ export default {
 		CraftIcon
 	},
 	mounted() {
-		const targets = '.svg-asset'
+		const targets = '.svg-asset path'
 		this.$anime({
 			targets,
 			strokeDasharray: 20,
@@ -148,9 +148,11 @@ export default {
 </script>
 <style>
 .svg-asset {
-	stroke: #ffffff;
+	stroke: #000ecc;
 	stroke-dasharray: 10;
 	stroke-dashoffset: 10;
-	fill: none;
+	fill: #ffffff;
+	stroke-width: 3;
+	stroke-linecap: round;
 }
 </style>
