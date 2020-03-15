@@ -5,7 +5,7 @@
 				<p class="uppercase text-white leading-tight text-3xl">
 					We are a small team whom focus on creating better problem-solving
 					while strive to perfecting our craft in software industry especially
-					on custom handcrafted ruby on rails application. 
+					on custom handcrafted ruby on rails application.
 					<!-- We are focused to deliver advanced web development for a flawless user experience -->
 				</p>
 				<div class="container flex flex-wrap flex-row py-12 md:-mx-6">
@@ -25,10 +25,11 @@
 						</h4>
 						<p class="my-6">
 							<!-- Moh is responsible for making sure each project results in a great client experience. -->
-							Moh has been working in the field of software engineering for more than 10 years.
-							His passion is to find a simple and elegant solution to the most complex ideas and problems.
-							He is responsible for driving technical projects and provide leadership in an innovative and fast-paced environment.				
-							
+							Moh has been working in the field of software engineering for more
+							than 10 years. His passion is to find a simple and elegant
+							solution to the most complex ideas and problems. He is responsible
+							for driving technical projects and provide leadership in an
+							innovative and fast-paced environment.
 						</p>
 					</div>
 					<div class="team-card md:w-1/2 md:px-6">
@@ -46,9 +47,10 @@
 							Design director
 						</h4>
 						<p class="my-6">
-							Al brings more than 10 years of experience in Web and Mobile Design.
-							Al is a creative and passionate designer who loves crafting intuitive and elegant UI solutions.
-							He ensures that the design elements fits in with the client's requirements.
+							Al brings more than 5 years of experience in Web and Mobile
+							Design. Al is a creative and passionate designer who loves
+							crafting intuitive and elegant UI solutions. He ensures that the
+							design elements fits in with the client's requirements.
 						</p>
 					</div>
 				</div>
@@ -56,3 +58,8 @@
 		</div>
 	</section>
 </template>
+<style lang="scss" scoped>
+img {
+	filter: grayscale(1);
+}
+</style>
