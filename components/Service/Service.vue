@@ -27,7 +27,7 @@
 						We help our clients deliver world-class, beautiful, engaging iOS and
 						Android applications. Our team knows these platforms inside out.
 						Depending on your requirements, it can be a native iOS/Android, a
-						cross-platform, or a hybrid applications.
+						cross-platform, or a hybrid application.
 					</p>
 				</div>
 				<div class="flex-1 text-xl px-6">
@@ -39,11 +39,11 @@
 						UI/UX Design
 					</h3>
 					<p class="text-gray-600 mb-8">
-						We're not only create beautiful designs, but also highly usable,
-						intuitive and simple-to-use. Our attention to detail and UX design
-						expertise is what makes us one of the top UX design firms in
-						Indonesia. Together, we’ll improve the usability and usefulness of
-						your applications for an optimal user experience.
+						Not only creating beautiful design, but we also create highly usable
+						and intuitive designs. Our attention to detail and UX design
+						expertise is what makes us one of the top UX design firms in Indonesia.
+						Together, we’ll improve the usability and usefulness of your 
+						applications for optimal user experience.
 					</p>
 				</div>
 			</div>
