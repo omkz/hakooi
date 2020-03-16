@@ -21,7 +21,7 @@
 			</div>
 			<transition>
 				<div
-					class="w-full leading-relaxed text-4xl md:text-6xl justify-center text-center"
+					class="w-full leading-relaxed text-4xl md:text-6xl md:pt-24 justify-center text-center"
 				>
 					<h3 class="font-bold px-6 text-white">Hakooi</h3>
 					<h3 class="font-bold px-6 text-white">Premium Web design studio</h3>
