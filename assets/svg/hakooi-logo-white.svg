@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="185px" viewBox="0 0 89 185" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>hakooi-raw copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="38.4280497%" y1="0%" x2="61.279515%" y2="98.7364477%" id="linearGradient-1">
+            <stop stop-color="#E458FC" offset="0%"></stop>
+            <stop stop-color="#1D1279" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Favicon-Optimized" transform="translate(-86.000000, -39.000000)" fill="#FFFFFF">
+            <g id="hakooi-raw-copy" transform="translate(86.000000, 39.000000)">
+                <polygon id="Path" points="0 119 0 58 28 58 28 86.5285521"></polygon>
+                <path d="M0,126.684605 L0,185 L28.5909713,185 L28.5909713,122.537114 C28.5909713,91.7324822 57,60 57,60 L0,126.684605 Z" id="Path"></path>
+                <polygon id="Path" points="89 66 89 127 61 127 61 98.4714479"></polygon>
+                <path d="M89,58.2913082 L89,0 L60.4003345,0 L60.4003345,62.5185405 C60.4003345,93.3050282 32,125 32,125 L89,58.2913082 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
