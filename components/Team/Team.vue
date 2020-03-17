@@ -1,8 +1,8 @@
 <template>
 	<section class="team bg-hakooi">
-		<div class="mx-auto container p-6 md:py-24">
+		<div class="mx-auto container p-6 pt-16 md:py-24">
 			<div class="w-full flex flex-col text-white">
-				<p class="uppercase text-white leading-tight text-3xl">
+				<p class="uppercase text-white leading-tight text-3xl font-bold">
 					We are a small team whom focus on creating better problem-solving
 					while strive to perfecting our craft in software industry especially
 					on custom handcrafted ruby on rails application.
@@ -17,7 +17,7 @@
 								src="~/assets/images/komeng.jpeg"
 							/>
 						</picture>
-						<h3 class="text-4xl text-white font-bold leading-none mt-12">
+						<h3 class="text-3xl text-white font-bold leading-none mt-12">
 							mohamed
 						</h3>
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">
@@ -40,7 +40,7 @@
 								src="~/assets/images/alfianjau.jpeg"
 							/>
 						</picture>
-						<h3 class="text-4xl text-white font-bold leading-none mt-12">
+						<h3 class="text-3xl text-white font-bold leading-none mt-12">
 							Alfian
 						</h3>
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">

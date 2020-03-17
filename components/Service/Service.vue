@@ -1,6 +1,6 @@
 <template>
 	<section class="services bg-hakooi">
-		<div class="mx-auto container md:pt-12">
+		<div class="mx-auto container  pt-16">
 			<div class="flex md:flex-row flex-col text-white ">
 				<div class="flex-1 text-xl px-6">
 					<NetworkIcon
@@ -41,9 +41,9 @@
 					<p class="text-gray-600 mb-8">
 						Not only creating beautiful design, but we also create highly usable
 						and intuitive designs. Our attention to detail and UX design
-						expertise is what makes us one of the top UX design firms in Indonesia.
-						Together, we’ll improve the usability and usefulness of your 
-						applications for optimal user experience.
+						expertise is what makes us one of the top UX design firms in
+						Indonesia. Together, we’ll improve the usability and usefulness of
+						your applications for optimal user experience.
 					</p>
 				</div>
 			</div>
