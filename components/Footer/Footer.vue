@@ -87,14 +87,14 @@
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
-								href="twitter.com/HakooiStudio"
+								href="https://twitter.com/HakooiStudio"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
 								>Linkedin</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
-								href="twitter.com/HakooiStudio"
+								href="https://twitter.com/HakooiStudio"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
 								>Twitter</a
 							>

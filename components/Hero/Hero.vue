@@ -24,15 +24,17 @@
 			>
 				<h3 class="font-bold px-6 text-4xl text-white">We are Hakooi</h3>
 				<!-- <h3 class="font-bold px-6 text-white">Premium Web design studio</h3> -->
-				<h3 class="font-bold px-6 pb-8 text-white">Ruby on Rails Crafter</h3>
+				<h3 class="font-bold px-6 pb-8 text-white">Web Design and Ruby on Rails Crafter</h3>
 			</div>
 			<p
 				class="font-paragraph text-white text-2xl px-6 w-2/3 uppercase self-center text-center"
 			>
-				We are creative studio based on yogyakarta focusing on ruby on rails web
-				applications
+				creative studio based in yogyakarta, Indonesia. 
+				
 			</p>
-
+			<p class="font-paragraph text-white text-2xl px-6 w-2/3 uppercase self-center text-center">
+                We create websites, mobile applications, eCommerce platforms, and much more.
+			</p>
 			<!--Right Col-->
 		</div>
 	</section>
