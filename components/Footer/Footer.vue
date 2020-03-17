@@ -60,7 +60,7 @@
 							<a
 								href="#"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
-								>ruby on rails custom site</a
+								>ruby on rails websites</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">

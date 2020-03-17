@@ -31,7 +31,7 @@
 			<p
 				class="font-paragraph text-white mb-3 md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
 			>
-				creative studio based in yogyakarta, Indonesia.
+				A creative studio based in yogyakarta, Indonesia.
 			</p>
 			<p
 				class="font-paragraph text-white mb-3 md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
