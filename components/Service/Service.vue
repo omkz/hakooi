@@ -3,7 +3,7 @@
 		<div class="mx-auto container  pt-16">
 			<div class="flex md:flex-row flex-col text-white ">
 				<div class="flex-1 px-6">
-					<NetworkIcon
+					<WebDevIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
@@ -17,7 +17,7 @@
 					</p>
 				</div>
 				<div class="flex-1 px-6">
-					<CraftIcon
+					<MobileIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
@@ -52,14 +52,14 @@
 </template>
 <script>
 // import Anime from 'animejs'
-import NetworkIcon from '@/assets/svg/networking.svg'
+import WebDevIcon from '@/assets/svg/hakooi-web-development.svg'
 import BrandingIcon from '@/assets/svg/branding.svg'
-import CraftIcon from '@/assets/svg/craft.svg'
+import MobileIcon from '@/assets/svg/hakooi-app-development.svg'
 export default {
 	components: {
-		NetworkIcon,
+		WebDevIcon,
 		BrandingIcon,
-		CraftIcon
+		MobileIcon
 	},
 	mounted() {
 		const targets = '.svg-asset path'
@@ -86,15 +86,5 @@ export default {
 	fill: #ffffff;
 	stroke-width: 3;
 	stroke-linecap: round;
-}
-.before-enter {
-	opacity: 0;
-	transform: translateY(100px);
-	transition: all 0.3s ease;
-}
-
-.enter {
-	opacity: 1;
-	transform: translateY(0);
 }
 </style>

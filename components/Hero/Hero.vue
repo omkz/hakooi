@@ -3,7 +3,7 @@
 		<div class="mx-auto container md:h-screen flex flex-wrap flex-col py-6 ">
 			<!--Left Col-->
 			<div class="flex justify-start">
-				<div class="hakooi-image px-6 pb-2/3 h-full sm:w-full md:w-auto">
+				<div class="hakooi-image px-6 pb-2/3 h-full sm:w-full md:w-auto -ml-6">
 					<!-- <img
 							alt="hakooi-logo"
 							class="h-48 w-full object-contain"
@@ -29,15 +29,14 @@
 				</h3>
 			</div>
 			<p
-				class="font-paragraph text-white mb-3 md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
+				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
 			>
-				A creative studio based in yogyakarta, Indonesia.
+				A creative studio based in yogyakarta, Indonesia
 			</p>
 			<p
-				class="font-paragraph text-white mb-3 md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
+				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
 			>
-				We create websites, mobile applications, eCommerce platforms, and much
-				more.
+				We provide solutions for your digital products
 			</p>
 			<!--Right Col-->
 		</div>

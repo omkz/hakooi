@@ -63,7 +63,7 @@ $transition--length: 0.8;
 	width: $size;
 	position: fixed;
 	z-index: 2;
-	right: 50px;
+	right: 2rem;
 	top: 30px;
 	cursor: pointer;
 	transform: scale(1.5);
