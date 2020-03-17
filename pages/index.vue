@@ -20,6 +20,30 @@ import Team from '~/components/Team/Team'
 import Adornment from '~/components/Details/Adornment'
 
 export default {
+	data() {
+		return {
+			title: 'Ruby on Rails Development and Web Design Company | Hakooi'
+		}
+	},
+	head() {
+		return {
+			title: this.title,
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content:
+						'We are delivering premium web design. Expertise in Ruby on Rails development'
+				},
+				{
+					hid: 'keywords',
+					name: 'keywords',
+					content:
+						'Ruby web development, Ruby programming, agile Ruby development, Ruby on Rails web design, RoR consulting, Ruby on Rails service, Ruby on Rails Yogyakarta, RoR consultant, Ruby on Rails Jakarta, Ruby on Rails Indonesia, Ruby on Rails expert, ruby on rails company, ruby on rails development company'
+				}
+			]
+		}
+	},
 	components: {
 		Navbar,
 		Hero,
