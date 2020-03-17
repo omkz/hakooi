@@ -64,7 +64,7 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: ['@/plugins/vue-animejs'],
+	plugins: ['@/plugins/vue-animejs', '@/plugins/aos'],
 	/*
 	 ** Nuxt.js dev-modules
 	 */
