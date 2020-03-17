@@ -22,7 +22,7 @@ import Adornment from '~/components/Details/Adornment'
 export default {
 	data() {
 		return {
-			title: 'Ruby on Rails Development and Web Design Company | Hakooi'
+			title: 'Ruby on Rails and Web Design Development Company | Hakooi'
 		}
 	},
 	head() {

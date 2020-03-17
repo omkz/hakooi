@@ -7,7 +7,7 @@
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-						Web Application
+						Web Development
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
 						We specialize in the scalable web applications with complex and rich
