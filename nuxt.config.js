@@ -72,6 +72,12 @@ export default {
 		// Doc: https://github.com/nuxt-community/nuxt-tailwindcss
 		'@nuxtjs/tailwindcss'
 	],
+	tailwindcss: {
+		configPath: '~/config/tailwind.config.js',
+		cssPath: '~/assets/css/tailwind.css',
+		purgeCSSInDev: false,
+		exposeConfig: false
+	},
 	//Static folder config
 	/* static: {
 		maxAge: 1000 * 60 * 60 * 24 * 7

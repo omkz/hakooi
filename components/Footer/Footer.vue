@@ -1,7 +1,7 @@
 <template>
 	<footer class="bg-hakooi">
-		<div class="mx-auto container">
-			<div class="w-full flex flex-col md:flex-row text-white md:h-screen md:items-center">
+		<div class="mx-auto container pb-12">
+			<div class="w-full flex flex-col md:flex-row text-white  md:items-center">
 				<div class="flex-1 mb-6 px-6">
 					<a class="no-underline hover:no-underline font-bold" href="#">
 						<picture>
@@ -15,74 +15,89 @@
 				</div>
 
 				<div class="flex-1 text-xl px-6">
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">General Enquiry</h3>
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+						General Enquiry
+					</h3>
 					<p class="uppercase text-white md:mb-6">Links</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
 								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-800"
-							>FAQ</a>
+								>FAQ</a
+							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
 								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-800"
-							>Help</a>
+								>Help</a
+							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
 								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-800"
-							>Support</a>
+								>Support</a
+							>
 						</li>
 					</ul>
 				</div>
 				<div class="flex-1 text-xl px-6">
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Projects</h3>
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+						Projects
+					</h3>
 					<p class="uppercase text-white md:mb-6">Our Showcase</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
-							>Brand identity</a>
+								>Brand identity</a
+							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
-							>ruby on rails custom site</a>
+								>ruby on rails custom site</a
+							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
-							>Marketing landing page</a>
+								>Marketing landing page</a
+							>
 						</li>
 					</ul>
 				</div>
 				<div class="flex-1 text-xl px-6">
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Visit Us</h3>
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+						Visit Us
+					</h3>
 					<p class="uppercase text-white md:mb-6">Social</p>
 					<ul class="list-reset mb-6">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://www.facebook.com/Hakooi-Studio-111255730493012"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
-							>Facebook</a>
+								>Facebook</a
+							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="twitter.com/HakooiStudio"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
-							>Linkedin</a>
+								>Linkedin</a
+							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="twitter.com/HakooiStudio"
 								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
-							>Twitter</a>
+								>Twitter</a
+							>
 						</li>
 					</ul>
 				</div>

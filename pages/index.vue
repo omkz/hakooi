@@ -5,6 +5,7 @@
 		<Service />
 		<Team />
 		<Footer />
+		<Adornment />
 	</div>
 </template>
 
@@ -16,6 +17,7 @@ import Hero from '~/components/Hero/Hero'
 import Service from '~/components/Service/Service'
 import Footer from '~/components/Footer/Footer'
 import Team from '~/components/Team/Team'
+import Adornment from '~/components/Details/Adornment'
 
 export default {
 	components: {
@@ -23,7 +25,8 @@ export default {
 		Hero,
 		Service,
 		Team,
-		Footer
+		Footer,
+		Adornment
 	},
 	methods: {
 		scroll(arg) {
@@ -66,8 +69,7 @@ export default {
 } */
 
 .gradient {
-	background: linear-gradient(90deg, #99a0ff 0%, #3341ff 100%);
-	opacity: 0.96;
+	background: #3341ff;
 }
 
 .title {

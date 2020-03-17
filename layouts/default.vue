@@ -6,8 +6,8 @@
 
 <style>
 html {
-	font-family: 'Bebas Neue', 'Montserrat', -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, 'Helvetica Neue', Arial, sans-serif;
 	font-size: 16px;
 	word-spacing: 1px;
 	-ms-text-size-adjust: 100%;

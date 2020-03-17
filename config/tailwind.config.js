@@ -4,6 +4,12 @@
  ** Docs: https://tailwindcss.com/docs/configuration
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
+/*
+ ** TailwindCSS Configuration File
+ **
+ ** Docs: https://tailwindcss.com/docs/configuration
+ ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+ */
 module.exports = {
 	theme: {
 		colors: {
@@ -43,7 +49,11 @@ module.exports = {
 			'10xl': '4.5rem',
 			'11xl': '5.625rem'
 		},
-		fonts: { bebas: 'Bebas Neue', montserrat: 'Montserrat' }
+		fonts: { bebas: 'Bebas Neue', montserrat: 'Montserrat' },
+		fontFamily: {
+			heading: 'bebas',
+			paragraph: 'montserrat'
+		}
 	},
 	variants: {},
 	plugins: []

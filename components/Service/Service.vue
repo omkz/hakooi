@@ -2,35 +2,35 @@
 	<section class="services bg-hakooi">
 		<div class="mx-auto container  pt-16">
 			<div class="flex md:flex-row flex-col text-white ">
-				<div class="flex-1 text-xl px-6">
+				<div class="flex-1 px-6">
 					<NetworkIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
 						Web Application
 					</h3>
-					<p class="text-gray-600 mb-8">
+					<p class="text-gray-600 mb-8 font-paragraph">
 						We specialize in the scalable web applications with complex and rich
 						functionality using Ruby on Rails, Javascript, and related
 						technologies. We can handle heavy loads and are happy to undertake
 						the solution of complex problems.
 					</p>
 				</div>
-				<div class="flex-1 text-xl px-6">
+				<div class="flex-1 px-6">
 					<CraftIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
 						Mobile Application
 					</h3>
-					<p class="text-gray-600 mb-8">
+					<p class="text-gray-600 mb-8 font-paragraph">
 						We help our clients deliver world-class, beautiful, engaging iOS and
 						Android applications. Our team knows these platforms inside out.
 						Depending on your requirements, it can be a native iOS/Android, a
 						cross-platform, or a hybrid application.
 					</p>
 				</div>
-				<div class="flex-1 text-xl px-6">
+				<div class="flex-1 px-6">
 					<BrandingIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 						stroke-dasharray="1000"
@@ -38,7 +38,7 @@
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
 						UI/UX Design
 					</h3>
-					<p class="text-gray-600 mb-8">
+					<p class="text-gray-600 mb-8 font-paragraph">
 						Not only creating beautiful design, but we also create highly usable
 						and intuitive designs. Our attention to detail and UX design
 						expertise is what makes us one of the top UX design firms in
@@ -86,5 +86,15 @@ export default {
 	fill: #ffffff;
 	stroke-width: 3;
 	stroke-linecap: round;
+}
+.before-enter {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: all 0.3s ease;
+}
+
+.enter {
+	opacity: 1;
+	transform: translateY(0);
 }
 </style>

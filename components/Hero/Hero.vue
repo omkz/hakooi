@@ -19,15 +19,19 @@
 					<HakooiLogo class="w-24 h-24" />
 				</div>
 			</div>
-			<transition>
-				<div
-					class="w-full leading-relaxed text-4xl md:text-6xl md:pt-24 justify-center text-center"
-				>
-					<h3 class="font-bold px-6 text-white">Hakooi</h3>
-					<h3 class="font-bold px-6 text-white">Premium Web design studio</h3>
-					<h3 class="font-bold px-6 text-white">Ruby on Rails Crafter</h3>
-				</div>
-			</transition>
+			<div
+				class="w-full leading-relaxed text-4xl md:text-5xl md:pt-24 justify-center text-center"
+			>
+				<h3 class="font-bold px-6 text-4xl text-white">We are Hakooi</h3>
+				<!-- <h3 class="font-bold px-6 text-white">Premium Web design studio</h3> -->
+				<h3 class="font-bold px-6 pb-8 text-white">Ruby on Rails Crafter</h3>
+			</div>
+			<p
+				class="font-paragraph text-white text-2xl px-6 w-2/3 uppercase self-center text-center"
+			>
+				We are creative studio based on yogyakarta focusing on ruby on rails web
+				applications
+			</p>
 
 			<!--Right Col-->
 		</div>
