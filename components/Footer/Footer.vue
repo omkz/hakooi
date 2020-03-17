@@ -1,7 +1,10 @@
 <template>
 	<footer class="bg-hakooi">
 		<div class="mx-auto container pb-12">
-			<div class="w-full flex flex-col md:flex-row text-white  md:items-center">
+			<div
+				class="w-full flex flex-col md:flex-row text-white  md:items-center "
+				data-aos="fade-up"
+			>
 				<div class="flex-1 mb-6 px-6">
 					<a class="no-underline hover:no-underline font-bold" href="#">
 						<picture>

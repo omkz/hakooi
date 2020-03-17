@@ -1,7 +1,7 @@
 <template>
 	<section class="services bg-hakooi">
 		<div class="mx-auto container  pt-16">
-			<div class="flex md:flex-row flex-col text-white ">
+			<div class="flex md:flex-row flex-col text-white " data-aos="fade-up">
 				<div class="flex-1 px-6">
 					<WebDevIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"

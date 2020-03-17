@@ -64,7 +64,10 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: ['@/plugins/vue-animejs', '@/plugins/aos'],
+	plugins: [
+		{ src: '@/plugins/vue-animejs' },
+		{ src: '@/plugins/aos', ssr: false }
+	],
 	/*
 	 ** Nuxt.js dev-modules
 	 */
@@ -123,6 +126,14 @@ export default {
 				},
 				extensions: ['html', 'vue', 'js']
 			}
+		],
+		whitelist: [
+			'aos-init',
+			'aos-animate',
+			'data-aos-delay',
+			'data-aos-duration',
+			'fade-(all used)',
+			'fade-(fade types)'
 		]
 	},
 	/*
