@@ -49,6 +49,11 @@ export default {
 					name: 'og:image',
 					content: '/hakooi-icon-square.png'
 				}
+				{
+					hid: 'og:image:alt',
+					name: 'og:image:alt',
+					content: 'Ruby on Rails Studio | Hakooi'
+				}
 			]
 		}
 	},
