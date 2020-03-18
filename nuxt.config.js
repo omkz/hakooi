@@ -132,8 +132,7 @@ export default {
 			'aos-animate',
 			'data-aos-delay',
 			'data-aos-duration',
-			'fade-(all used)',
-			'fade-(fade types)'
+			'fade-up'
 		]
 	},
 	/*

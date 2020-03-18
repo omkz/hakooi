@@ -4,6 +4,7 @@
 		<Hero />
 		<Service />
 		<Team />
+		<TechStack />
 		<Footer />
 		<Adornment />
 	</div>
@@ -17,6 +18,7 @@ import Hero from '~/components/Hero/Hero'
 import Service from '~/components/Service/Service'
 import Footer from '~/components/Footer/Footer'
 import Team from '~/components/Team/Team'
+import TechStack from '~/components/Stack/TechStack'
 import Adornment from '~/components/Details/Adornment'
 
 export default {
@@ -49,6 +51,7 @@ export default {
 		Hero,
 		Service,
 		Team,
+		TechStack,
 		Footer,
 		Adornment
 	},
