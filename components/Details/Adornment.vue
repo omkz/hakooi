@@ -31,4 +31,9 @@ export default {
 	z-index: 1;
 	position: fixed;
 }
+@media screen and (max-width: 900px) {
+	.hakooi-logo {
+		display: none;
+	}
+}
 </style>
