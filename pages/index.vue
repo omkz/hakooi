@@ -24,7 +24,7 @@ import Adornment from '~/components/Details/Adornment'
 export default {
 	data() {
 		return {
-			title: 'Ruby on Rails and Web Design Development Company | Hakooi'
+			title: 'Ruby on Rails and Web Design Studio | Hakooi'
 		}
 	},
 	head() {
@@ -35,13 +35,13 @@ export default {
 					hid: 'description',
 					name: 'description',
 					content:
-						'We are delivering premium web design. Expertise in Ruby on Rails development'
+						'We are delivering Ruby on Rails Web Application and Web Design. Specialize in building Ruby on Rails Web Application'
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
 					content:
-						'Ruby web development, Ruby programming, agile Ruby development, Ruby on Rails web design, RoR consulting, Ruby on Rails service, Ruby on Rails Yogyakarta, RoR consultant, Ruby on Rails Jakarta, Ruby on Rails Indonesia, Ruby on Rails expert, ruby on rails company, ruby on rails development company'
+						'Ruby on Rails development, Ruby on Rails Yogyakarta, RoR consultant, Ruby on Rails Company, Ruby on Rails development company, Ruby programming, Web Design, Web Design Yogyakarta, Web Design Indonesia'
 				}
 			]
 		}
