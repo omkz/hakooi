@@ -28,6 +28,12 @@ export default {
 				hid: 'description',
 				name: 'description',
 				content: process.env.npm_package_description || ''
+			},
+			{
+				hid: 'keywords',
+				name: 'keywords',
+				content:
+					'Ruby web development, Ruby programming, agile Ruby development, Ruby on Rails web design, RoR consulting, Ruby on Rails service, Ruby on Rails Yogyakarta, RoR consultant, Ruby on Rails Jakarta, Ruby on Rails Indonesia, Ruby on Rails expert, ruby on rails company, ruby on rails development company'
 			}
 		],
 		link: [
