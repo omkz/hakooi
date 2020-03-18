@@ -24,7 +24,7 @@ import Adornment from '~/components/Details/Adornment'
 export default {
 	data() {
 		return {
-			title: 'Ruby on Rails and Web Design Studio | Hakooi'
+			title: 'Ruby on Rails Studio | Hakooi'
 		}
 	},
 	head() {
