@@ -1,14 +1,14 @@
 <template>
 	<section class="team bg-hakooi">
-		<div class="mx-auto container p-6 pt-16 md:py-24">
+		<div class="mx-auto container p-6 pt-16 md:pt-24">
 			<div class="w-full flex flex-col text-white" data-aos="fade-up">
-				<p class="uppercase text-white leading-tight text-2xl font-bold ">
+				<p class="uppercase text-white leading-tight text-2xl font-bold mb-6">
 					We are a small team whom focus on creating better problem-solving
 					while strive to perfecting our craft in software industry especially
 					on custom handcrafted ruby on rails application.
 					<!-- We are focused to deliver advanced web development for a flawless user experience -->
 				</p>
-				<div class="flex flex-wrap flex-row py-12 md:-mx-6">
+				<div class="flex flex-wrap flex-row md:-mx-6">
 					<div class="team-card md:w-1/2 md:px-6">
 						<picture>
 							<img

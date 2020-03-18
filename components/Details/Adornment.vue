@@ -21,12 +21,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .hakooi-logo {
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 	top: 50%;
 	left: 50%;
-	margin-left: -150px;
-	margin-top: -150px;
+	margin-left: -100px;
+	margin-top: -100px;
 	opacity: 0.3;
 	z-index: 1;
 	position: fixed;
