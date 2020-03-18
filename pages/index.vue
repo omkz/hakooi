@@ -47,7 +47,7 @@ export default {
 				{
 					hid: 'og:image',
 					name: 'og:image',
-					content: '/hakooi-icon.png'
+					content: '/hakooi-icon-square.png'
 				}
 			]
 		}
