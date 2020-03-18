@@ -98,7 +98,14 @@ export default {
 		['vue-scrollto/nuxt', { duration: 1500, easing: 'ease-in-out' }],
 		'nuxt-webfontloader',
 		'nuxt-purgecss',
-		'nuxt-svg-loader'
+		'nuxt-svg-loader',
+		[
+			'nuxt-gmaps',
+			{
+				key: process.env.API_KEY
+				//you can use libraries: ['places']
+			}
+		]
 	],
 	/*
 	 ** Axios module configuration

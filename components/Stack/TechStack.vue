@@ -57,40 +57,33 @@ export default {
 		TailwindLogo,
 		ReactLogo,
 		PostgreLogo
-	}
-	/* mounted() {
-		const logoEl = document.querySelector('.tech-logo svg')
-
-		const logoAnimation = this.$anime({
-			targets: logoEl,
-			easing: 'easeInOutElastic',
+	},
+	mounted() {
+		const targets = '.tech-logo svg path'
+		this.$anime({
+			targets,
+			strokeDasharray: 20,
+			strokeDashoffset: 20,
+			easing: 'steps',
 			duration: 3000,
-			scale: 1.2,
 			delay: function(el, i) {
 				return i * 250
 			},
+			direction: 'alternate',
 			loop: true
 		})
-
-		function enterButton() {
-			if (logoAnimation.reversed) logoAnimation.reverse()
-			logoAnimation.play()
-		}
-
-		function leaveButton() {
-			if (!logoAnimation.reversed) logoAnimation.reverse()
-			logoAnimation.play()
-		}
-
-		logoEl.addEventListener('mouseenter', enterButton, false)
-		logoEl.addEventListener('mouseleave', leaveButton, false)
-	} */
+	}
 }
 </script>
 <style lang="scss" scoped>
 .tech-logo {
 	@apply flex;
 	transition: all 1s ease;
+	stroke: #cccfff;
+	stroke-dasharray: 10;
+	stroke-dashoffset: 10;
+	stroke-width: 3;
+	stroke-linecap: round;
 	svg {
 		transition: all 1s ease;
 		filter: grayscale(0.9);

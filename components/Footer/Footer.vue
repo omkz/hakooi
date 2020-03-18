@@ -2,7 +2,7 @@
 	<footer class="bg-hakooi">
 		<div class="mx-auto container pb-12">
 			<div
-				class="w-full flex flex-col md:flex-row text-white  md:items-center "
+				class="w-full flex flex-col md:flex-row text-white"
 				data-aos="fade-up"
 			>
 				<div class="flex-1 mb-6 px-6">
@@ -16,7 +16,6 @@
 						</picture>
 					</a>
 				</div>
-
 				<div class="flex-1 text-xl px-6">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
 						General Enquiry
