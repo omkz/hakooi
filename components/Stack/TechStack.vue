@@ -5,34 +5,37 @@
 				Tech Stack
 			</h3>
 			<p
-				class="uppercase font-paragraph text-white text-center leading-tight text-xl font-bold mb-12"
+				class="uppercase font-paragraph text-white md:text-center leading-relaxed text-xl font-bold mb-12"
 			>
 				List of our tools of the trade to solve your digital problems
 			</p>
-			<div class="flex flex-wrap md:flex-row flex-col text-white mt-12">
-				<div class="tech-logo md:w-1/4 p-6">
-					<RubyLogo class=" text-white w-1/2  h-auto m-auto p-6" alt="Ruby" />
+			<div class="flex flex-wrap flex-row text-white mt-12">
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<RubyLogo
+						class=" text-white w-1/2  h-auto m-auto md:p-6"
+						alt="Ruby"
+					/>
 				</div>
-				<div class="tech-logo md:w-1/4 p-6">
-					<RailsLogo class=" text-white w-1/2  h-auto m-auto p-6" />
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<RailsLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo md:w-1/4 p-6">
-					<VueLogo class=" text-white w-1/2  h-auto m-auto p-6" />
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<VueLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo md:w-1/4 p-6">
-					<NuxtLogo class=" text-white w-1/2  h-auto m-auto p-6" />
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<NuxtLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo md:w-1/4 p-6">
-					<TailwindLogo class=" text-white w-1/2  h-auto m-auto p-6" />
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<TailwindLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo md:w-1/4 p-6">
-					<GatsbyLogo class=" text-white w-1/2  h-auto m-auto p-6" />
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<GatsbyLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo md:w-1/4 p-6">
-					<ReactLogo class=" text-white w-1/2  h-auto m-auto p-6" />
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<ReactLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo md:w-1/4 p-6">
-					<PostgreLogo class=" text-white w-1/2  h-auto m-auto p-6" />
+				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+					<PostgreLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
 			</div>
 		</div>
@@ -110,6 +113,9 @@ export default {
 		}
 		&:nth-child(odd) {
 			@apply bg-hakooi-600;
+		}
+		svg {
+			height: 9rem;
 		}
 	}
 }

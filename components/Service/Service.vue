@@ -1,12 +1,15 @@
 <template>
 	<section class="services bg-hakooi">
 		<div class="mx-auto container  pt-16">
-			<div class="flex md:flex-row flex-col text-white " data-aos="fade-up">
+			<div
+				class="flex md:flex-row flex-col text-white leading-relaxed "
+				data-aos="fade-up"
+			>
 				<div class="flex-1 px-6">
 					<WebDevIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
-					<h3 class="text-3xl text-gray-800 font-bold leading-relaxed mb-3">
+					<h3 class="text-3xl text-gray-800 font-bold  mb-3">
 						Web Development
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
