@@ -47,7 +47,7 @@ export default {
 				{
 					hid: 'og:image',
 					name: 'og:image',
-					content: '/apple-touch-icon.png'
+					content: '/hakooi-icon.png'
 				}
 			]
 		}
