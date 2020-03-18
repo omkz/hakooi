@@ -36,7 +36,8 @@
 			<p
 				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
 			>
-				We provide solutions for your digital products
+				<!-- We provide solutions for your digital products -->
+				We turn your great idea into the next big things
 			</p>
 			<!--Right Col-->
 		</div>
