@@ -72,6 +72,7 @@ export default {
 	 */
 	plugins: [
 		{ src: '@/plugins/vue-animejs' },
+		// { src: '@/plugins/particle', ssr: false },
 		{ src: '@/plugins/aos', ssr: false }
 	],
 	/*
