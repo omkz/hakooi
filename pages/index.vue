@@ -43,6 +43,11 @@ export default {
 					name: 'keywords',
 					content:
 						'Ruby on Rails development, Ruby on Rails Company, Ruby on Rails development company, Ruby on Rails Yogyakarta, Web Design, Web Design Yogyakarta, RoR consultant, Ruby programming, Web Design Indonesia'
+				},
+				{
+					hid: 'og:image',
+					name: 'og:image',
+					content: '/apple-touch-icon.png'
 				}
 			]
 		}

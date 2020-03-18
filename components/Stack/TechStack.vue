@@ -91,12 +91,12 @@ export default {
 		transition: all 1s ease;
 		filter: grayscale(0.9);
 	}
-	@apply bg-hakooi-900;
+	@apply bg-hakooi-600;
 	&:nth-child(-2n + 4) {
-		@apply bg-hakooi-600;
+		@apply bg-hakooi-400;
 	}
 	&:nth-last-of-type(-2n + 4) {
-		@apply bg-hakooi-600;
+		@apply bg-hakooi-400;
 	}
 	&:hover {
 		@apply bg-hakooi-300;
@@ -109,10 +109,10 @@ export default {
 @media screen and (max-width: 900px) {
 	.tech-logo {
 		&:nth-child(-2n + 4) {
-			@apply bg-hakooi-900;
+			@apply bg-hakooi-600;
 		}
 		&:nth-child(odd) {
-			@apply bg-hakooi-600;
+			@apply bg-hakooi-400;
 		}
 		svg {
 			height: 9rem;
