@@ -1,27 +1,26 @@
 <template>
 	<footer class="bg-hakooi">
-		<div class="mx-auto container pb-12">
+		<div class="mx-auto container p-6 md:p-12">
 			<div
-				class="w-full flex flex-col md:flex-row text-white"
+				class="w-full flex flex-col md:flex-row justify-evenly text-white"
 				data-aos="fade-up"
 			>
-				<div class="flex-1 mb-6 px-6">
-					<a class="no-underline hover:no-underline font-bold" href="#">
-						<picture>
-							<img
-								class="h-48 w-full object-contain"
-								alt="hakooi-logo"
-								src="~/assets/images/hakooi-logo.webp"
-							/>
-						</picture>
-					</a>
+				<div class="w-full md:w-1/3 mb-6 md:px-6">
+					<h3 class="text-3xl md:text-6xl text-white font-bold leading-loose ">
+						Catch up to us
+					</h3>
+					<p
+						class="uppercase font-paragraph text-white leading-loose text-xl font-bold mb-12"
+					>
+						We're always on the lookout for great collaborators who are
+						passionate about their products and customers.
+					</p>
 				</div>
-				<div class="flex-1 text-xl px-6">
+				<div class="w-full md:w-1/3 text-xl md:px-6">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
 						General Enquiry
 					</h3>
-					<p class="uppercase text-white md:mb-6">Links</p>
-					<ul class="list-reset mb-6">
+					<ul class="list-reset mb-16">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
@@ -44,13 +43,10 @@
 							>
 						</li>
 					</ul>
-				</div>
-				<div class="flex-1 text-xl px-6">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
 						Projects
 					</h3>
-					<p class="uppercase text-white md:mb-6">Our Showcase</p>
-					<ul class="list-reset mb-6">
+					<ul class="list-reset mb-16">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
@@ -73,13 +69,10 @@
 							>
 						</li>
 					</ul>
-				</div>
-				<div class="flex-1 text-xl px-6">
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-						Visit Us
+						Follow Us
 					</h3>
-					<p class="uppercase text-white md:mb-6">Social</p>
-					<ul class="list-reset mb-6">
+					<ul class="list-reset mb-16">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://www.facebook.com/Hakooi-Studio-111255730493012"

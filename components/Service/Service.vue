@@ -6,7 +6,7 @@
 					<WebDevIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+					<h3 class="text-3xl text-gray-800 font-bold leading-relaxed mb-3">
 						Web Development
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
@@ -20,7 +20,7 @@
 					<MobileIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+					<h3 class="text-3xl text-gray-800 font-bold leading-relaxed mb-3">
 						Mobile Application
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
@@ -35,7 +35,7 @@
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 						stroke-dasharray="1000"
 					/>
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+					<h3 class="text-3xl text-gray-800 font-bold leading-relaxed mb-3">
 						UI/UX Design
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">

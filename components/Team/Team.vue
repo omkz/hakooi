@@ -2,7 +2,7 @@
 	<section class="team bg-hakooi">
 		<div class="mx-auto container p-6 pt-16 md:pt-24">
 			<div class="w-full flex flex-col text-white" data-aos="fade-up">
-				<p class="uppercase text-white leading-tight text-2xl font-bold mb-6">
+				<p class="uppercase text-white leading-relaxed text-2xl font-bold mb-6">
 					We are a small team whom focus on creating better problem-solving
 					while strive to perfecting our craft in software industry especially
 					on custom handcrafted ruby on rails application.
@@ -23,7 +23,7 @@
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">
 							Engineering Manager
 						</h4>
-						<p class="my-6 font-paragraph">
+						<p class="my-6 font-paragraph leading-relaxed">
 							<!-- Moh is responsible for making sure each project results in a great client experience. -->
 							Moh has been working in the field of software engineering for more
 							than 10 years. His passion is to find a simple and elegant
@@ -46,7 +46,7 @@
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">
 							Design director
 						</h4>
-						<p class="my-6 font-paragraph">
+						<p class="my-6 font-paragraph leading-relaxed">
 							Al brings more than 5 years of experience in Web and Mobile
 							Design. Al is a creative and passionate designer who loves
 							crafting intuitive and elegant UI solutions. He ensures that the
