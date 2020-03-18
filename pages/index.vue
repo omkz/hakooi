@@ -31,17 +31,18 @@ export default {
 		return {
 			title: this.title,
 			meta: [
+				{ hid: 'og:title', name: 'og:title', content: this.title },
 				{
 					hid: 'description',
 					name: 'description',
 					content:
-						'We are delivering Ruby on Rails Web Application and Web Design. Specialize in building Ruby on Rails Web Application'
+						'Hakooi is a creative digital studio based in Yogyakarta, Indonesia. We specialize in Ruby on Rails Web Application'
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
 					content:
-						'Ruby on Rails development, Ruby on Rails Yogyakarta, RoR consultant, Ruby on Rails Company, Ruby on Rails development company, Ruby programming, Web Design, Web Design Yogyakarta, Web Design Indonesia'
+						'Ruby on Rails development, Ruby on Rails Company, Ruby on Rails development company, Ruby on Rails Yogyakarta, Web Design, Web Design Yogyakarta, RoR consultant, Ruby programming, Web Design Indonesia'
 				}
 			]
 		}

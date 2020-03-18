@@ -1,7 +1,7 @@
 {
 	"name": "Hakooi",
 	"version": "1.0.0",
-	"description": "Ruby on Rails and Web Design Studio | Hakooi",
+	"description": "Hakooi is a creative digital studio based in Yogyakarta, Indonesia. We specialize in Ruby on Rails Web Application",
 	"author": "Hakooi Studio",
 	"private": true,
 	"scripts": {

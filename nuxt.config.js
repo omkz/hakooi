@@ -16,11 +16,11 @@ export default {
 	 ** Headers of the page
 	 */
 	head: {
-		title: process.env.npm_package_name || '',
+		title: 'Ruby on Rails and Web Design Studio | Hakooi',
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ name: 'apple-mobile-web-app-title', content: 'Hakooi' },
+			{ name: 'apple-mobile-web-app-title', content: 'Ruby on Rails and Web Design Studio | Hakooi' },
 			{ name: 'application-name', content: 'Hakooi' },
 			{ name: 'msapplication-TileColor', content: '#ffc40d' },
 			{ name: 'theme-color', content: '#3341ff' },
@@ -28,12 +28,6 @@ export default {
 				hid: 'description',
 				name: 'description',
 				content: process.env.npm_package_description || ''
-			},
-			{
-				hid: 'keywords',
-				name: 'keywords',
-				content:
-					'Ruby web development, Ruby programming, agile Ruby development, Ruby on Rails web design, RoR consulting, Ruby on Rails service, Ruby on Rails Yogyakarta, RoR consultant, Ruby on Rails Jakarta, Ruby on Rails Indonesia, Ruby on Rails expert, ruby on rails company, ruby on rails development company'
 			}
 		],
 		link: [
