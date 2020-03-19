@@ -10,6 +10,7 @@
 			}"
 		/>
 		<vue-particles
+			id="particles-js"
 			color="#6670FF"
 			:particleOpacity="0.6"
 			:particlesNumber="60"
