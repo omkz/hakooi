@@ -16,25 +16,53 @@
 						alt="Ruby"
 					/>
 				</div>
-				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+				<div
+					class="tech-logo w-1/2 md:w-1/4 p-6"
+					data-aos="fade-up"
+					data-aos-delay="30"
+				>
 					<RailsLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+				<div
+					class="tech-logo w-1/2 md:w-1/4 p-6"
+					data-aos="fade-up"
+					data-aos-delay="60"
+				>
 					<VueLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+				<div
+					class="tech-logo w-1/2 md:w-1/4 p-6"
+					data-aos="fade-up"
+					data-aos-delay="90"
+				>
 					<NuxtLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+				<div
+					class="tech-logo w-1/2 md:w-1/4 p-6"
+					data-aos="fade-up"
+					data-aos-delay="120"
+				>
 					<TailwindLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+				<div
+					class="tech-logo w-1/2 md:w-1/4 p-6"
+					data-aos="fade-up"
+					data-aos-delay="150"
+				>
 					<GatsbyLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+				<div
+					class="tech-logo w-1/2 md:w-1/4 p-6"
+					data-aos="fade-up"
+					data-aos-delay="180"
+				>
 					<ReactLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
-				<div class="tech-logo w-1/2 md:w-1/4 p-6">
+				<div
+					class="tech-logo w-1/2 md:w-1/4 p-6"
+					data-aos="fade-up"
+					data-aos-delay="210"
+				>
 					<PostgreLogo class=" text-white w-1/2  h-auto m-auto md:p-6" />
 				</div>
 			</div>
@@ -105,10 +133,16 @@ export default {
 }
 @media screen and (max-width: 900px) {
 	.tech-logo {
-		&:nth-child(-2n + 4) {
+		&:nth-child(-2n + 4),
+		&:nth-last-of-type(-2n + 4) {
 			@apply bg-hakooi-600;
 		}
-		&:nth-child(odd) {
+		/*&:nth-child(odd) {
+			@apply bg-hakooi-400;
+		} */
+		&:nth-child(2),
+		&:nth-child(3n),
+		&:nth-child(7n) {
 			@apply bg-hakooi-400;
 		}
 		svg {
