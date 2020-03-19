@@ -49,7 +49,7 @@ export default {
 	z-index: 1;
 	position: fixed;
 }
-.hakooi-adornment {
+#particles-js {
 	position: fixed;
 	top: 0;
 	left: 0;
