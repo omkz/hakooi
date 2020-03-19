@@ -168,7 +168,7 @@ $transition--length: 0.8;
 	height: $size;
 	width: $size;
 	position: fixed;
-	z-index: 2;
+	z-index: 30;
 	right: 50px;
 	top: 30px;
 	cursor: pointer;
@@ -204,7 +204,7 @@ $transition--length: 0.8;
 	$font--size--calc: calc(1.5vw + 10px);
 	$transition--easing: cubic-bezier(0.77, 0, 0.175, 1);
 	position: fixed;
-	z-index: 1;
+	z-index: 20;
 	&:before,
 	&:after {
 		content: '';

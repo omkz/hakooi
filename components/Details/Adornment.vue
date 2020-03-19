@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="hakooi-adornment">
 		<HakooiLogo
 			class="hakooi-logo"
 			v-anime="{
@@ -10,13 +10,12 @@
 			}"
 		/>
 		<vue-particles
-			class="hakooi-particle"
 			color="#6670FF"
 			:particleOpacity="0.6"
 			:particlesNumber="60"
 			shapeType="edge"
 			:particleSize="6"
-			linesColor="#0011FF"
+			linesColor="#99A0FF"
 			:linesWidth="1"
 			:lineLinked="true"
 			:lineOpacity="0.3"
@@ -50,9 +49,12 @@ export default {
 	z-index: 1;
 	position: fixed;
 }
-.hakooi-particle {
+.hakooi-adornment {
 	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	z-index: 1;
 }
 @media screen and (max-width: 900px) {

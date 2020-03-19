@@ -1,7 +1,10 @@
 <template>
 	<section class="team bg-hakooi">
 		<div class="mx-auto container p-6 pt-16 md:pt-24">
-			<div class="w-full flex flex-col text-white" data-aos="fade-up">
+			<div
+				class="w-full flex flex-col text-white z-10 relative"
+				data-aos="fade-up"
+			>
 				<p class="uppercase text-white leading-relaxed text-2xl font-bold mb-6">
 					We are a small team whom focus on creating better problem-solving
 					while strive to perfecting our craft in software industry especially

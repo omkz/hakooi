@@ -1,6 +1,6 @@
 <template>
 	<section class="tech-stack">
-		<div class="mx-auto container p-6 py-24" data-aos="fade-up">
+		<div class="mx-auto container p-6 py-24 z-10 relative" data-aos="fade-up">
 			<h3 class="text-3xl text-white text-center font-bold leading-none mb-6 ">
 				Tech Stack
 			</h3>

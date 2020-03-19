@@ -2,7 +2,7 @@
 	<section class="services bg-hakooi">
 		<div class="mx-auto container  pt-16">
 			<div
-				class="flex md:flex-row flex-col text-white leading-relaxed "
+				class="flex md:flex-row flex-col text-white leading-relaxed z-10 relative "
 				data-aos="fade-up"
 			>
 				<div class="flex-1 px-6">
