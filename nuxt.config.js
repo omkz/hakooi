@@ -20,7 +20,10 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ name: 'apple-mobile-web-app-title', content: 'Ruby on Rails and Web Design Studio | Hakooi' },
+			{
+				name: 'apple-mobile-web-app-title',
+				content: 'Ruby on Rails and Web Design Studio | Hakooi'
+			},
 			{ name: 'application-name', content: 'Hakooi' },
 			{ name: 'msapplication-TileColor', content: '#ffc40d' },
 			{ name: 'theme-color', content: '#3341ff' },
@@ -66,7 +69,7 @@ export default {
 	 */
 	plugins: [
 		{ src: '@/plugins/vue-animejs' },
-		// { src: '@/plugins/particle', ssr: false },
+		{ src: '@/plugins/particle', ssr: false },
 		{ src: '@/plugins/aos', ssr: false }
 	],
 	/*

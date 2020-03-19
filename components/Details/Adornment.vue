@@ -9,6 +9,25 @@
 				loop: true
 			}"
 		/>
+		<vue-particles
+			class="hakooi-particle"
+			color="#6670FF"
+			:particleOpacity="0.6"
+			:particlesNumber="60"
+			shapeType="edge"
+			:particleSize="6"
+			linesColor="#0011FF"
+			:linesWidth="1"
+			:lineLinked="true"
+			:lineOpacity="0.3"
+			:linesDistance="60"
+			:moveSpeed="3"
+			:hoverEffect="true"
+			hoverMode="grab"
+			:clickEffect="false"
+			clickMode="bubble"
+		>
+		</vue-particles>
 	</div>
 </template>
 <script>
@@ -30,6 +49,11 @@ export default {
 	opacity: 0.3;
 	z-index: 1;
 	position: fixed;
+}
+.hakooi-particle {
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
 @media screen and (max-width: 900px) {
 	.hakooi-logo {
