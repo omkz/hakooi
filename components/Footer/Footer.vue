@@ -32,21 +32,21 @@
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-600"
 								>FAQ</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-600"
 								>Help</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline text-gray-800 hover:text-hakooi-600"
 								>Support</a
 							>
 						</li>
@@ -58,21 +58,21 @@
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-600"
 								>+62 857-2933-3493</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-600"
 								>+62 858-7860-9191</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="mailto:mail@hakooi.com"
-								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-600"
 								>mail@hakooi.com</a
 							>
 						</li>
@@ -84,21 +84,21 @@
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://www.facebook.com/Hakooi-Studio-111255730493012"
-								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-600"
 								>Facebook</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://twitter.com/HakooiStudio"
-								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-600"
 								>Linkedin</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://twitter.com/HakooiStudio"
-								class="transitions duration-300 ease-in underline hover:text-hakooi-800"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-600"
 								>Twitter</a
 							>
 						</li>

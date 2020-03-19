@@ -3,9 +3,10 @@
 		<HakooiLogo
 			class="hakooi-logo"
 			v-anime="{
-				opacity: [0.1, 0.3, 0.1],
+				opacity: [0, 0.3, 0],
 				duration: 6000,
-				easing: 'easeInOutElastic',
+				easing: 'linear',
+				direction: 'alternate',
 				loop: true
 			}"
 		/>
