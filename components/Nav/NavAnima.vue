@@ -364,9 +364,14 @@ body.nav-active {
 			}
 		}
 	}
-	@media only screen and (max-width: 900px) {
-		.menu-icon {
-			right: 2rem;
+}
+@media only screen and (max-width: 900px) {
+	.menu-icon {
+		right: 2rem;
+	}
+	.nav {
+		.menu {
+			top: -2.5rem;
 		}
 	}
 }

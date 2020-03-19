@@ -65,13 +65,10 @@ export default {
 		const targets = '.tech-logo svg path'
 		this.$anime({
 			targets,
-			strokeDasharray: 20,
-			strokeDashoffset: 20,
-			easing: 'steps',
-			duration: 3000,
-			delay: function(el, i) {
-				return i * 250
-			},
+			strokeDasharray: 0,
+			strokeDashoffset: 0,
+			easing: 'linear',
+			duration: 1500,
 			direction: 'alternate',
 			loop: true
 		})
@@ -82,9 +79,9 @@ export default {
 .tech-logo {
 	@apply flex;
 	transition: all 1s ease;
-	stroke: #cccfff;
-	stroke-dasharray: 10;
-	stroke-dashoffset: 10;
+	stroke: #ffffff;
+	stroke-dasharray: 9;
+	stroke-dashoffset: 0;
 	stroke-width: 3;
 	stroke-linecap: round;
 	svg {

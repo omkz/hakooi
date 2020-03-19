@@ -12,7 +12,11 @@
 					<!-- We are focused to deliver advanced web development for a flawless user experience -->
 				</p>
 				<div class="flex flex-wrap flex-row md:-mx-6">
-					<div class="team-card md:w-1/2 md:px-6">
+					<div
+						class="team-card md:w-1/2 md:px-6"
+						data-aos="fade-up"
+						data-aos-delay="150"
+					>
 						<picture>
 							<img
 								class="w-full object-contain"
@@ -35,7 +39,11 @@
 							innovative and fast-paced environment.
 						</p>
 					</div>
-					<div class="team-card md:w-1/2 md:px-6">
+					<div
+						class="team-card md:w-1/2 md:px-6"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					>
 						<picture>
 							<img
 								class="w-full object-contain"

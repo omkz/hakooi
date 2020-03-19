@@ -3,9 +3,8 @@
 		<div class="mx-auto container  pt-16">
 			<div
 				class="flex md:flex-row flex-col text-white leading-relaxed z-10 relative "
-				data-aos="fade-up"
 			>
-				<div class="flex-1 px-6">
+				<div class="flex-1 px-6" data-aos="fade-up">
 					<WebDevIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
@@ -19,7 +18,7 @@
 						the solution of complex problems.
 					</p>
 				</div>
-				<div class="flex-1 px-6">
+				<div class="flex-1 px-6" data-aos="fade-up" data-aos-delay="150">
 					<MobileIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 					/>
@@ -33,7 +32,7 @@
 						cross-platform, or a hybrid application.
 					</p>
 				</div>
-				<div class="flex-1 px-6">
+				<div class="flex-1 px-6" data-aos="fade-up" data-aos-delay="300">
 					<BrandingIcon
 						class="svg-asset fill-current text-white h-auto w-1/2 m-auto mb-10"
 						stroke-dasharray="1000"
@@ -68,13 +67,11 @@ export default {
 		const targets = '.svg-asset path'
 		this.$anime({
 			targets,
-			strokeDasharray: 20,
-			strokeDashoffset: 20,
-			easing: 'steps',
-			duration: 3000,
-			delay: function(el, i) {
-				return i * 250
-			},
+			strokeDasharray: 0,
+			strokeDashoffset: 0,
+			// easing: 'steps',
+			easing: 'linear',
+			duration: 1500,
 			direction: 'alternate',
 			loop: true
 		})
@@ -83,10 +80,10 @@ export default {
 </script>
 <style>
 .svg-asset {
-	stroke: #000ecc;
-	stroke-dasharray: 10;
-	stroke-dashoffset: 10;
-	fill: #ffffff;
+	stroke: #cccfff;
+	stroke-dasharray: 9;
+	stroke-dashoffset: 0;
+	fill: none;
 	stroke-width: 3;
 	stroke-linecap: round;
 }

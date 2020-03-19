@@ -5,7 +5,11 @@
 				class="w-full flex flex-col md:flex-row justify-evenly text-white z-10 relative"
 				data-aos="fade-up"
 			>
-				<div class="w-full md:w-1/3 mb-6 md:px-6">
+				<div
+					class="w-full md:w-1/3 mb-6 md:px-6"
+					data-aos="fade-up"
+					data-aos-delay="150"
+				>
 					<h3 class="text-3xl md:text-6xl text-white font-bold leading-loose">
 						Catch up to us
 					</h3>
@@ -16,7 +20,11 @@
 						passionate about their products and customers.
 					</p>
 				</div>
-				<div class="w-full md:w-1/3 text-xl md:px-6">
+				<div
+					class="w-full md:w-1/3 text-xl md:px-6"
+					data-aos="fade-up"
+					data-aos-delay="300"
+				>
 					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
 						General Enquiry
 					</h3>
@@ -100,3 +108,10 @@
 		</div>
 	</footer>
 </template>
+<style lang="scss" scoped>
+@media only screen and (max-width: 900px) {
+	.list-reset {
+		@apply flex flex-col;
+	}
+}
+</style>
