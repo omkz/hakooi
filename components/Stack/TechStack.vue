@@ -67,8 +67,8 @@ export default {
 			targets,
 			strokeDasharray: 0,
 			strokeDashoffset: 0,
-			easing: 'linear',
-			duration: 1500,
+			easing: 'steps(3)',
+			duration: 1200,
 			direction: 'alternate',
 			loop: true
 		})

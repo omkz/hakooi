@@ -70,8 +70,8 @@ export default {
 			strokeDasharray: 0,
 			strokeDashoffset: 0,
 			// easing: 'steps',
-			easing: 'linear',
-			duration: 1500,
+			easing: 'steps(9)',
+			duration: 1200,
 			direction: 'alternate',
 			loop: true
 		})
