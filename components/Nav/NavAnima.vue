@@ -1,6 +1,6 @@
 <template>
 	<nav>
-		<div class="menu-icon">
+		<div class="menu-icon right-6">
 			<span class="menu-icon__line menu-icon__line-left"></span>
 			<span class="menu-icon__line"></span>
 			<span class="menu-icon__line menu-icon__line-right"></span>
