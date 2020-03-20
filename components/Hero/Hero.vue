@@ -32,12 +32,12 @@
 				</h3>
 			</div>
 			<p
-				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-2/3 uppercase self-center text-center"
+				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-10/12 uppercase self-center text-center"
 			>
 				A creative studio based in Yogyakarta, Indonesia
 			</p>
 			<p
-				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-4 md:w-2/3 uppercase self-center text-center"
+				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-10/12 uppercase self-center text-center"
 			>
 				
 				We transform your great idea into the next big things
