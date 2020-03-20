@@ -30,6 +30,7 @@
 		"vue-scrollto": "^2.17.1"
 	},
 	"devDependencies": {
+		"@nuxtjs/google-analytics": "^2.2.3",
 		"@nuxtjs/tailwindcss": "^1.0.0",
 		"eslint-config-prettier": "^4.1.0",
 		"eslint-plugin-prettier": "^3.0.1",

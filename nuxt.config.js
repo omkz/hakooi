@@ -77,7 +77,13 @@ export default {
 	 */
 	buildModules: [
 		// Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-		'@nuxtjs/tailwindcss'
+		'@nuxtjs/tailwindcss',
+		[
+			'@nuxtjs/google-analytics',
+			{
+				id: 'UA-161391939-1'
+			}
+		]
 	],
 	tailwindcss: {
 		configPath: '~/config/tailwind.config.js',
