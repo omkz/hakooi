@@ -13,7 +13,7 @@
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
 						We specialize in the scalable web applications using Ruby on Rails,
-						Javascript, and related technologies. 
+						Javascript, and related technologies
 					</p>
 				</div>
 				<div class="flex-1 px-6" data-aos="fade-up" data-aos-delay="150">
@@ -25,7 +25,7 @@
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
 						We help you deliver stylish, high-performing, engaging 
-						mobile applications for Android and iOS platforms.
+						mobile applications for Android and iOS platforms
 					</p>
 				</div>
 				<div class="flex-1 px-6" data-aos="fade-up" data-aos-delay="300">
@@ -37,8 +37,8 @@
 						UI/UX Design
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
-						Not only creating beautiful design, but we also create highly usable
-						and intuitive designs.
+						Not only creating beautiful design, but we also create highly usable, 
+						and intuitive designs that represent you
 					</p>
 				</div>
 			</div>
