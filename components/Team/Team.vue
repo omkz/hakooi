@@ -8,7 +8,7 @@
 				<p class="uppercase text-white leading-relaxed text-2xl font-bold mb-6">
 					We are a small team whom focus on creating better problem-solving
 					while strive to perfecting our craft in software industry especially
-					on custom handcrafted ruby on rails application.
+					on custom handcrafted ruby on rails web application.
 					<!-- We are focused to deliver advanced web development for a flawless user experience -->
 				</p>
 				<div class="flex flex-wrap flex-row md:-mx-6">

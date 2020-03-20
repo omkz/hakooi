@@ -7,7 +7,7 @@
 			<p
 				class="uppercase font-paragraph text-white md:text-center leading-relaxed text-xl font-bold mb-12"
 			>
-				List of our tools of the trade to realize your digital products
+				List of our tools to realize your digital products
 			</p>
 			<div class="flex flex-wrap flex-row text-white mt-12">
 				<div class="tech-logo w-1/2 md:w-1/4 p-6">

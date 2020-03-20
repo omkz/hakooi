@@ -26,10 +26,10 @@
 						Mobile Application
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
-						We help our clients deliver world-class, beautiful, engaging iOS and
+						We help our clients deliver stylish, engaging iOS and
 						Android applications. Our team knows these platforms inside out.
-						Depending on your requirements, it can be a native iOS/Android, a
-						cross-platform, or a hybrid application.
+						Depending on your requirements, it can be a native iOS/Android or
+					    cross-platform application.
 					</p>
 				</div>
 				<div class="flex-1 px-6" data-aos="fade-up" data-aos-delay="300">
@@ -41,10 +41,9 @@
 						UI/UX Design
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
-						Not only creating beautiful design, but we also create highly usable
-						and intuitive designs. Our attention to detail and UX design
-						expertise is what makes us one of the top UX design firms in
-						Indonesia. Together, we’ll improve the usability and usefulness of
+						Not only creating beautiful design, but we also create
+						highly usable and intuitive designs. Together, 
+						we’ll improve the usability and usefulness of
 						your applications for optimal user experience.
 					</p>
 				</div>
