@@ -12,10 +12,10 @@
 						Web Development
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
-						We specialize in the scalable web applications with complex and rich
+						We specialize in the scalable web applications with complex
 						functionality using Ruby on Rails, Javascript, and related
-						technologies. We can handle heavy loads and are happy to undertake
-						the solution of complex problems.
+						technologies. <br /><br />We can handle heavy loads and are happy to
+						undertake the solution of complex problems.
 					</p>
 				</div>
 				<div class="flex-1 px-6" data-aos="fade-up" data-aos-delay="150">
@@ -26,10 +26,10 @@
 						Mobile Application
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
-						We help our clients deliver stylish, engaging iOS and
-						Android applications. Our team knows these platforms inside out.
+						We help our clients deliver stylish, engaging iOS and Android
+						applications. Our team knows these platforms inside out.<br /><br />
 						Depending on your requirements, it can be a native iOS/Android or
-					    cross-platform application.
+						cross-platform application.
 					</p>
 				</div>
 				<div class="flex-1 px-6" data-aos="fade-up" data-aos-delay="300">
@@ -41,10 +41,10 @@
 						UI/UX Design
 					</h3>
 					<p class="text-gray-600 mb-8 font-paragraph">
-						Not only creating beautiful design, but we also create
-						highly usable and intuitive designs. Together, 
-						we’ll improve the usability and usefulness of
-						your applications for optimal user experience.
+						Not only creating beautiful design, but we also create highly usable
+						and intuitive designs. <br /><br />Together, we’ll improve the
+						usability and usefulness of your applications for optimal user
+						experience.
 					</p>
 				</div>
 			</div>

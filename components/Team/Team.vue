@@ -34,9 +34,9 @@
 							<!-- Moh is responsible for making sure each project results in a great client experience. -->
 							Moh has been working in the field of software engineering for more
 							than 10 years. His passion is to find a simple and elegant
-							solution to the most complex ideas and problems. He is responsible
-							for driving technical projects and provide leadership in an
-							innovative and fast-paced environment.
+							solution to the most complex ideas and problems. <br /><br />He is
+							responsible for driving technical projects and provide leadership
+							in an innovative and fast-paced environment.
 						</p>
 					</div>
 					<div
@@ -60,8 +60,9 @@
 						<p class="my-6 font-paragraph leading-relaxed">
 							Al brings more than 5 years of experience in Web and Mobile
 							Design. Al is a creative and passionate designer who loves
-							crafting intuitive and elegant UI solutions. He ensures that the
-							design elements fits in with the client's requirements.
+							crafting intuitive and elegant UI solutions. <br /><br />He
+							ensures that the design elements fits in with the client's
+							requirements.
 						</p>
 					</div>
 				</div>
