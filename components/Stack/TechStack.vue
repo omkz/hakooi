@@ -1,13 +1,13 @@
 <template>
 	<section class="tech-stack">
 		<div class="mx-auto container p-6 py-24 z-10 relative" data-aos="fade-up">
-			<h3 class="text-3xl text-white text-center font-bold leading-none mb-6 ">
-				Tech Stack
-			</h3>
-			<p
-				class="uppercase font-paragraph text-white md:text-center leading-relaxed text-xl font-bold mb-12"
-			>
+			<!-- <h3 class="text-3xl text-white text-center font-bold leading-none mb-6 ">
 				Our swiss knife to realize your digital products
+			</h3> -->
+			<p
+				class="uppercase text-white md:text-center leading-relaxed text-3xl font-bold mb-12"
+			>
+				Our swiss knife to manifest your digital products
 			</p>
 			<div class="flex flex-wrap flex-row text-white mt-12">
 				<div class="tech-logo w-1/2 md:w-1/4 p-6">
