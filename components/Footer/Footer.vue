@@ -102,6 +102,13 @@
 								>Twitter</a
 							>
 						</li>
+						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
+							<a
+								href="https://www.instagram.com/hakooistudio/"
+								class="transitions duration-300 ease-in underline hover:text-hakooi-600"
+								>Instagram</a
+							>
+						</li>
 					</ul>
 				</div>
 			</div>
