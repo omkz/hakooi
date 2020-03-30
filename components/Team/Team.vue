@@ -16,7 +16,7 @@
 				</p>
 				<div class="flex flex-wrap flex-row justify-around md:-mx-6">
 					<div
-						class="team-card md:w-1/3 md:px-6"
+						class="team-card md:w-1/2 md:px-6"
 						data-aos="fade-up"
 						data-aos-delay="150"
 					>
@@ -40,7 +40,7 @@
 						</p>
 					</div>
 					<div
-						class="team-card md:w-1/3 md:px-6"
+						class="team-card md:w-1/2 md:px-6"
 						data-aos="fade-up"
 						data-aos-delay="300"
 					>
