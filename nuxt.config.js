@@ -108,7 +108,8 @@ export default {
 		['vue-scrollto/nuxt', { duration: 1500, easing: 'ease-in-out' }],
 		'nuxt-webfontloader',
 		'nuxt-purgecss',
-		'nuxt-svg-loader',
+    'nuxt-svg-loader',
+    '@nuxtjs/sitemap',
 		[
 			'nuxt-gmaps',
 			{
@@ -121,7 +122,11 @@ export default {
 	 ** Axios module configuration
 	 ** See https://axios.nuxtjs.org/options
 	 */
-	axios: {},
+  axios: {},
+  sitemap: {
+    hostname: 'https://hakooi.com',
+      gzip: true
+  },
 	/* Google fonts */
 	webfontloader: {
 		custom: {
