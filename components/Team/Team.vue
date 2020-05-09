@@ -26,10 +26,10 @@
 							/>
 						</picture>
 						<h3 class="text-3xl text-white font-bold leading-none mt-12">
-							mohamed
+							mohamad
 						</h3>
 						<h4 class="text-3xl text-white font-bold leading-none mt-6">
-							Engineering Director
+							Engineering Manager
 						</h4>
 						<p class="my-6 font-paragraph leading-relaxed">
 
