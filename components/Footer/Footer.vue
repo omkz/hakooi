@@ -64,13 +64,6 @@
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
-								href="#"
-								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
-								>+62 858-7860-9191</a
-							>
-						</li>
-						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
-							<a
 								href="mailto:mail@hakooi.com"
 								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
 								>mail@hakooi.com</a
