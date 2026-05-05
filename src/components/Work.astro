@@ -1,0 +1,61 @@
+---
+const projects = [
+    {
+        title: "LUMINA AI",
+        category: "Product Engineering",
+        desc: "Autonomous financial forecasting system for next-gen fintech startups.",
+        color: "from-blue-600/20 to-indigo-600/20"
+    },
+    {
+        title: "VORTEX",
+        category: "Ecosystem Architecture",
+        desc: "Unified supply chain automation platform serving 2M+ daily requests.",
+        color: "from-purple-600/20 to-pink-600/20"
+    },
+    {
+        title: "AURA",
+        category: "Neural Experience",
+        desc: "Adaptive wellness platform utilizing real-time biometric resonance.",
+        color: "from-green-600/20 to-teal-600/20"
+    }
+];
+---
+
+<section id="work" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-20 flex flex-col md:flex-row justify-between items-end gap-8">
+            <div>
+                <h2 class="font-heading text-5xl md:text-7xl text-white mb-4 leading-none">SELECTED<br/>WORK.</h2>
+                <div class="h-1 w-20 bg-[#3341FF]"></div>
+            </div>
+            <p class="text-gray-400 font-paragraph max-w-sm mb-2">
+                A glimpse into the digital products we've engineered to push the boundaries of modern tech.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map(project => (
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-3xl bg-white/[0.03] border border-white/10">
+                    <!-- Background Placeholder / Gradient -->
+                    <div class={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-40 group-hover:scale-110 transition-transform duration-700`}></div>
+                    
+                    <!-- Content Overlay -->
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent">
+                        <span class="text-[#3341FF] font-bold text-[10px] uppercase tracking-[0.3em] mb-4">{project.category}</span>
+                        <h3 class="font-heading text-4xl text-white mb-2 tracking-wider">{project.title}</h3>
+                        <p class="text-gray-400 text-sm font-paragraph leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            {project.desc}
+                        </p>
+                        
+                        <div class="mt-8 pt-8 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <a href="#" class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                                View Case Study
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
