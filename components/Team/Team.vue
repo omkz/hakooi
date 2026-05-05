@@ -18,8 +18,8 @@
 					>
 						<picture>
 							<img
-								class="w-full object-contain"
-								alt="hakooi-logo"
+								class="w-full max-w-sm h-auto object-cover rounded-lg"
+								alt="mohamad"
 								src="~/assets/images/komeng.jpeg"
 							/>
 						</picture>
@@ -42,8 +42,8 @@
 					>
 						<picture>
 							<img
-								class="w-full object-contain"
-								alt="hakooi-logo"
+								class="w-full max-w-sm h-auto object-cover rounded-lg"
+								alt="alfian"
 								src="~/assets/images/alfianjau.jpeg"
 							/>
 						</picture>
@@ -67,5 +67,10 @@
 <style lang="scss" scoped>
 img {
 	filter: grayscale(1);
+	transition: filter 0.3s ease;
+}
+
+.team-card:hover img {
+	filter: grayscale(0);
 }
 </style>
