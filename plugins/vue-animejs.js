@@ -1,4 +1,10 @@
 import Vue from 'vue'
-import VueAnime from 'vue-animejs'
+import anime from 'animejs'
 
-Vue.use(VueAnime)
+// Make animejs available globally via Vue.prototype
+Vue.prototype.$anime = anime
+
+// Also expose as window.anime for compatibility
+if (typeof window !== 'undefined') {
+	window.anime = anime
+}

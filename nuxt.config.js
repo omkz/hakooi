@@ -11,7 +11,7 @@
 
 export default {
 	// ...routerBase,
-	mode: 'universal',
+	target: 'static',
 	/*
 	 ** Headers of the page
 	 */
@@ -73,8 +73,8 @@ export default {
 		{ src: '@/plugins/aos', ssr: false }
 	],
 	/*
-	 ** Nuxt.js dev-modules
-	 */
+ ** Nuxt.js dev-modules
+ */
 	buildModules: [
 		// Doc: https://github.com/nuxt-community/nuxt-tailwindcss
 		'@nuxtjs/tailwindcss',
@@ -88,7 +88,6 @@ export default {
 	tailwindcss: {
 		configPath: '~/config/tailwind.config.js',
 		cssPath: '~/assets/css/tailwind.css',
-		purgeCSSInDev: false,
 		exposeConfig: false
 	},
 	//Static folder config
@@ -107,9 +106,8 @@ export default {
 		'@nuxtjs/dotenv',
 		['vue-scrollto/nuxt', { duration: 1500, easing: 'ease-in-out' }],
 		'nuxt-webfontloader',
-		'nuxt-purgecss',
-    'nuxt-svg-loader',
-    '@nuxtjs/sitemap',
+		'nuxt-svg-loader',
+		'@nuxtjs/sitemap',
 		[
 			'nuxt-gmaps',
 			{
@@ -137,25 +135,6 @@ export default {
 				'https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat:600&display=swap'
 			]
 		}
-	},
-	/* Purge CSS */
-	purgeCSS: {
-		// your settings here
-		extractors: [
-			{
-				extractor(content) {
-					return content.match(/[A-Za-z0-9-_:\\/]+/g) || []
-				},
-				extensions: ['html', 'vue', 'js']
-			}
-		],
-		whitelist: [
-			'aos-init',
-			'aos-animate',
-			'data-aos-delay',
-			'data-aos-duration',
-			'fade-up'
-		]
 	},
 	/*
 	 ** Build configuration

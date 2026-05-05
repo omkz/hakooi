@@ -4,13 +4,14 @@
  ** Docs: https://tailwindcss.com/docs/configuration
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
-/*
- ** TailwindCSS Configuration File
- **
- ** Docs: https://tailwindcss.com/docs/configuration
- ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
- */
 module.exports = {
+	content: [
+		'./components/**/*.vue',
+		'./layouts/**/*.vue',
+		'./pages/**/*.vue',
+		'./plugins/**/*.js',
+		'./nuxt.config.js'
+	],
 	theme: {
 		colors: {
 			hakooi: {
@@ -33,7 +34,7 @@ module.exports = {
 			white: '#ffffff',
 			level2: '#ffffff'
 		},
-		fontSizes: {
+		fontSize: {
 			sm: '0.8125rem',
 			base: '1rem',
 			lg: '1.25rem',
@@ -49,12 +50,10 @@ module.exports = {
 			'10xl': '4.5rem',
 			'11xl': '5.625rem'
 		},
-		fonts: { bebas: 'Bebas Neue', montserrat: 'Montserrat' },
 		fontFamily: {
-			heading: 'bebas',
-			paragraph: 'montserrat'
+			heading: ['Bebas Neue', 'sans-serif'],
+			paragraph: ['Montserrat', 'sans-serif']
 		}
 	},
-	variants: {},
 	plugins: []
 }
