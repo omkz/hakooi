@@ -11,7 +11,7 @@ import '../styles/global.css';
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Hakooi is a creative digital studio based in Yogyakarta, Indonesia. We specialize in Ruby on Rails Web Application." />
+		<meta name="description" content="Hakooi is a creative digital studio based in Yogyakarta, Indonesia. We specialize in Digital Product Engineering." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -33,8 +33,6 @@ import '../styles/global.css';
 
 		<!-- Scripts -->
 		<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script is:inline src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
-		
 		<script is:inline>
 			// Initialize AOS
 			AOS.init({
@@ -42,14 +40,6 @@ import '../styles/global.css';
 				once: true,
 				easing: 'ease-out-expo'
 			});
-
-			// Initialize Lenis Smooth Scroll
-			const lenis = new Lenis();
-			function raf(time) {
-				lenis.raf(time);
-				requestAnimationFrame(raf);
-			}
-			requestAnimationFrame(raf);
 		</script>
 	</body>
 </html>
@@ -57,39 +47,9 @@ import '../styles/global.css';
 <style is:global>
 	:root {
 		--hakooi-blue: #3341FF;
-	}
-
-	.noise-overlay {
-		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-	}
-
-	html.lenis {
-		height: auto;
-	}
-
-	.lenis.lenis-smooth {
-		scroll-behavior: auto !important;
-	}
-
-	.lenis.lenis-smooth [data-lenis-prevent] {
-		overscroll-behavior: contain;
-	}
-
-	.lenis.lenis-stopped {
-		overflow: hidden;
-	}
-
-	.lenis.lenis-scrolling iframe {
-		pointer-events: none;
-	}
-</style>
-
-<style is:global>
-	:root {
-		--hakooi-blue: #3341FF;
 		--deep-black: #0a0a0a;
 	}
-	
+
 	html {
 		scroll-behavior: smooth;
 	}
@@ -97,6 +57,11 @@ import '../styles/global.css';
 	body {
 		margin: 0;
 		padding: 0;
+		background-color: var(--deep-black);
+	}
+
+	.noise-overlay {
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 	}
 
 	.font-heading {
