@@ -1,8 +1,5 @@
 <template>
-	<section class="home bg-gradient-to-br from-hakooi-700 via-hakooi-600 to-accent-600 relative overflow-hidden">
-		<!-- Animated background gradient -->
-		<div class="absolute inset-0 animate-gradient-x opacity-20"></div>
-		
+	<section class="home bg-hakooi">
 		<div
 			class="mx-auto container flex flex-wrap flex-col py-24 md:py-32 mb-24 z-10 relative"
 			data-aos="fade-up"
@@ -10,18 +7,6 @@
 			<!--Left Col-->
 			<div class="flex justify-center md:justify-start">
 				<div class="hakooi-image px-6 pb-2/3 h-full sm:w-full md:w-auto -ml-6">
-					<!-- <img
-							alt="hakooi-logo"
-							class="h-48 w-full object-contain"
-							src="~/static/images/hakooi-logo.png"
-					/>-->
-					<!-- <picture>
-						<img
-							class="h-auto w-1/2 sm:w-3/4 m-auto object-contain"
-							alt="hakooi-logo"
-							src="~/assets/images/hakooi-logo.webp"
-						/>
-					</picture> -->
 					<HakooiLogo class="w-32 h-32 md:w-48 md:h-48 animate-float" />
 				</div>
 			</div>
@@ -31,9 +16,8 @@
 				<h3 class="font-bold px-6 text-4xl md:text-5xl text-white drop-shadow-lg">
 					We are Hakooi
 				</h3>
-				<!-- <h3 class="font-bold px-6 text-white">Premium Web design studio</h3> -->
 				<h3 class="font-bold px-6 pb-4 text-white text-3xl md:text-5xl">
-					Ruby on Rails and Web Design <span class="text-gradient">Crafter</span>
+					Ruby on Rails and Web Design Crafter
 				</h3>
 			</div>
 			<p

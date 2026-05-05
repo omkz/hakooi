@@ -1,5 +1,5 @@
 <template>
-	<footer class="bg-gradient-to-br from-hakooi-900 via-hakooi-800 to-accent-900">
+	<footer class="bg-hakooi">
 		<div class="mx-auto container p-6 md:p-12">
 			<div
 				class="w-full flex flex-col md:flex-row justify-evenly text-white z-10 relative"

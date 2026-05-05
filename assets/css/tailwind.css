@@ -2,12 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer utilities {
-	.text-gradient {
-		@apply bg-clip-text text-transparent bg-gradient-to-r from-hakooi-500 to-accent-500;
-	}
-}
-
 @keyframes float {
 	0%, 100% {
 		transform: translateY(0);
@@ -19,31 +13,4 @@
 
 .animate-float {
 	animation: float 6s ease-in-out infinite;
-}
-
-@keyframes gradient-x {
-	0%, 100% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-}
-
-.animate-gradient-x {
-	background-size: 200% 200%;
-	animation: gradient-x 15s ease infinite;
-}
-
-@keyframes pulse-glow {
-	0%, 100% {
-		box-shadow: 0 0 15px rgba(79, 70, 229, 0.3);
-	}
-	50% {
-		box-shadow: 0 0 30px rgba(79, 70, 229, 0.6);
-	}
-}
-
-.animate-pulse-glow {
-	animation: pulse-glow 3s ease-in-out infinite;
 }
