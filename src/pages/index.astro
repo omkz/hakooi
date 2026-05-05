@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Team from '../components/Team.astro';
+import TechStack from '../components/TechStack.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Hakooi | Creative Digital Studio">
+	<main class="relative overflow-hidden">
+		<!-- Decorative Background Elements -->
+		<div class="fixed inset-0 z-0 pointer-events-none">
+			<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px]"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600/10 rounded-full blur-[120px]"></div>
+		</div>
+
+		<div class="relative z-10">
+			<Hero />
+			<Services />
+			<Team />
+			<TechStack />
+			<Footer />
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		min-height: 100vh;
+	}
+</style>

@@ -1,0 +1,67 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Hakooi is a creative digital studio based in Yogyakarta, Indonesia. We specialize in Ruby on Rails Web Application." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#0a0a0a] text-white font-paragraph antialiased selection:bg-[#3341FF] selection:text-white">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--hakooi-blue: #3341FF;
+		--deep-black: #0a0a0a;
+	}
+	
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.font-heading {
+		font-family: 'Bebas Neue', sans-serif;
+	}
+
+	.font-paragraph {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	/* Custom Scrollbar */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		background: var(--deep-black);
+	}
+	::-webkit-scrollbar-thumb {
+		background: #222;
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--hakooi-blue);
+	}
+</style>

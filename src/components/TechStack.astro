@@ -1,0 +1,27 @@
+---
+const techs = [
+    { name: "Ruby", icon: "/svg/ruby.svg" },
+    { name: "Rails", icon: "/svg/ruby-on-rails.svg" },
+    { name: "Vue", icon: "/svg/vue.svg" },
+    { name: "Nuxt", icon: "/svg/nuxt.svg" },
+    { name: "Tailwind", icon: "/svg/tailwindcss-icon.svg" },
+    { name: "React", icon: "/svg/react.svg" },
+    { name: "PostgreSQL", icon: "/svg/postgresql.svg" }
+];
+---
+
+<section id="tech" class="py-24 px-6 bg-white/[0.01]">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <p class="font-heading text-4xl text-white mb-4 italic">OUR INSTRUMENTS.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:opacity-100 transition-all duration-700">
+            {techs.map(tech => (
+                <div class="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300">
+                    <img src={tech.icon} alt={tech.name} class="max-h-full max-w-full object-contain" title={tech.name} />
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

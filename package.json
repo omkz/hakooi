@@ -1,48 +1,19 @@
 {
-	"name": "hakooi",
-	"version": "1.0.0",
-	"description": "Hakooi is a creative digital studio based in Yogyakarta, Indonesia. We specialize in Ruby on Rails Web Application",
-	"author": "Hakooi Studio",
-	"private": true,
-	"scripts": {
-		"dev": "nuxt",
-		"build": "nuxt generate",
-		"start": "nuxt start",
-		"generate": "nuxt build",
-		"build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
-		"generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
-	},
-	"dependencies": {
-		"@nuxtjs/axios": "^5.13.6",
-		"@nuxtjs/dotenv": "^1.4.1",
-		"@nuxtjs/pwa": "^3.3.5",
-		"@nuxtjs/sitemap": "^2.4.0",
-		"animejs": "^3.2.2",
-		"aos": "^2.3.4",
-		"charming": "^3.0.2",
-		"core-js": "^3.38.1",
-		"nuxt": "^2.18.1",
-		"nuxt-gmaps": "^1.2.2",
-		"nuxt-svg-loader": "^1.2.0",
-		"nuxt-webfontloader": "^1.1.0",
-		"vue-scrollto": "^2.20.0"
-	},
-	"devDependencies": {
-		"@nuxtjs/eslint-config": "^12.0.0",
-		"@nuxtjs/eslint-module": "^4.1.0",
-		"@nuxtjs/google-analytics": "^2.4.0",
-		"@nuxtjs/tailwindcss": "^4.2.1",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-prettier": "^5.2.1",
-		"eslint-plugin-vue": "^9.27.0",
-		"prettier": "^3.3.3",
-		"sass": "^1.77.8",
-		"sass-loader": "^10.4.1",
-		"vue-particles": "^1.0.9",
-		"webpack": "^4.47.0"
-	},
-	"overrides": {
-		"webpack": "^4.47.0"
-	}
+  "name": "stale-satellite",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.2.2",
+    "tailwindcss": "^4.2.4"
+  }
 }

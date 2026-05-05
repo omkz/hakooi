@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import mohamadImg from '../assets/images/komeng.jpeg';
+import alfianImg from '../assets/images/alfianjau.jpeg';
+
+const team = [
+    {
+        name: "MOHAMAD",
+        role: "AI/Engineering witcher",
+        image: mohamadImg,
+        bio: "10+ years of expertise. Specializing in elegant solutions for complex engineering challenges."
+    },
+    {
+        name: "ALFIAN",
+        role: "Design wizard",
+        image: alfianImg,
+        bio: "10+ years in high-end design. Crafting intuitive UI solutions that bridge tech and humanity."
+    }
+];
+---
+
+<section id="team" class="py-24 px-6 border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+        <div class="mb-20 text-center">
+            <h2 class="font-heading text-5xl md:text-6xl text-white">THE PEOPLE.</h2>
+        </div>
+
+        <div class="flex flex-col gap-16 md:gap-24">
+            {team.map((member, index) => (
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 group">
+                    <div class="shrink-0 relative">
+                        <div class="absolute -inset-1 bg-white/10 rounded-full blur opacity-0 group-hover:opacity-40 transition duration-500"></div>
+                        <Image 
+                            src={member.image} 
+                            alt={member.name}
+                            class="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover grayscale shadow-2xl border border-white/10"
+                        />
+                    </div>
+                    <div class="text-center md:text-left pt-2">
+                        <h3 class="font-heading text-3xl md:text-4xl text-white tracking-wider mb-1">{member.name}</h3>
+                        <h4 class="text-[#3341FF] font-bold text-xs uppercase tracking-[0.2em] mb-4">{member.role}</h4>
+                        <p class="text-gray-400 font-paragraph leading-relaxed max-w-lg">
+                            {member.bio}
+                        </p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
