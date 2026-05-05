@@ -98,7 +98,7 @@ export default {
 */
 
 .gradient {
-	background: #3341ff;
+	background: linear-gradient(135deg, #6670FF 0%, #4F46E5 100%);
 }
 
 .title {

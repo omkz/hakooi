@@ -1,11 +1,14 @@
 <template>
-	<section class="home bg-hakooi">
+	<section class="home bg-gradient-to-br from-hakooi-700 via-hakooi-600 to-accent-600 relative overflow-hidden">
+		<!-- Animated background gradient -->
+		<div class="absolute inset-0 animate-gradient-x opacity-20"></div>
+		
 		<div
-			class="mx-auto container flex flex-wrap flex-col py-6 mb-24 z-10 relative"
+			class="mx-auto container flex flex-wrap flex-col py-24 md:py-32 mb-24 z-10 relative"
 			data-aos="fade-up"
 		>
 			<!--Left Col-->
-			<div class="flex justify-start">
+			<div class="flex justify-center md:justify-start">
 				<div class="hakooi-image px-6 pb-2/3 h-full sm:w-full md:w-auto -ml-6">
 					<!-- <img
 							alt="hakooi-logo"
@@ -19,29 +22,29 @@
 							src="~/assets/images/hakooi-logo.webp"
 						/>
 					</picture> -->
-					<HakooiLogo class="w-24 h-24" />
+					<HakooiLogo class="w-32 h-32 md:w-48 md:h-48 animate-float" />
 				</div>
 			</div>
 			<div
-				class="w-full leading-relaxed text-4xl md:text-5xl md:pt-24 justify-center text-center"
+				class="w-full leading-relaxed text-4xl md:text-6xl md:pt-24 justify-center text-center"
 			>
-				<h3 class="font-bold px-6 text-4xl text-white">We are Hakooi</h3>
+				<h3 class="font-bold px-6 text-4xl md:text-5xl text-white drop-shadow-lg">
+					We are Hakooi
+				</h3>
 				<!-- <h3 class="font-bold px-6 text-white">Premium Web design studio</h3> -->
-				<h3 class="font-bold px-6 pb-8 text-white">
-					Ruby on Rails and Web Design Crafter
+				<h3 class="font-bold px-6 pb-4 text-white text-3xl md:text-5xl">
+					Ruby on Rails and Web Design <span class="text-gradient">Crafter</span>
 				</h3>
 			</div>
 			<p
-				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-10/12 uppercase self-center text-center"
+				class="font-paragraph text-white mb-4 text-xl md:text-2xl px-6 md:w-10/12 uppercase self-center text-center"
 			>
 				A creative studio based in Yogyakarta, Indonesia
 			</p>
 			<p
-				class="font-paragraph text-white mb-3 text-xl md:text-2xl px-6 md:w-10/12 uppercase self-center text-center"
+				class="font-paragraph text-white mb-8 text-xl md:text-2xl px-6 md:w-10/12 uppercase self-center text-center"
 			>
-				
 				We transform your great idea into the next big things
-				
 			</p>
 			<!--Right Col-->
 		</div>

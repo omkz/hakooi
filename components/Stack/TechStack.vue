@@ -1,5 +1,5 @@
 <template>
-	<section class="tech-stack">
+	<section class="tech-stack bg-gradient-to-br from-hakooi-900 via-hakooi-800 to-accent-900">
 		<div class="mx-auto container p-6 py-24 z-10 relative" data-aos="fade-up">
 			<!-- <h3 class="text-3xl text-white text-center font-bold leading-none mb-6 ">
 				Our swiss knife to realize your digital products

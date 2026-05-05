@@ -1,5 +1,5 @@
 <template>
-	<footer class="bg-hakooi">
+	<footer class="bg-gradient-to-br from-hakooi-900 via-hakooi-800 to-accent-900">
 		<div class="mx-auto container p-6 md:p-12">
 			<div
 				class="w-full flex flex-col md:flex-row justify-evenly text-white z-10 relative"
@@ -25,80 +25,80 @@
 					data-aos="fade-up"
 					data-aos-delay="300"
 				>
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-8">
+					<h3 class="text-3xl text-white font-bold leading-none mb-8">
 						General Enquiry
 					</h3>
 					<ul class="list-reset mb-16">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in hover:underline text-gray-800 hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline text-white hover:text-accent-400"
 								>FAQ</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in hover:underline text-gray-800 hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline text-white hover:text-accent-400"
 								>Help</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in hover:underline text-gray-800 hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline text-white hover:text-accent-400"
 								>Support</a
 							>
 						</li>
 					</ul>
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-8">
+					<h3 class="text-3xl text-white font-bold leading-none mb-8">
 						Get In Touch
 					</h3>
 					<ul class="list-reset mb-16">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="#"
-								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline hover:text-accent-400"
 								>+62 857-2933-3493</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="mailto:mail@hakooi.com"
-								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline hover:text-accent-400"
 								>mail@hakooi.com</a
 							>
 						</li>
 					</ul>
-					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-8">
+					<h3 class="text-3xl text-white font-bold leading-none mb-8">
 						Follow Us
 					</h3>
 					<ul class="list-reset mb-16">
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://www.facebook.com/Hakooi-Studio"
-								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline hover:text-accent-400"
 								>Facebook</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://www.linkedin.com/company/hakooi"
-								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline hover:text-accent-400"
 								>Linkedin</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://twitter.com/HakooiStudio"
-								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline hover:text-accent-400"
 								>Twitter</a
 							>
 						</li>
 						<li class="mt-2 inline-block mr-2 md:block md:mr-0">
 							<a
 								href="https://www.instagram.com/hakooistudio/"
-								class="transitions duration-300 ease-in hover:underline hover:text-hakooi-600"
+								class="transitions duration-300 ease-in hover:underline hover:text-accent-400"
 								>Instagram</a
 							>
 						</li>

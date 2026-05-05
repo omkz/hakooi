@@ -153,12 +153,12 @@ export default {
 }
 </script>
 <style lang="scss">
-$background--color: #3341ff;
+$background--color: #4F46E5;
 /* $hakooi--subtle: #99a0ff; */
-$hakooi--darken: #000ecc;
-$icon--color: #3341ff;
+$hakooi--darken: #3730A3;
+$icon--color: #4F46E5;
 $font--color: #ffffff;
-$font--color--active: #6670ff;
+$font--color--active: #6366F1;
 $font--primary: 'Montserrat', sans-serif;
 $transition--length: 0.8;
 
