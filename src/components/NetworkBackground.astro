@@ -1,15 +1,15 @@
 ---
 ---
-<canvas id="network-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40"></canvas>
+<canvas id="network-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
 
 <script>
     const canvas = document.getElementById('network-canvas') as HTMLCanvasElement;
     const ctx = canvas.getContext('2d');
 
     let particles: Particle[] = [];
-    const particleCount = 100;
-    const connectionDistance = 150;
-    const mouse = { x: 0, y: 0, radius: 200 };
+    const particleCount = 120; // Increased count
+    const connectionDistance = 170; // Increased distance
+    const mouse = { x: 0, y: 0, radius: 250 }; // Increased interaction radius
 
     class Particle {
         x: number;
@@ -21,9 +21,9 @@
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.size = Math.random() * 2 + 1;
+            this.vx = (Math.random() - 0.5) * 0.6;
+            this.vy = (Math.random() - 0.5) * 0.6;
+            this.size = Math.random() * 2.5 + 1; // Slightly larger particles
         }
 
         update() {
@@ -39,8 +39,8 @@
             const distance = Math.sqrt(dx * dx + dy * dy);
             if (distance < mouse.radius) {
                 const force = (mouse.radius - distance) / mouse.radius;
-                this.x -= dx * force * 0.02;
-                this.y -= dy * force * 0.02;
+                this.x -= dx * force * 0.03;
+                this.y -= dy * force * 0.03;
             }
         }
 
@@ -48,7 +48,7 @@
             if (!ctx) return;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(51, 65, 255, 0.5)';
+            ctx.fillStyle = 'rgba(51, 65, 255, 0.7)'; // Increased opacity
             ctx.fill();
         }
     }
@@ -78,8 +78,9 @@
 
                 if (dist < connectionDistance) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(51, 65, 255, ${1 - dist / connectionDistance})`;
-                    ctx.lineWidth = 0.5;
+                    // Sharper connections with higher base opacity
+                    ctx.strokeStyle = `rgba(51, 65, 255, ${(1 - dist / connectionDistance) * 0.8})`;
+                    ctx.lineWidth = 0.8; // Slightly thicker lines
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
                     ctx.stroke();
