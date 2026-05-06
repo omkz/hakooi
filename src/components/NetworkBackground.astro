@@ -37,26 +37,22 @@
             this.x += this.vx;
             this.y += this.vy;
             
-            // Boundary bounce with hard reset to avoid getting stuck outside
             if (this.x < 0) { this.x = 0; this.vx *= -1; }
             if (this.x > canvas.width) { this.x = canvas.width; this.vx *= -1; }
             if (this.y < 0) { this.y = 0; this.vy *= -1; }
             if (this.y > canvas.height) { this.y = canvas.height; this.vy *= -1; }
             
-            // Supernova shockwave (Softer Ripple)
             if (supernova && supernova.active && supernova.phase === 'exploding') {
                 const dx = this.x - supernova.x;
                 const dy = this.y - supernova.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
-                // Only push if the shockwave front hits the particle
-                if (dist < supernova.radius && dist > supernova.radius - 50) {
-                    const force = 2.0; // Quick nudge
+                if (dist < supernova.radius && dist > supernova.radius - 100) {
+                    const force = 3.5; // Stronger push for Big Bang
                     this.x += (dx / dist) * force;
                     this.y += (dy / dist) * force;
                 }
             }
 
-            // Mouse interaction
             const dx = mouse.x - this.x;
             const dy = mouse.y - this.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
@@ -145,21 +141,21 @@
             setTimeout(() => { this.active = true; }, 3000);
         }
         reset() {
-            this.x = Math.random() * (canvas.width * 0.6) + (canvas.width * 0.2);
-            this.y = Math.random() * (canvas.height * 0.6) + (canvas.height * 0.2);
+            this.x = canvas.width / 2;
+            this.y = canvas.height / 2;
             this.radius = 0;
-            this.maxRadius = Math.random() * 300 + 200;
+            this.maxRadius = Math.max(canvas.width, canvas.height) * 1.5;
             this.opacity = 0;
         }
         update() {
             if (!this.active || this.phase === 'finished') return;
             if (this.phase === 'charging') {
-                this.opacity += 0.02;
-                this.radius += 0.8;
+                this.opacity += 0.015;
+                this.radius += 1.5;
                 if (this.opacity >= 1) this.phase = 'exploding';
             } else if (this.phase === 'exploding') {
-                this.radius += 12;
-                this.opacity -= 0.02;
+                this.radius += 25; // Massive speed
+                this.opacity -= 0.015;
                 if (this.opacity <= 0) {
                     this.phase = 'finished';
                 }
@@ -170,11 +166,18 @@
             ctx.beginPath();
             const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
             grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
-            grad.addColorStop(0.4, `rgba(51, 65, 255, ${this.opacity * 0.7})`);
+            grad.addColorStop(0.3, `rgba(51, 65, 255, ${this.opacity * 0.8})`);
+            grad.addColorStop(0.7, `rgba(51, 65, 255, ${this.opacity * 0.3})`);
             grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
             ctx.fillStyle = grad;
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
+            
+            // Full Screen Flash at peak
+            if (this.phase === 'exploding' && this.opacity > 0.8) {
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity - 0.8})`;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
         }
     }
 
