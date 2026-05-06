@@ -20,6 +20,18 @@
     const connectionDistance = 170;
     const mouse = { x: 0, y: 0, radius: 250 };
 
+    const colors = [
+        '#3341FF', // Hakooi Blue
+        '#8B5CF6', // Purple
+        '#EC4899', // Pink
+        '#10B981', // Emerald
+        '#06B6D4', // Cyan
+        '#F59E0B', // Amber
+        '#EF4444', // Red
+        '#D9F99D', // Lime
+        '#F472B6'  // Rose
+    ];
+
     class Particle {
         x: number; y: number; vx: number; vy: number; size: number;
         constructor() {
@@ -80,23 +92,24 @@
     }
 
     class Comet {
-        x: number; y: number; vx: number; vy: number; len: number; opacity: number; active: boolean;
+        x: number; y: number; vx: number; vy: number; len: number; opacity: number; active: boolean; color: string;
         constructor() {
             this.active = false;
             this.reset();
             this.scheduleNext();
         }
         reset() {
-            this.x = Math.random() * (canvas.width * 0.5);
-            this.y = -100;
-            this.vx = Math.random() * 10 + 15; // Much faster
-            this.vy = Math.random() * 5 + 10;
-            this.len = Math.random() * 200 + 150; // Much longer
+            this.x = Math.random() * (canvas.width * 0.3);
+            this.y = -200;
+            this.vx = Math.random() * 10 + 20; // Massive speed
+            this.vy = Math.random() * 5 + 15;
+            this.len = Math.random() * 400 + 300; // Super long tail
             this.opacity = 1;
             this.active = false;
+            this.color = colors[Math.floor(Math.random() * colors.length)];
         }
         scheduleNext() {
-            const delay = Math.random() * 10000 + 5000; // 5-15 seconds
+            const delay = Math.random() * 8000 + 4000; // 4-12 seconds for more frequency
             setTimeout(() => {
                 this.active = true;
             }, delay);
@@ -113,19 +126,24 @@
         draw() {
             if (!this.active || !ctx) return;
             ctx.beginPath();
-            const grad = ctx.createLinearGradient(this.x, this.y, this.x - this.vx * 10, this.y - this.vy * 10);
-            grad.addColorStop(0, 'rgba(255, 255, 255, 0.8)');
-            grad.addColorStop(1, 'rgba(51, 65, 255, 0)');
+            const grad = ctx.createLinearGradient(this.x, this.y, this.x - this.vx * 15, this.y - this.vy * 15);
+            grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            grad.addColorStop(0.2, this.color);
+            grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
             ctx.strokeStyle = grad;
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 4; // Much thicker
             ctx.moveTo(this.x, this.y);
-            ctx.lineTo(this.x - this.vx * 10, this.y - this.vy * 10);
+            ctx.lineTo(this.x - this.vx * 15, this.y - this.vy * 15);
             ctx.stroke();
+            
             // Head glow
             ctx.beginPath();
-            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+            ctx.arc(this.x, this.y, 4, 0, Math.PI * 2);
             ctx.fillStyle = '#fff';
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = this.color;
             ctx.fill();
+            ctx.shadowBlur = 0; // Reset for other drawings
         }
     }
 
@@ -137,7 +155,7 @@
         comets = [];
         for (let i = 0; i < particleCount; i++) particles.push(new Particle());
         for (let i = 0; i < 5; i++) shootingStars.push(new ShootingStar());
-        comets.push(new Comet()); // Initial comet
+        for (let i = 0; i < 5; i++) comets.push(new Comet()); // 5 Big Comets
     }
 
     function animate() {
