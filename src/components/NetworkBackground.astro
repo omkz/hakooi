@@ -144,18 +144,18 @@
             this.x = canvas.width / 2;
             this.y = canvas.height / 2;
             this.radius = 0;
-            this.maxRadius = Math.max(canvas.width, canvas.height) * 1.5;
+            this.maxRadius = Math.max(canvas.width, canvas.height) * 2.5; // Mega radius
             this.opacity = 0;
         }
         update() {
             if (!this.active || this.phase === 'finished') return;
             if (this.phase === 'charging') {
-                this.opacity += 0.015;
-                this.radius += 1.5;
+                this.opacity += 0.02;
+                this.radius += 2;
                 if (this.opacity >= 1) this.phase = 'exploding';
             } else if (this.phase === 'exploding') {
-                this.radius += 25; // Massive speed
-                this.opacity -= 0.015;
+                this.radius += 35; // Warp speed explosion
+                this.opacity -= 0.012; // Slower fade for better impact
                 if (this.opacity <= 0) {
                     this.phase = 'finished';
                 }
@@ -166,16 +166,18 @@
             ctx.beginPath();
             const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
             grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
-            grad.addColorStop(0.2, `rgba(255, 200, 50, ${this.opacity * 0.9})`); // Amber
-            grad.addColorStop(0.5, `rgba(255, 100, 0, ${this.opacity * 0.6})`); // Deep Orange
+            grad.addColorStop(0.1, `rgba(255, 220, 100, ${this.opacity})`);
+            grad.addColorStop(0.4, `rgba(255, 140, 0, ${this.opacity * 0.8})`);
+            grad.addColorStop(0.8, `rgba(255, 80, 0, ${this.opacity * 0.4})`);
             grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
             ctx.fillStyle = grad;
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
             
-            // Full Screen Flash at peak (Warmer Flash)
-            if (this.phase === 'exploding' && this.opacity > 0.8) {
-                ctx.fillStyle = `rgba(255, 220, 150, ${this.opacity - 0.8})`;
+            // Mega Flash at peak
+            if (this.phase === 'exploding' && this.opacity > 0.4) {
+                const flashAlpha = Math.min((this.opacity - 0.4) * 2, 0.8);
+                ctx.fillStyle = `rgba(255, 230, 180, ${flashAlpha})`;
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
             }
         }
