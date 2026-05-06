@@ -2,55 +2,167 @@
 import NetworkBackground from './NetworkBackground.astro';
 ---
 
-<section class="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
+<section id="hero" class="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-[#0a0a0a]">
     <!-- Jigsaw Style Background -->
     <NetworkBackground />
     
-    <div class="max-w-6xl w-full relative z-10">
+    <div class="max-w-6xl w-full relative z-10 parallax-content">
         <div class="flex flex-col items-center text-center">
             <span
                 class="text-[#3341FF] font-bold tracking-[0.4em] text-sm mb-6 uppercase"
                 data-aos="fade-down"
             >
-                Creative Digital Studio
+                Digital Product Engineering
             </span>
             <h1
-                class="font-heading text-7xl md:text-9xl leading-[0.85] text-white mb-8 select-none"
+                id="scramble-text"
+                class="font-heading text-6xl md:text-8xl lg:text-9xl text-white mb-8 leading-[0.9] tracking-tighter"
             >
-                CRAFTING <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500"
-                    >DIGITAL</span
-                ><br />
-                <span class="text-[#3341FF]">EXCELLENCE</span>
+                HAKOOI<br/>STUDIO<span class="text-[#3341FF]">.</span>
             </h1>
             <p
-                class="max-w-2xl text-gray-400 text-lg md:text-xl font-paragraph leading-relaxed mb-12"
+                class="text-gray-400 font-paragraph text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
+                data-aos="fade-up"
+                data-aos-delay="200"
             >
-                We are a boutique studio specializing in high-performance <span
-                    class="text-white font-bold">Applications</span
-                > . Bridging the gap between complex engineering and intuitive design.
+                Engineering high-impact digital products for the next generation. From core strategy to intelligent execution.
             </p>
-
-            <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex flex-col sm:flex-row gap-6" data-aos="fade-up" data-aos-delay="400">
                 <a
-                    href="#services"
-                    class="px-10 py-4 bg-[#3341FF] text-white font-bold rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-blue-500/20"
+                    href="#work"
+                    class="magnetic-btn px-10 py-4 bg-[#3341FF] text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(51,65,255,0.3)]"
                 >
-                    Our Services
+                    <span class="btn-text">SEE OUR WORK</span>
                 </a>
                 <a
                     href="#contact"
-                    class="px-10 py-4 bg-white/5 text-white font-bold rounded-full border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    class="magnetic-btn px-10 py-4 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/5 transition-all duration-300"
                 >
-                    Get in touch
+                    <span class="btn-text">START A PROJECT</span>
                 </a>
             </div>
         </div>
     </div>
 </section>
 
+<script>
+    // --- TEXT SCRAMBLE EFFECT ---
+    class TextScramble {
+        el: HTMLElement;
+        chars: string;
+        queue: any[];
+        frame: number;
+        resolve: any;
+
+        constructor(el: HTMLElement) {
+            this.el = el;
+            this.chars = '!<>-_\\/[]{}—=+*^?#________';
+            this.update = this.update.bind(this);
+            this.queue = [];
+            this.frame = 0;
+        }
+        setText(newText: string) {
+            const oldText = this.el.innerText;
+            const length = Math.max(oldText.length, newText.length);
+            const promise = new Promise((resolve) => this.resolve = resolve);
+            this.queue = [];
+            for (let i = 0; i < length; i++) {
+                const from = oldText[i] || '';
+                const to = newText[i] || '';
+                const start = Math.floor(Math.random() * 40);
+                const end = start + Math.floor(Math.random() * 40);
+                this.queue.push({ from, to, start, end, char: '' });
+            }
+            cancelAnimationFrame(this.frame);
+            this.frame = 0;
+            this.update();
+            return promise;
+        }
+        update() {
+            let output = '';
+            let complete = 0;
+            for (let i = 0, n = this.queue.length; i < n; i++) {
+                let { from, to, start, end, char } = this.queue[i];
+                if (this.frame >= end) {
+                    complete++;
+                    output += to;
+                } else if (this.frame >= start) {
+                    if (!char || Math.random() < 0.28) {
+                        char = this.randomChar();
+                        this.queue[i].char = char;
+                    }
+                    output += `<span class="text-[#3341FF] opacity-50">${char}</span>`;
+                } else {
+                    output += from;
+                }
+            }
+            this.el.innerHTML = output;
+            if (complete === this.queue.length) {
+                this.resolve();
+            } else {
+                this.frame++;
+                requestAnimationFrame(this.update);
+            }
+        }
+        randomChar() {
+            return this.chars[Math.floor(Math.random() * this.chars.length)];
+        }
+    }
+
+    const el = document.getElementById('scramble-text');
+    if (el) {
+        const fx = new TextScramble(el);
+        fx.setText('HAKOOI\nSTUDIO.');
+    }
+
+    // --- MAGNETIC BUTTONS ---
+    const magneticBtns = document.querySelectorAll('.magnetic-btn');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e: any) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            const btnEl = btn as HTMLElement;
+            btnEl.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+            
+            const text = btn.querySelector('.btn-text') as HTMLElement;
+            if (text) text.style.transform = `translate(${x * 0.1}px, ${y * 0.2}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            const btnEl = btn as HTMLElement;
+            btnEl.style.transform = `translate(0px, 0px)`;
+            const text = btn.querySelector('.btn-text') as HTMLElement;
+            if (text) text.style.transform = `translate(0px, 0px)`;
+        });
+    });
+
+    // --- HERO PARALLAX ---
+    const hero = document.getElementById('hero');
+    const content = document.querySelector('.parallax-content') as HTMLElement;
+    
+    if (hero && content) {
+        hero.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.clientX) / 50;
+            const y = (window.innerHeight / 2 - e.clientY) / 50;
+            content.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    }
+</script>
+
 <style>
-    h1 {
-        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    .magnetic-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .btn-text {
+        display: block;
+        transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #scramble-text {
+        white-space: pre-wrap;
     }
 </style>
