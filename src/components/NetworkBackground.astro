@@ -16,22 +16,13 @@
     let particles: Particle[] = [];
     let shootingStars: ShootingStar[] = [];
     let comets: Comet[] = [];
+    let supernova: Supernova | null = null;
+    
     const particleCount = 120;
     const connectionDistance = 170;
     const mouse = { x: 0, y: 0, radius: 250 };
 
-    const colors = [
-        '#3341FF', // Hakooi Blue
-        '#8B5CF6', // Purple
-        '#EC4899', // Pink
-        '#10B981', // Emerald
-        '#06B6D4', // Cyan
-        '#F59E0B', // Amber
-        '#EF4444', // Red
-        '#D9F99D', // Lime
-        '#F472B6', // Rose
-        '#00FF95'  // Aurora Green
-    ];
+    const colors = ['#3341FF', '#8B5CF6', '#EC4899', '#10B981', '#06B6D4', '#F59E0B', '#EF4444', '#D9F99D', '#F472B6', '#00FF95'];
 
     class Particle {
         x: number; y: number; vx: number; vy: number; size: number;
@@ -47,6 +38,19 @@
             this.y += this.vy;
             if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
             if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            
+            // Supernova shockwave
+            if (supernova && supernova.active && supernova.phase === 'exploding') {
+                const dx = this.x - supernova.x;
+                const dy = this.y - supernova.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < supernova.radius) {
+                    const force = (supernova.radius - dist) / supernova.radius;
+                    this.x += dx * force * 0.1;
+                    this.y += dy * force * 0.1;
+                }
+            }
+
             const dx = mouse.x - this.x;
             const dy = mouse.y - this.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
@@ -94,34 +98,21 @@
 
     class Comet {
         x: number; y: number; vx: number; vy: number; len: number; opacity: number; active: boolean; color: string;
-        constructor() {
-            this.active = false;
-            this.reset();
-            this.scheduleNext();
-        }
+        constructor() { this.active = false; this.reset(); this.scheduleNext(); }
         reset() {
-            this.x = Math.random() * (canvas.width * 0.3);
-            this.y = -200;
-            this.vx = Math.random() * 10 + 20; // Massive speed
-            this.vy = Math.random() * 5 + 15;
-            this.len = Math.random() * 400 + 300; // Super long tail
-            this.opacity = 1;
-            this.active = false;
+            this.x = Math.random() * (canvas.width * 0.3); this.y = -200;
+            this.vx = Math.random() * 10 + 20; this.vy = Math.random() * 5 + 15;
+            this.len = Math.random() * 400 + 300; this.opacity = 1; this.active = false;
             this.color = colors[Math.floor(Math.random() * colors.length)];
         }
         scheduleNext() {
-            const delay = Math.random() * 8000 + 4000; // 4-12 seconds for more frequency
-            setTimeout(() => {
-                this.active = true;
-            }, delay);
+            setTimeout(() => { this.active = true; }, Math.random() * 8000 + 4000);
         }
         update() {
             if (!this.active) return;
-            this.x += this.vx;
-            this.y += this.vy;
+            this.x += this.vx; this.y += this.vy;
             if (this.x > canvas.width + this.len || this.y > canvas.height + this.len) {
-                this.reset();
-                this.scheduleNext();
+                this.reset(); this.scheduleNext();
             }
         }
         draw() {
@@ -131,37 +122,71 @@
             grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
             grad.addColorStop(0.2, this.color);
             grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-            ctx.strokeStyle = grad;
-            ctx.lineWidth = 4; // Much thicker
-            ctx.moveTo(this.x, this.y);
-            ctx.lineTo(this.x - this.vx * 15, this.y - this.vy * 15);
+            ctx.strokeStyle = grad; ctx.lineWidth = 4;
+            ctx.moveTo(this.x, this.y); ctx.lineTo(this.x - this.vx * 15, this.y - this.vy * 15);
             ctx.stroke();
-            
-            // Head glow
+            ctx.beginPath(); ctx.arc(this.x, this.y, 4, 0, Math.PI * 2); ctx.fillStyle = '#fff';
+            ctx.shadowBlur = 20; ctx.shadowColor = this.color; ctx.fill(); ctx.shadowBlur = 0;
+        }
+    }
+
+    class Supernova {
+        x: number; y: number; radius: number; maxRadius: number; opacity: number; active: boolean; phase: 'charging' | 'exploding' | 'fading';
+        constructor() { this.active = false; this.reset(); this.scheduleNext(); }
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.radius = 0;
+            this.maxRadius = Math.random() * 300 + 200;
+            this.opacity = 0;
+            this.active = false;
+            this.phase = 'charging';
+        }
+        scheduleNext() {
+            setTimeout(() => { this.active = true; }, Math.random() * 30000 + 30000); // 30-60s
+        }
+        update() {
+            if (!this.active) return;
+            if (this.phase === 'charging') {
+                this.opacity += 0.01;
+                this.radius += 0.5;
+                if (this.opacity >= 1) this.phase = 'exploding';
+            } else if (this.phase === 'exploding') {
+                this.radius += 10;
+                this.opacity -= 0.02;
+                if (this.opacity <= 0) {
+                    this.reset();
+                    this.scheduleNext();
+                }
+            }
+        }
+        draw() {
+            if (!this.active || !ctx) return;
             ctx.beginPath();
-            ctx.arc(this.x, this.y, 4, 0, Math.PI * 2);
-            ctx.fillStyle = '#fff';
-            ctx.shadowBlur = 20;
-            ctx.shadowColor = this.color;
+            const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+            grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
+            grad.addColorStop(0.5, `rgba(51, 65, 255, ${this.opacity * 0.5})`);
+            grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            ctx.fillStyle = grad;
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
-            ctx.shadowBlur = 0; // Reset for other drawings
         }
     }
 
     function init() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        particles = [];
-        shootingStars = [];
-        comets = [];
+        particles = []; shootingStars = []; comets = [];
         for (let i = 0; i < particleCount; i++) particles.push(new Particle());
         for (let i = 0; i < 5; i++) shootingStars.push(new ShootingStar());
-        for (let i = 0; i < 5; i++) comets.push(new Comet()); // 5 Big Comets
+        for (let i = 0; i < 5; i++) comets.push(new Comet());
+        supernova = new Supernova();
     }
 
     function animate() {
         if (!ctx) return;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (supernova) { supernova.update(); supernova.draw(); }
         comets.forEach(c => { c.update(); c.draw(); });
         shootingStars.forEach(s => { s.update(); s.draw(); });
         particles.forEach((p, i) => {
