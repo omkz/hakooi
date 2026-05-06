@@ -12,33 +12,34 @@ import NetworkBackground from './NetworkBackground.astro';
                 class="text-[#3341FF] font-bold tracking-[0.4em] text-sm mb-6 uppercase"
                 data-aos="fade-down"
             >
-                Digital Product Engineering
+                Creative Digital Studio
             </span>
             <h1
                 id="scramble-text"
-                class="font-heading text-6xl md:text-8xl lg:text-9xl text-white mb-8 leading-[0.9] tracking-tighter uppercase"
+                class="font-heading text-7xl md:text-9xl leading-[0.85] text-white mb-8 select-none uppercase tracking-tighter"
             >
-                A BOUTIQUE<br/>PRODUCT ENGINEERING<br/>STUDIO<span class="text-[#3341FF]">.</span>
+                CRAFTING<br/>DIGITAL<br/>EXCELLENCE<span class="text-[#3341FF]">.</span>
             </h1>
             <p
-                class="text-gray-400 font-paragraph text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
+                class="max-w-2xl text-gray-400 text-lg md:text-xl font-paragraph leading-relaxed mb-12"
                 data-aos="fade-up"
                 data-aos-delay="200"
             >
-                We build high-performance digital products for the next generation. From core strategy to intelligent execution.
+                We are a boutique studio specializing in high-performance <span class="text-white font-bold">Applications</span>. Bridging the gap between complex engineering and intuitive design.
             </p>
-            <div class="flex flex-col sm:flex-row gap-6" data-aos="fade-up" data-aos-delay="400">
+
+            <div class="flex flex-col md:flex-row gap-6" data-aos="fade-up" data-aos-delay="400">
                 <a
-                    href="#work"
-                    class="magnetic-btn px-10 py-4 bg-[#3341FF] text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(51,65,255,0.3)]"
+                    href="#services"
+                    class="magnetic-btn px-10 py-4 bg-[#3341FF] text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(51,65,255,0.2)]"
                 >
-                    <span class="btn-text">SEE OUR WORK</span>
+                    <span class="btn-text">OUR SERVICES</span>
                 </a>
                 <a
                     href="#contact"
-                    class="magnetic-btn px-10 py-4 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/5 transition-all duration-300"
+                    class="magnetic-btn px-10 py-4 bg-white/5 text-white font-bold rounded-full border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                    <span class="btn-text">START A PROJECT</span>
+                    <span class="btn-text">GET IN TOUCH</span>
                 </a>
             </div>
         </div>
@@ -112,7 +113,7 @@ import NetworkBackground from './NetworkBackground.astro';
     const el = document.getElementById('scramble-text');
     if (el) {
         const fx = new TextScramble(el);
-        fx.setText('A BOUTIQUE\nPRODUCT ENGINEERING\nSTUDIO.');
+        fx.setText('CRAFTING\nDIGITAL\nEXCELLENCE.');
     }
 
     // --- MAGNETIC BUTTONS ---
