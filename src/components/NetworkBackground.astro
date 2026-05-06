@@ -166,16 +166,16 @@
             ctx.beginPath();
             const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
             grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
-            grad.addColorStop(0.3, `rgba(51, 65, 255, ${this.opacity * 0.8})`);
-            grad.addColorStop(0.7, `rgba(51, 65, 255, ${this.opacity * 0.3})`);
+            grad.addColorStop(0.2, `rgba(255, 200, 50, ${this.opacity * 0.9})`); // Amber
+            grad.addColorStop(0.5, `rgba(255, 100, 0, ${this.opacity * 0.6})`); // Deep Orange
             grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
             ctx.fillStyle = grad;
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
             
-            // Full Screen Flash at peak
+            // Full Screen Flash at peak (Warmer Flash)
             if (this.phase === 'exploding' && this.opacity > 0.8) {
-                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity - 0.8})`;
+                ctx.fillStyle = `rgba(255, 220, 150, ${this.opacity - 0.8})`;
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
             }
         }
