@@ -2,221 +2,223 @@
 ---
 <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <!-- Nebula Glows -->
-    <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#3341FF]/30 rounded-full blur-[200px] animate-pulse"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-indigo-600/20 rounded-full blur-[200px] animate-pulse" style="animation-delay: 2s;"></div>
-    <div class="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-blue-400/10 rounded-full blur-[180px] animate-pulse" style="animation-delay: 4s;"></div>
+    <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#3341FF]/25 rounded-full blur-[200px] animate-pulse"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-indigo-600/15 rounded-full blur-[200px] animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[180px] animate-pulse" style="animation-delay: 4s;"></div>
 </div>
 
-<canvas id="network-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
+<canvas id="liquid-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-70"></canvas>
 
 <script>
-    const canvas = document.getElementById('network-canvas') as HTMLCanvasElement;
+    const canvas = document.getElementById('liquid-canvas') as HTMLCanvasElement;
     const ctx = canvas.getContext('2d');
 
-    let particles: Particle[] = [];
-    let shootingStars: ShootingStar[] = [];
-    let comets: Comet[] = [];
-    let supernova: Supernova | null = null;
-    
-    const particleCount = 120;
-    const connectionDistance = 170;
-    const mouse = { x: 0, y: 0, radius: 250 };
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
 
-    const colors = ['#3341FF', '#8B5CF6', '#EC4899', '#10B981', '#06B6D4', '#F59E0B', '#EF4444', '#D9F99D', '#F472B6', '#00FF95'];
+    const particles: Particle[] = [];
+    const particleCount = Math.min(80, Math.floor((width * height) / 15000)); // Adaptive count for peak performance
+    
+    const mouse = { x: width / 2, y: height / 2, tx: width / 2, ty: height / 2, speed: 0, active: false };
+
+    // Premium color palette for fluid liquid
+    const colors = [
+        'rgba(51, 65, 255, 0.45)',  // Electric Blue
+        'rgba(139, 92, 246, 0.45)', // Violet
+        'rgba(236, 72, 153, 0.35)', // Pink
+        'rgba(6, 182, 212, 0.4)'    // Cyan
+    ];
 
     class Particle {
-        x: number; y: number; vx: number; vy: number; size: number;
+        x: number;
+        y: number;
+        vx: number;
+        vy: number;
+        radius: number;
+        color: string;
+        history: { x: number; y: number }[];
+        maxHistory: number;
+        angle: number;
+        speed: number;
+
         constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.6;
-            this.vy = (Math.random() - 0.5) * 0.6;
-            this.size = Math.random() * 2.5 + 1;
-        }
-        update() {
-            this.x += this.vx;
-            this.y += this.vy;
-            
-            if (this.x < 0) { this.x = 0; this.vx *= -1; }
-            if (this.x > canvas.width) { this.x = canvas.width; this.vx *= -1; }
-            if (this.y < 0) { this.y = 0; this.vy *= -1; }
-            if (this.y > canvas.height) { this.y = canvas.height; this.vy *= -1; }
-            
-            if (supernova && supernova.active && supernova.phase === 'exploding') {
-                const dx = this.x - supernova.x;
-                const dy = this.y - supernova.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < supernova.radius && dist > supernova.radius - 100) {
-                    const force = 3.5; // Stronger push for Big Bang
-                    this.x += (dx / dist) * force;
-                    this.y += (dy / dist) * force;
-                }
-            }
-
-            const dx = mouse.x - this.x;
-            const dy = mouse.y - this.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < mouse.radius) {
-                const force = (mouse.radius - distance) / mouse.radius;
-                this.x -= dx * force * 0.03;
-                this.y -= dy * force * 0.03;
-            }
-        }
-        draw() {
-            if (!ctx) return;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(51, 65, 255, 0.7)';
-            ctx.fill();
-        }
-    }
-
-    class ShootingStar {
-        x: number; y: number; vx: number; vy: number; len: number; opacity: number;
-        constructor() { this.reset(); }
-        reset() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height * 0.5;
-            this.vx = Math.random() * 4 + 2;
-            this.vy = Math.random() * 4 + 2;
-            this.len = Math.random() * 30 + 20;
-            this.opacity = Math.random() * 0.5 + 0.2;
-        }
-        update() {
-            this.x += this.vx;
-            this.y += this.vy;
-            if (this.x > canvas.width || this.y > canvas.height) this.reset();
-        }
-        draw() {
-            if (!ctx) return;
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity})`;
-            ctx.lineWidth = 0.5;
-            ctx.moveTo(this.x, this.y);
-            ctx.lineTo(this.x - this.vx * 5, this.y - this.vy * 5);
-            ctx.stroke();
-        }
-    }
-
-    class Comet {
-        x: number; y: number; vx: number; vy: number; len: number; opacity: number; active: boolean; color: string;
-        constructor() { this.active = false; this.reset(); this.scheduleNext(); }
-        reset() {
-            this.x = Math.random() * (canvas.width * 0.3); this.y = -200;
-            this.vx = Math.random() * 10 + 20; this.vy = Math.random() * 5 + 15;
-            this.len = Math.random() * 400 + 300; this.opacity = 1; this.active = false;
-            this.color = colors[Math.floor(Math.random() * colors.length)];
-        }
-        scheduleNext() {
-            setTimeout(() => { this.active = true; }, Math.random() * 8000 + 4000);
-        }
-        update() {
-            if (!this.active) return;
-            this.x += this.vx; this.y += this.vy;
-            if (this.x > canvas.width + this.len || this.y > canvas.height + this.len) {
-                this.reset(); this.scheduleNext();
-            }
-        }
-        draw() {
-            if (!this.active || !ctx) return;
-            ctx.beginPath();
-            const grad = ctx.createLinearGradient(this.x, this.y, this.x - this.vx * 15, this.y - this.vy * 15);
-            grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
-            grad.addColorStop(0.2, this.color);
-            grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-            ctx.strokeStyle = grad; ctx.lineWidth = 4;
-            ctx.moveTo(this.x, this.y); ctx.lineTo(this.x - this.vx * 15, this.y - this.vy * 15);
-            ctx.stroke();
-            ctx.beginPath(); ctx.arc(this.x, this.y, 4, 0, Math.PI * 2); ctx.fillStyle = '#fff';
-            ctx.shadowBlur = 20; ctx.shadowColor = this.color; ctx.fill(); ctx.shadowBlur = 0;
-        }
-    }
-
-    class Supernova {
-        x: number; y: number; radius: number; maxRadius: number; opacity: number; active: boolean; phase: 'charging' | 'exploding' | 'finished';
-        constructor() {
-            this.active = false;
-            this.phase = 'charging';
             this.reset();
-            setTimeout(() => { this.active = true; }, 3000);
+            this.maxHistory = Math.floor(Math.random() * 20) + 15;
+            this.history = [];
         }
+
         reset() {
-            this.x = canvas.width / 2;
-            this.y = canvas.height / 2;
-            this.radius = 0;
-            this.maxRadius = Math.max(canvas.width, canvas.height) * 2.5; // Mega radius
-            this.opacity = 0;
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 0.8;
+            this.vy = (Math.random() - 0.5) * 0.8;
+            this.radius = Math.random() * 8 + 4;
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+            this.angle = Math.random() * Math.PI * 2;
+            this.speed = Math.random() * 0.5 + 0.3;
         }
+
         update() {
-            if (!this.active || this.phase === 'finished') return;
-            if (this.phase === 'charging') {
-                this.opacity += 0.02;
-                this.radius += 2;
-                if (this.opacity >= 1) this.phase = 'exploding';
-            } else if (this.phase === 'exploding') {
-                this.radius += 35; // Warp speed explosion
-                this.opacity -= 0.012; // Slower fade for better impact
-                if (this.opacity <= 0) {
-                    this.phase = 'finished';
-                }
+            // Save position for smooth liquid trails
+            this.history.push({ x: this.x, y: this.y });
+            if (this.history.length > this.maxHistory) {
+                this.history.shift();
+            }
+
+            // Flow-field noise using sine/cosine for smooth organic drift
+            this.angle += (Math.random() - 0.5) * 0.1;
+            const flowX = Math.cos(this.x * 0.003 + this.angle) * this.speed;
+            const flowY = Math.sin(this.y * 0.003 + this.angle) * this.speed;
+
+            this.vx += flowX * 0.05;
+            this.vy += flowY * 0.05;
+
+            // Swirling force around mouse (Whirlpool effect)
+            const dx = this.x - mouse.x;
+            const dy = this.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const maxDist = 300;
+
+            if (dist < maxDist) {
+                const force = (maxDist - dist) / maxDist;
+                // Swirl direction vector: perpendicular to direction to mouse
+                const swirlX = -dy / dist;
+                const swirlY = dx / dist;
+
+                // Push speed based on mouse movement speed
+                const speedMult = Math.max(1, mouse.speed * 0.15);
+
+                this.vx += swirlX * force * 0.5 * speedMult;
+                this.vy += swirlY * force * 0.5 * speedMult;
+
+                // Slight pull towards mouse to keep particles in flow
+                this.vx -= (dx / dist) * force * 0.1;
+                this.vy -= (dy / dist) * force * 0.1;
+            }
+
+            // Friction to keep movement fluid and prevent infinite acceleration
+            this.vx *= 0.96;
+            this.vy *= 0.96;
+
+            // Update position
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Wrap around edges with reset to maintain distribution
+            if (this.x < -50 || this.x > width + 50 || this.y < -50 || this.y > height + 50) {
+                this.reset();
+                this.history = [];
             }
         }
+
         draw() {
-            if (!this.active || this.phase === 'finished' || !ctx) return;
+            if (!ctx || this.history.length < 2) return;
+
+            // Draw fluid trailing paths
             ctx.beginPath();
-            const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
-            grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
-            grad.addColorStop(0.1, `rgba(255, 220, 100, ${this.opacity})`);
-            grad.addColorStop(0.4, `rgba(255, 140, 0, ${this.opacity * 0.8})`);
-            grad.addColorStop(0.8, `rgba(255, 80, 0, ${this.opacity * 0.4})`);
-            grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-            ctx.fillStyle = grad;
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fill();
+            ctx.moveTo(this.history[0].x, this.history[0].y);
             
-            // Mega Flash at peak
-            if (this.phase === 'exploding' && this.opacity > 0.4) {
-                const flashAlpha = Math.min((this.opacity - 0.4) * 2, 0.8);
-                ctx.fillStyle = `rgba(255, 230, 180, ${flashAlpha})`;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            for (let i = 1; i < this.history.length - 1; i++) {
+                const xc = (this.history[i].x + this.history[i + 1].x) / 2;
+                const yc = (this.history[i].y + this.history[i + 1].y) / 2;
+                ctx.quadraticCurveTo(this.history[i].x, this.history[i].y, xc, yc);
             }
+            
+            ctx.strokeStyle = this.color;
+            ctx.lineWidth = this.radius;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.stroke();
+
+            // Draw glowing head orb
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius * 0.6, 0, Math.PI * 2);
+            ctx.fillStyle = this.color.replace('0.4', '0.8').replace('0.3', '0.7');
+            ctx.fill();
         }
     }
 
     function init() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        particles = []; shootingStars = []; comets = [];
-        for (let i = 0; i < particleCount; i++) particles.push(new Particle());
-        for (let i = 0; i < 5; i++) shootingStars.push(new ShootingStar());
-        for (let i = 0; i < 5; i++) comets.push(new Comet());
-        supernova = new Supernova();
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        particles.length = 0;
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
     }
+
+    let lastMouseX = 0;
+    let lastMouseY = 0;
 
     function animate() {
         if (!ctx) return;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        if (supernova) { supernova.update(); supernova.draw(); }
-        comets.forEach(c => { c.update(); c.draw(); });
-        shootingStars.forEach(s => { s.update(); s.draw(); });
-        particles.forEach((p, i) => {
-            p.update(); p.draw();
+
+        // Clear with slight accumulation for trailing ribbon blur
+        ctx.fillStyle = 'rgba(10, 10, 10, 0.08)';
+        ctx.fillRect(0, 0, width, height);
+
+        // Smooth mouse tracking
+        mouse.x += (mouse.tx - mouse.x) * 0.1;
+        mouse.y += (mouse.ty - mouse.y) * 0.1;
+
+        // Calculate mouse movement speed for swirl intensity
+        const mdx = mouse.tx - lastMouseX;
+        const mdy = mouse.ty - lastMouseY;
+        mouse.speed = Math.sqrt(mdx * mdx + mdy * mdy);
+        lastMouseX = mouse.tx;
+        lastMouseY = mouse.ty;
+
+        // Blend mode to create organic overlay blending (bio-luminescent current)
+        ctx.globalCompositeOperation = 'screen';
+
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+
+        // Draw connections between close trails to create mesh-like fluid currents
+        ctx.globalCompositeOperation = 'lighter';
+        for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
+                const p1 = particles[i];
                 const p2 = particles[j];
-                const dx = p.x - p2.x; const dy = p.y - p2.y;
+                const dx = p1.x - p2.x;
+                const dy = p1.y - p2.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < connectionDistance) {
+
+                if (dist < 120) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(51, 65, 255, ${(1 - dist / connectionDistance) * 0.8})`;
-                    ctx.lineWidth = 0.8;
-                    ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+                    ctx.strokeStyle = `rgba(51, 65, 255, ${(1 - dist / 120) * 0.07})`;
+                    ctx.lineWidth = 1;
+                    ctx.moveTo(p1.x, p1.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.stroke();
                 }
             }
-        });
+        }
+
+        ctx.globalCompositeOperation = 'source-over';
         requestAnimationFrame(animate);
     }
 
     window.addEventListener('resize', init);
-    window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
-    init(); animate();
+    
+    // Track mouse coordinates dynamically
+    window.addEventListener('mousemove', (e) => {
+        mouse.tx = e.clientX;
+        mouse.ty = e.clientY;
+        mouse.active = true;
+    });
+
+    // Touch support for mobile devices
+    window.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+            mouse.tx = e.touches[0].clientX;
+            mouse.ty = e.touches[0].clientY;
+            mouse.active = true;
+        }
+    });
+
+    init();
+    animate();
 </script>
