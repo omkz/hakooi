@@ -1,201 +1,130 @@
 ---
 ---
-<div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <!-- Nebula Glows -->
-    <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#3341FF]/25 rounded-full blur-[200px] animate-pulse"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-indigo-600/15 rounded-full blur-[200px] animate-pulse" style="animation-delay: 2s;"></div>
-    <div class="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[180px] animate-pulse" style="animation-delay: 4s;"></div>
+<div class="absolute inset-0 overflow-hidden pointer-events-none bg-[#0a0a0a]">
+    <!-- Deep Ambient Glows (CSS fallback for static depth) -->
+    <div class="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] bg-[#3341FF]/10 rounded-full blur-[160px]"></div>
+    <div class="absolute bottom-[-20%] right-[-20%] w-[80%] h-[80%] bg-indigo-600/10 rounded-full blur-[160px]"></div>
 </div>
 
-<canvas id="liquid-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-70"></canvas>
+<canvas id="liquid-silk-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-50"></canvas>
 
 <script>
-    const canvas = document.getElementById('liquid-canvas') as HTMLCanvasElement;
+    const canvas = document.getElementById('liquid-silk-canvas') as HTMLCanvasElement;
     const ctx = canvas.getContext('2d');
 
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
 
-    const particles: Particle[] = [];
-    const particleCount = Math.min(80, Math.floor((width * height) / 15000)); // Adaptive count for peak performance
-    
-    const mouse = { x: width / 2, y: height / 2, tx: width / 2, ty: height / 2, speed: 0, active: false };
+    const mouse = { x: width / 2, y: height / 2, tx: width / 2, ty: height / 2 };
 
-    // Premium color palette for fluid liquid
-    const colors = [
-        'rgba(51, 65, 255, 0.45)',  // Electric Blue
-        'rgba(139, 92, 246, 0.45)', // Violet
-        'rgba(236, 72, 153, 0.35)', // Pink
-        'rgba(6, 182, 212, 0.4)'    // Cyan
-    ];
-
-    class Particle {
+    class SilkBlob {
         x: number;
         y: number;
+        tx: number;
+        ty: number;
         vx: number;
         vy: number;
         radius: number;
+        baseRadius: number;
         color: string;
-        history: { x: number; y: number }[];
-        maxHistory: number;
         angle: number;
+        angleSpeed: number;
+        orbitRadius: number;
         speed: number;
 
-        constructor() {
-            this.reset();
-            this.maxHistory = Math.floor(Math.random() * 20) + 15;
-            this.history = [];
-        }
-
-        reset() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.8;
-            this.vy = (Math.random() - 0.5) * 0.8;
-            this.radius = Math.random() * 8 + 4;
-            this.color = colors[Math.floor(Math.random() * colors.length)];
+        constructor(x: number, y: number, radius: number, color: string, speed: number) {
+            this.x = x;
+            this.y = y;
+            this.tx = x;
+            this.ty = y;
+            this.vx = 0;
+            this.vy = 0;
+            this.baseRadius = radius;
+            this.radius = radius;
+            this.color = color;
             this.angle = Math.random() * Math.PI * 2;
-            this.speed = Math.random() * 0.5 + 0.3;
+            this.angleSpeed = (Math.random() * 0.002 + 0.001) * (Math.random() > 0.5 ? 1 : -1);
+            this.orbitRadius = Math.random() * 80 + 40;
+            this.speed = speed;
         }
 
         update() {
-            // Save position for smooth liquid trails
-            this.history.push({ x: this.x, y: this.y });
-            if (this.history.length > this.maxHistory) {
-                this.history.shift();
-            }
+            // Very slow organic orbit (drifting)
+            this.angle += this.angleSpeed;
+            this.tx = width / 2 + Math.cos(this.angle) * (width * 0.25) + Math.sin(this.angle * 0.5) * this.orbitRadius;
+            this.ty = height / 2 + Math.sin(this.angle) * (height * 0.25) + Math.cos(this.angle * 0.5) * this.orbitRadius;
 
-            // Flow-field noise using sine/cosine for smooth organic drift
-            this.angle += (Math.random() - 0.5) * 0.1;
-            const flowX = Math.cos(this.x * 0.003 + this.angle) * this.speed;
-            const flowY = Math.sin(this.y * 0.003 + this.angle) * this.speed;
-
-            this.vx += flowX * 0.05;
-            this.vy += flowY * 0.05;
-
-            // Swirling force around mouse (Whirlpool effect)
-            const dx = this.x - mouse.x;
-            const dy = this.y - mouse.y;
+            // Gentle interaction with mouse (slowly floating away/towards)
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
             const dist = Math.sqrt(dx * dx + dy * dy);
-            const maxDist = 300;
-
-            if (dist < maxDist) {
-                const force = (maxDist - dist) / maxDist;
-                // Swirl direction vector: perpendicular to direction to mouse
-                const swirlX = -dy / dist;
-                const swirlY = dx / dist;
-
-                // Push speed based on mouse movement speed
-                const speedMult = Math.max(1, mouse.speed * 0.15);
-
-                this.vx += swirlX * force * 0.5 * speedMult;
-                this.vy += swirlY * force * 0.5 * speedMult;
-
-                // Slight pull towards mouse to keep particles in flow
-                this.vx -= (dx / dist) * force * 0.1;
-                this.vy -= (dy / dist) * force * 0.1;
+            
+            if (dist < 500) {
+                const force = (500 - dist) / 500;
+                // Gently push the blobs away from the cursor to create a liquid dispersion look
+                this.vx -= (dx / dist) * force * 0.15;
+                this.vy -= (dy / dist) * force * 0.15;
             }
 
-            // Friction to keep movement fluid and prevent infinite acceleration
-            this.vx *= 0.96;
-            this.vy *= 0.96;
+            // High friction for majestic, damped movements
+            this.vx *= 0.95;
+            this.vy *= 0.95;
 
-            // Update position
-            this.x += this.vx;
-            this.y += this.vy;
+            this.x += this.vx + (this.tx - this.x) * this.speed;
+            this.y += this.vy + (this.ty - this.y) * this.speed;
 
-            // Wrap around edges with reset to maintain distribution
-            if (this.x < -50 || this.x > width + 50 || this.y < -50 || this.y > height + 50) {
-                this.reset();
-                this.history = [];
-            }
+            // Pulsing radius for fluid breathing effect
+            this.radius = this.baseRadius + Math.sin(this.angle * 2) * 40;
         }
 
         draw() {
-            if (!ctx || this.history.length < 2) return;
+            if (!ctx) return;
 
-            // Draw fluid trailing paths
-            ctx.beginPath();
-            ctx.moveTo(this.history[0].x, this.history[0].y);
-            
-            for (let i = 1; i < this.history.length - 1; i++) {
-                const xc = (this.history[i].x + this.history[i + 1].x) / 2;
-                const yc = (this.history[i].y + this.history[i + 1].y) / 2;
-                ctx.quadraticCurveTo(this.history[i].x, this.history[i].y, xc, yc);
-            }
-            
-            ctx.strokeStyle = this.color;
-            ctx.lineWidth = this.radius;
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'round';
-            ctx.stroke();
+            // Render soft, luxurious radial gradient
+            const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+            grad.addColorStop(0, this.color);
+            grad.addColorStop(0.5, this.color.replace('0.25', '0.08').replace('0.2', '0.05').replace('0.15', '0.03').replace('0.12', '0.02'));
+            grad.addColorStop(1, 'rgba(10, 10, 10, 0)');
 
-            // Draw glowing head orb
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius * 0.6, 0, Math.PI * 2);
-            ctx.fillStyle = this.color.replace('0.4', '0.8').replace('0.3', '0.7');
+            ctx.fillStyle = grad;
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
         }
     }
 
+    const blobs: SilkBlob[] = [];
+
     function init() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
-        particles.length = 0;
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
-    }
+        blobs.length = 0;
 
-    let lastMouseX = 0;
-    let lastMouseY = 0;
+        // Custom premium colors with ultra-low opacity for maximum elegance
+        blobs.push(new SilkBlob(width * 0.3, height * 0.3, Math.min(width, height) * 0.6, 'rgba(51, 65, 255, 0.25)', 0.003)); // Electric Blue
+        blobs.push(new SilkBlob(width * 0.7, height * 0.4, Math.min(width, height) * 0.7, 'rgba(99, 102, 241, 0.2)', 0.002));  // Indigo
+        blobs.push(new SilkBlob(width * 0.4, height * 0.7, Math.min(width, height) * 0.5, 'rgba(139, 92, 246, 0.15)', 0.004)); // Violet
+        blobs.push(new SilkBlob(width * 0.6, height * 0.8, Math.min(width, height) * 0.45, 'rgba(6, 182, 212, 0.12)', 0.003)); // Cyan
+    }
 
     function animate() {
         if (!ctx) return;
 
-        // Clear with slight accumulation for trailing ribbon blur
-        ctx.fillStyle = 'rgba(10, 10, 10, 0.08)';
+        // Clear canvas fully on each frame to maintain pure, noise-free gradients
+        ctx.fillStyle = '#0a0a0a';
         ctx.fillRect(0, 0, width, height);
 
-        // Smooth mouse tracking
-        mouse.x += (mouse.tx - mouse.x) * 0.1;
-        mouse.y += (mouse.ty - mouse.y) * 0.1;
+        // Smooth mouse easing
+        mouse.x += (mouse.tx - mouse.x) * 0.05;
+        mouse.y += (mouse.ty - mouse.y) * 0.05;
 
-        // Calculate mouse movement speed for swirl intensity
-        const mdx = mouse.tx - lastMouseX;
-        const mdy = mouse.ty - lastMouseY;
-        mouse.speed = Math.sqrt(mdx * mdx + mdy * mdy);
-        lastMouseX = mouse.tx;
-        lastMouseY = mouse.ty;
-
-        // Blend mode to create organic overlay blending (bio-luminescent current)
+        // Beautiful overlay blending mode for glowing liquid effect
         ctx.globalCompositeOperation = 'screen';
 
-        particles.forEach(p => {
-            p.update();
-            p.draw();
+        blobs.forEach(b => {
+            b.update();
+            b.draw();
         });
-
-        // Draw connections between close trails to create mesh-like fluid currents
-        ctx.globalCompositeOperation = 'lighter';
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const p1 = particles[i];
-                const p2 = particles[j];
-                const dx = p1.x - p2.x;
-                const dy = p1.y - p2.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < 120) {
-                    ctx.beginPath();
-                    ctx.strokeStyle = `rgba(51, 65, 255, ${(1 - dist / 120) * 0.07})`;
-                    ctx.lineWidth = 1;
-                    ctx.moveTo(p1.x, p1.y);
-                    ctx.lineTo(p2.x, p2.y);
-                    ctx.stroke();
-                }
-            }
-        }
 
         ctx.globalCompositeOperation = 'source-over';
         requestAnimationFrame(animate);
@@ -203,19 +132,15 @@
 
     window.addEventListener('resize', init);
     
-    // Track mouse coordinates dynamically
     window.addEventListener('mousemove', (e) => {
         mouse.tx = e.clientX;
         mouse.ty = e.clientY;
-        mouse.active = true;
     });
 
-    // Touch support for mobile devices
     window.addEventListener('touchmove', (e) => {
         if (e.touches.length > 0) {
             mouse.tx = e.touches[0].clientX;
             mouse.ty = e.touches[0].clientY;
-            mouse.active = true;
         }
     });
 
