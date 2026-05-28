@@ -12,8 +12,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/bebas-neue": "^5.2.7",
+    "@fontsource/montserrat": "^5.2.8",
     "@tailwindcss/vite": "^4.2.4",
+    "aos": "^2.3.4",
     "astro": "^6.2.2",
     "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.8"
   }
 }
