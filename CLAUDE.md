@@ -30,4 +30,12 @@ Single-page marketing site for **Hakooi** (an Ecommerce Growth Studio). Built wi
 - Dark background `#0a0a0a` (`--deep-black`) is the base; all sections use subtle `bg-white/[0.02]` or `bg-white/[0.03]` to differentiate
 - Section animations use AOS (`data-aos="fade-up"`) initialized in `Layout.astro`
 
-**Deployment target**: Cloudflare Workers (evidenced by `dist/server/wrangler.json`).
+**Deployment target**: Vercel (static output). `vercel.json` sets `Cache-Control: max-age=31536000, immutable` for `/fonts/*`, `/svg/*`, and `/_astro/*`.
+
+**Font strategy**: Critical fonts (Bebas Neue, Montserrat 300/400/700) are stored as stable woff2 files in `public/fonts/` (non-hashed, stable URLs) and declared with `@font-face` + `font-display: swap` in `Layout.astro`. `<link rel="preload">` tags are added directly to `<head>` to break the JS→CSS→font waterfall dependency chain.
+
+**Performance notes**:
+- Background canvas (`NetworkBackground.astro`) uses `IntersectionObserver` to pause the `requestAnimationFrame` loop when the hero section is not visible.
+- Canvas resolution is downscaled to `0.5x` on mobile (`window.innerWidth < 768`) to reduce GPU fill-rate cost.
+- Noise texture overlay uses a tiled base64 PNG (zero CPU) instead of SVG `<feTurbulence>`.
+- AOS is bundled locally via npm (`aos` package) — no external CDN requests.
