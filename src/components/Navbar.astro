@@ -14,7 +14,7 @@
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <button class="md:hidden text-white p-2" id="menu-toggle">
+        <button class="md:hidden text-white p-2" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
@@ -55,10 +55,12 @@
             mobileMenu?.classList.add('translate-x-full');
             mobileMenu?.classList.remove('translate-x-0');
             menuIcon?.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            menuToggle?.setAttribute('aria-expanded', 'false');
         } else {
             mobileMenu?.classList.add('translate-x-0');
             mobileMenu?.classList.remove('translate-x-full');
             menuIcon?.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            menuToggle?.setAttribute('aria-expanded', 'true');
         }
     });
 
@@ -68,6 +70,7 @@
             mobileMenu?.classList.add('translate-x-full');
             mobileMenu?.classList.remove('translate-x-0');
             menuIcon?.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            menuToggle?.setAttribute('aria-expanded', 'false');
         });
     });
 </script>
