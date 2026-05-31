@@ -3,45 +3,62 @@ const steps = [
     {
         number: "01",
         title: "DISCOVERY",
-        desc: "We deep-dive into your vision, market dynamics, and technical constraints to build a solid strategic foundation."
+        desc: "Understanding your business model, commercial goals, and technical requirements to engineer the optimal solution."
     },
     {
         number: "02",
-        title: "ARCHITECTURE",
-        desc: "Crafting the technical blueprint and user experience flows designed for maximum efficiency and scalability."
+        title: "DESIGN & PLANNING",
+        desc: "Mapping out intuitive user experiences, robust system architecture, and a strategic roadmap before development begins."
     },
     {
         number: "03",
-        title: "ENGINEERING",
-        desc: "High-precision development phase where we manifest the product using modern, robust technologies."
+        title: "BUILD",
+        desc: "Developing, testing, and refining your product through transparent collaboration and rapid, iterative delivery."
     },
     {
         number: "04",
-        title: "EVOLUTION",
-        desc: "Beyond launch, we continuously optimize and scale the product to adapt to real-world feedback and growth."
+        title: "LAUNCH & GROWTH",
+        desc: "Deploying, monitoring, and continuously optimizing the platform based on real-world data and evolving business needs."
     }
 ];
 ---
 
-<section id="process" class="py-24 px-6 bg-white/[0.01]">
-    <div class="max-w-6xl mx-auto">
+<section id="process" class="py-24 px-6 relative overflow-hidden bg-[#0c0c0e]/20">
+    <!-- Ambient light reflection -->
+    <div class="absolute bottom-0 left-1/4 w-[350px] h-[350px] bg-[#3341FF]/3 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
         <div class="mb-20">
-            <h2 class="font-heading text-5xl md:text-6xl text-white mb-4">THE PROCESS.</h2>
-            <div class="h-1 w-20 bg-[#3341FF]"></div>
+            <h2 class="font-heading text-5xl md:text-6xl text-white mb-4 tracking-wider">THE PROCESS.</h2>
+            <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF]"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <!-- Connecting line for desktop (hidden on mobile) -->
+            <div class="hidden lg:block absolute top-[44px] left-[5%] right-[5%] h-[1px] bg-gradient-to-r from-[#3341FF]/30 via-[#00D2FF]/20 to-transparent z-0"></div>
+
             {steps.map((step, index) => (
-                <div class="relative" data-aos="fade-up" data-aos-delay={index * 100}>
-                    <span class="font-heading text-6xl md:text-8xl text-white/5 absolute -top-8 -left-4 select-none italic">
-                        {step.number}
-                    </span>
-                    <div class="relative z-10">
-                        <h3 class="font-heading text-2xl text-white mb-4 tracking-widest flex items-center gap-4">
-                            <span class="w-2 h-2 bg-[#3341FF] rounded-full"></span>
+                <div class="group relative p-6 rounded-2xl border border-transparent hover:border-white/[0.05] hover:bg-white/[0.01] transition-all duration-500 flex flex-col h-full" data-aos="fade-up" data-aos-delay={index * 150}>
+                    <!-- Glow effect on hover -->
+                    <div class="absolute inset-0 bg-[radial-gradient(180px_circle_at_50%_0%,rgba(51,65,255,0.04),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"></div>
+
+                    <!-- Step Number & Milestone dot -->
+                    <div class="relative mb-6 flex items-center justify-between z-10">
+                        <span class="font-heading text-6xl text-white/5 select-none italic transition-all duration-500 group-hover:text-[#3341FF]/20 group-hover:scale-105">
+                            {step.number}
+                        </span>
+                        <!-- Custom indicator dot with neon glow -->
+                        <span class="w-3.5 h-3.5 rounded-full bg-[#3341FF]/10 flex items-center justify-center border border-[#3341FF]/30 group-hover:border-[#00D2FF]/80 group-hover:bg-[#00D2FF]/10 transition-all duration-500">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#3341FF] group-hover:bg-[#00D2FF] shadow-[0_0_8px_rgba(51,65,255,0.8)] group-hover:shadow-[0_0_10px_rgba(0,210,255,0.8)] transition-all duration-500"></span>
+                        </span>
+                    </div>
+
+                    <!-- Step Content -->
+                    <div class="relative z-10 flex-grow">
+                        <h3 class="font-heading text-2xl text-white mb-4 tracking-widest leading-tight transition-colors duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80">
                             {step.title}
                         </h3>
-                        <p class="text-gray-400 font-paragraph text-sm leading-relaxed">
+                        <p class="text-gray-400 font-paragraph text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-500">
                             {step.desc}
                         </p>
                     </div>
