@@ -1,47 +1,65 @@
 ---
 const services = [
     {
-        title: "BESPOKE SHOPIFY STORES",
-        desc: "Crafting highly-customized Shopify Liquid storefronts that communicate your brand's unique narrative with zero template limitations.",
-        icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+        title: "SHOPIFY DEVELOPMENT",
+        desc: "Custom Shopify storefronts, theme development, and tailored commerce experiences designed for performance and growth.",
+        icon: "M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
     },
     {
-        title: "HEADLESS COMMERCE",
-        desc: "Engineering lightning-fast storefronts using modern stacks like Astro & React connected to Shopify's Storefront API for sub-second load times.",
-        icon: "M13 10V3L4 14h7v7l9-11h-7z"
-    },
-    {
-        title: "CUSTOM INTEGRATIONS",
-        desc: "Developing custom Rails middleware, specialized subscription engines, advanced Stripe checkout, and automated inventory sync systems.",
+        title: "COMMERCE SYSTEMS",
+        desc: "Scalable systems for managing products, orders, inventory, workflows, and integrations across modern commerce operations.",
         icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
     },
     {
-        title: "CONVERSION OPTIMIZATION",
-        desc: "Fine-tuning mobile UX, core web vitals, dynamic mini-carts, and checkout flows to directly scale your average transaction value.",
-        icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+        title: "CUSTOM APPLICATIONS",
+        desc: "Business applications, internal tools, and SaaS platforms built around your unique operational requirements.",
+        icon: "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+    },
+    {
+        title: "AI & AUTOMATION",
+        desc: "AI-powered workflows, intelligent automation, and custom integrations that help teams work more efficiently.",
+        icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
     }
 ];
 ---
 
-<section id="services" class="py-24 px-6 bg-white/[0.02]">
-    <div class="max-w-6xl mx-auto">
+<section id="services" class="py-24 px-6 relative overflow-hidden bg-[#0c0c0e]/40">
+    <!-- Radial Glow Background -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#3341FF]/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
         <div class="mb-16">
-            <h2 class="font-heading text-5xl md:text-6xl text-white mb-4">OUR SERVICES.</h2>
-            <div class="h-1 w-20 bg-[#3341FF]"></div>
+            <h2 class="font-heading text-5xl md:text-6xl text-white mb-4 tracking-wider">OUR SERVICES.</h2>
+            <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF]"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {services.map(service => (
-                <div class="group p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#3341FF]/50 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
-                    <div class="w-12 h-12 rounded-lg bg-[#3341FF]/10 flex items-center justify-center mb-6 group-hover:bg-[#3341FF] transition-colors duration-500">
-                        <svg class="w-6 h-6 text-[#3341FF] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
-                        </svg>
+                <div class="group relative rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+                    <!-- Glow Border Effect (High fidelity 1px border) -->
+                    <div class="absolute -inset-[1px] bg-gradient-to-b from-white/10 to-white/5 rounded-2xl group-hover:from-[#3341FF]/60 group-hover:to-[#00D2FF]/40 transition-all duration-500 z-0"></div>
+                    
+                    <!-- Inner Card Content (Glassmorphism bg) -->
+                    <div class="relative z-10 p-8 rounded-2xl bg-[#111115]/90 backdrop-blur-md flex flex-col h-full flex-grow transition-colors duration-500 group-hover:bg-[#0c0c0f]/95">
+                        
+                        <!-- Hover radial spotlight -->
+                        <div class="absolute inset-0 bg-[radial-gradient(350px_circle_at_50%_0%,rgba(51,65,255,0.08),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl pointer-events-none"></div>
+
+                        <!-- Service Icon with Neon glow and dynamic rotation -->
+                        <div class="relative w-12 h-12 rounded-lg bg-[#3341FF]/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#3341FF] group-hover:to-[#00D2FF] transition-all duration-500 shadow-[0_0_15px_rgba(51,65,255,0)] group-hover:shadow-[0_0_20px_rgba(51,65,255,0.4)] group-hover:scale-110 group-hover:rotate-3">
+                            <svg class="w-6 h-6 text-[#3341FF] group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
+                            </svg>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="font-heading text-2xl text-white mb-4 tracking-wider leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 transition-all duration-500">{service.title}</h3>
+                        
+                        <!-- Description -->
+                        <p class="text-gray-400 font-paragraph leading-relaxed text-sm flex-grow group-hover:text-gray-300 transition-colors duration-500">
+                            {service.desc}
+                        </p>
                     </div>
-                    <h3 class="font-heading text-2xl text-white mb-4 tracking-wider leading-tight">{service.title}</h3>
-                    <p class="text-gray-400 font-paragraph leading-relaxed text-sm flex-grow">
-                        {service.desc}
-                    </p>
                 </div>
             ))}
         </div>
