@@ -33,7 +33,7 @@ const solutions = [
 const faqItems = [
     {
         q: "What technologies do you use for building custom SaaS and business applications?",
-        a: "We choose technologies that guarantee extreme speed, type safety, and scalability. For frontends and client portals, we use React.js and Next.js. For the backend APIs, we rely on Node.js/NestJS with TypeScript. We model and store data in PostgreSQL utilizing Prisma ORM, and compile all background applications into Docker containers hosted securely on cloud platforms like AWS or Vercel."
+        a: "We select technologies based on each project's specific requirements. For rapid product development and rich convention-driven backends, we use Ruby on Rails — the same framework Shopify itself is built on. For high-concurrency microservices and data-intensive APIs, we use Golang for its exceptional throughput. Frontend portals and dashboards are built with React.js and Next.js, all backed by PostgreSQL and hosted on cloud platforms like AWS or Vercel."
     },
     {
         q: "How do you handle application security and sensitive customer data?",
@@ -181,7 +181,7 @@ const faqSchema = {
                             We build using type-safe application structures, robust serverless routing, and modular component design patterns to ensure maximum long-term code maintainability.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["React.js / Next.js", "Node.js (NestJS)", "TypeScript", "PostgreSQL", "Prisma ORM", "Stripe API Integration", "Docker Containerization", "AWS Serverless Compute"].map(tech => (
+                            {["React.js / Next.js", "Ruby on Rails", "Golang", "TypeScript", "PostgreSQL", "Prisma ORM", "Stripe Integration", "Docker & AWS Cloud"].map(tech => (
                                 <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-gray-300 tracking-wider">
                                     {tech}
                                 </span>

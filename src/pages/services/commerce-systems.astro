@@ -37,7 +37,7 @@ const faqItems = [
     },
     {
         q: "What database and server architectures do you use for these engines?",
-        a: "We architect systems focusing on absolute data integrity and sub-second performance. We utilize PostgreSQL with strict schemas for transactional accounting, Redis for hyper-fast state caching, and Node.js or Go for execution runtime. The infrastructure is hosted on serverless clouds (like AWS or Vercel) which automatically scale up during traffic spikes (e.g., Black Friday) and scale down to zero when idle to minimize operational costs."
+        a: "Our technology choices are driven by each system's performance profile. For high-throughput order sync engines and inventory daemons, we use Golang — its concurrency model is purpose-built for processing thousands of simultaneous events with minimal CPU overhead. For convention-driven admin APIs and back-office tools, we use Ruby on Rails for its battle-tested reliability. Data is persisted in PostgreSQL with Redis handling sub-millisecond state caching, hosted across auto-scaling cloud infrastructure on AWS."
     },
     {
         q: "Can you integrate older, legacy ERP systems like Microsoft Dynamics or SAP?",
@@ -181,7 +181,7 @@ const faqSchema = {
                             We build on cloud-native databases, event-driven message queues, and bulletproof relational structures to guarantee zero-data-loss and absolute consistency.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["PostgreSQL", "Node.js (TypeScript)", "GraphQL / REST APIs", "Redis Cache", "RabbitMQ / SQS", "Docker Containers", "Prisma ORM", "AWS Cloud / VPC"].map(tech => (
+                            {["PostgreSQL", "Ruby on Rails", "Golang", "Rust", "Node.js (TypeScript)", "GraphQL & REST", "Redis Cache", "RabbitMQ / AWS SQS"].map(tech => (
                                 <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-gray-300 tracking-wider">
                                     {tech}
                                 </span>
