@@ -2,21 +2,25 @@
 const services = [
     {
         title: "SHOPIFY DEVELOPMENT",
+        slug: "shopify-development",
         desc: "Custom Shopify storefronts, theme development, and tailored commerce experiences designed for performance and growth.",
         icon: "M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
     },
     {
         title: "COMMERCE SYSTEMS",
+        slug: "commerce-systems",
         desc: "Scalable systems for managing products, orders, inventory, workflows, and integrations across modern commerce operations.",
         icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
     },
     {
         title: "CUSTOM APPLICATIONS",
+        slug: "custom-applications",
         desc: "Business applications, internal tools, and SaaS platforms built around your unique operational requirements.",
         icon: "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
     },
     {
         title: "AI & AUTOMATION",
+        slug: "ai-automation",
         desc: "AI-powered workflows, intelligent automation, and custom integrations that help teams work more efficiently.",
         icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
     }
@@ -35,7 +39,7 @@ const services = [
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {services.map(service => (
-                <div class="group relative rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+                <a href={service.slug ? `/services/${service.slug}` : "#"} class="group relative rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block">
                     <!-- Glow Border Effect (High fidelity 1px border) -->
                     <div class="absolute -inset-[1px] bg-gradient-to-b from-white/10 to-white/5 rounded-2xl group-hover:from-[#3341FF]/60 group-hover:to-[#00D2FF]/40 transition-all duration-500 z-0"></div>
                     
@@ -56,11 +60,17 @@ const services = [
                         <h3 class="font-heading text-2xl text-white mb-4 tracking-wider leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 transition-all duration-500">{service.title}</h3>
                         
                         <!-- Description -->
-                        <p class="text-gray-400 font-paragraph leading-relaxed text-sm flex-grow group-hover:text-gray-300 transition-colors duration-500">
+                        <p class="text-gray-400 font-paragraph leading-relaxed text-sm flex-grow group-hover:text-gray-300 transition-colors duration-500 mb-6">
                             {service.desc}
                         </p>
+
+                        <!-- Explore Link -->
+                        <div class="mt-auto pt-4 border-t border-white/5 flex items-center justify-between text-xs font-bold tracking-widest uppercase text-white/40 group-hover:text-[#00D2FF] transition-colors duration-300">
+                            <span>Explore Service</span>
+                            <span class="transform group-hover:translate-x-2 transition-transform duration-300">→</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             ))}
         </div>
     </div>

@@ -1,0 +1,279 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+// SEO details
+const title = "Shopify Development Services | Hakooi | Commerce Engineering Studio";
+const desc = "We engineer flagship Shopify storefronts, dynamic custom themes, and high-performance headless commerce systems. Maximize conversion and speed with bespoke Shopify development.";
+
+const solutions = [
+    {
+        title: "Bespoke Liquid Themes",
+        desc: "100% custom Shopify 2.0 themes crafted line-by-line. No bloated page builders, no unnecessary apps. We build with clean JSON templates and modular native sections for absolute editing freedom.",
+        features: ["Tailored UI/UX design", "Fully responsive and accessible", "Native OS 2.0 theme editor compatibility", "Zero external app dependencies"]
+    },
+    {
+        title: "Headless Commerce (Hydrogen)",
+        desc: "Take performance to the absolute limit. Using Shopify Hydrogen, Remix, React, and GraphQL, we decouple your frontend from Shopify's backend to deliver sub-second page loads and limitless design possibilities.",
+        features: ["Sub-second page transitions", "Vercel or Netlify globally edge-hosted", "Advanced dynamic animations", "Omnichannel API architecture"]
+    },
+    {
+        title: "Custom App & API Integrations",
+        desc: "Connect your storefront to ERPs, CRMs, WMS, or bespoke inventory systems. We write robust private apps and serverless middleware to automate processes and sync real-time data.",
+        features: ["Robust webhook infrastructure", "SAP, NetSuite, and Salesforce integrations", "Custom product configurators", "Tailored checkout extensions"]
+    },
+    {
+        title: "Core Web Vitals & Optimization",
+        desc: "Don't let slow loading kill your sales. We perform deep auditing, image pipeline optimization, JavaScript minification, and code pruning to push your Shopify speed scores into the high 90s.",
+        features: ["LCP & CLS stabilization", "Render-blocking script elimination", "Dynamic lazy-loading strategies", "Continuous monitoring setups"]
+    }
+];
+
+const faqItems = [
+    {
+        q: "Why should we choose a custom Shopify theme over a pre-made template?",
+        a: "Pre-made templates are built to serve thousands of stores. Consequently, they are bloated with unused CSS, heavy JavaScript, and rigid settings that slow down your site and limit your design. A custom theme by Hakooi is built specifically for your brand. It contains only the code your store needs, guaranteeing elite page speed, unique conversion-focused UX, and a tailor-made Shopify editor interface for your operations team."
+    },
+    {
+        q: "What is Headless Commerce, and does my store need it?",
+        a: "Headless commerce separates your frontend (what customers see) from your Shopify backend. We build the frontend using React (Remix/Hydrogen) and connect to Shopify via the Storefront API. You should consider headless if you need total design freedom, extreme speed (< 1s load times), dynamic interactions that Liquid can't support, or if you want to pull content seamlessly from external headless CMSs like Sanity or Strapi."
+    },
+    {
+        q: "How do you ensure zero-downtime migrations from other platforms?",
+        a: "Migrating from Magento, WooCommerce, or Salesforce is a delicate process. We follow a strict migration playbook: we replicate your catalog database, preserve URL structures to prevent SEO ranking loss, map 301 redirects, securely migrate customer passwords, and run comprehensive parallel environment testing before pointing the primary domain to Shopify."
+    },
+    {
+        q: "Can you build custom applications that integrate with our existing ERP?",
+        a: "Yes. We build custom private Shopify apps using Remix, Node.js, and Shopify's App Bridge. Whether you need to integrate a custom warehouse management system (WMS), synchronize complex pricing structures from SAP or NetSuite, or build a unique frontend product builder, we write secure, middleware integrations that communicate seamlessly with Shopify's Admin API."
+    }
+];
+
+// JSON-LD Schema for SEO rich snippets
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.a
+        }
+    }))
+};
+---
+
+<Layout title={title}>
+    <!-- FAQ Schema Injection -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <Navbar />
+
+    <main class="relative overflow-hidden pt-28">
+        <!-- Grid/Dot Background -->
+        <div class="fixed inset-0 z-0 pointer-events-none opacity-20">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+            <div class="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#3341FF]/20 to-transparent blur-[120px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
+            
+            <!-- HERO SECTION -->
+            <section class="py-20 md:py-32 flex flex-col items-center text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#3341FF]/30 bg-[#3341FF]/5 text-xs tracking-[0.2em] font-bold text-[#00D2FF] mb-8 uppercase" data-aos="fade-down">
+                    <span class="w-2 h-2 rounded-full bg-[#00D2FF] animate-pulse"></span>
+                    Flagship Commerce Engineering
+                </div>
+
+                <h1 class="font-heading text-6xl md:text-8xl text-white tracking-wider max-w-4xl leading-tight mb-8" data-aos="fade-up">
+                    SHOPIFY<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3341FF] to-[#00D2FF]">DEVELOPMENT.</span>
+                </h1>
+
+                <p class="text-gray-400 font-paragraph text-lg md:text-xl max-w-2xl leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="100">
+                    We engineer elite Shopify storefronts, dynamic custom themes, and bespoke headless commerce architectures designed for high conversion, flawless aesthetics, and sub-second loading speeds.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-[#3341FF] hover:bg-[#3341FF]/90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_20px_rgba(51,65,255,0.3)] hover:scale-105">
+                        Book a Discovery Call
+                    </a>
+                    <a href="#solutions" class="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold tracking-widest text-xs uppercase transition-all hover:scale-105">
+                        View Solutions ↓
+                    </a>
+                </div>
+            </section>
+
+            <!-- STATS SECTION -->
+            <section class="py-12 border-y border-white/5 bg-[#111115]/20 backdrop-blur-md rounded-2xl mb-24" data-aos="fade-up">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4 border-r border-white/5 last:border-0">
+                        <p class="font-heading text-4xl md:text-5xl text-[#00D2FF]">&lt; 1.2S</p>
+                        <p class="text-gray-400 text-xs tracking-wider uppercase font-bold mt-2">Avg. Load Time</p>
+                    </div>
+                    <div class="p-4 md:border-r border-white/5 last:border-0">
+                        <p class="font-heading text-4xl md:text-5xl text-white">+25%</p>
+                        <p class="text-gray-400 text-xs tracking-wider uppercase font-bold mt-2">Avg. Conversion Lift</p>
+                    </div>
+                    <div class="p-4 border-r border-white/5 last:border-0">
+                        <p class="font-heading text-4xl md:text-5xl text-white">95+</p>
+                        <p class="text-gray-400 text-xs tracking-wider uppercase font-bold mt-2">Mobile Speed Score</p>
+                    </div>
+                    <div class="p-4 last:border-0">
+                        <p class="font-heading text-4xl md:text-5xl text-[#3341FF]">100%</p>
+                        <p class="text-gray-400 text-xs tracking-wider uppercase font-bold mt-2">Bespoke Codebase</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DETAILED SOLUTIONS -->
+            <section id="solutions" class="py-16 mb-24">
+                <div class="mb-16 text-center md:text-left">
+                    <h2 class="font-heading text-4xl md:text-5xl text-white mb-4 tracking-wider">ENGINEERED TO OUTPERFORM.</h2>
+                    <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto md:mx-0"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {solutions.map((sol, index) => (
+                        <div class="group relative rounded-2xl transition-all duration-500 hover:-translate-y-1" data-aos="fade-up" data-aos-delay={index * 50}>
+                            <!-- Glow Border -->
+                            <div class="absolute -inset-[1px] bg-gradient-to-b from-white/10 to-white/5 rounded-2xl group-hover:from-[#3341FF]/40 group-hover:to-[#00D2FF]/20 transition-all duration-500 z-0"></div>
+                            
+                            <!-- Inner Content -->
+                            <div class="relative z-10 p-8 rounded-2xl bg-[#111115]/90 backdrop-blur-md h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center justify-between mb-6">
+                                        <h3 class="font-heading text-2xl md:text-3xl text-white tracking-wide">{sol.title}</h3>
+                                        <div class="w-8 h-8 rounded-lg bg-[#3341FF]/10 flex items-center justify-center text-xs font-bold text-[#00D2FF] group-hover:bg-[#3341FF] group-hover:text-white transition-all duration-300">
+                                            0{index + 1}
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-6">
+                                        {sol.desc}
+                                    </p>
+                                </div>
+                                <ul class="space-y-3 pt-4 border-t border-white/5">
+                                    {sol.features.map(feat => (
+                                        <li class="flex items-center gap-3 text-xs text-gray-300">
+                                            <svg class="w-4 h-4 text-[#00D2FF] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="font-bold tracking-wide uppercase text-[10px]">{feat}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <!-- TECH STACK SECTION -->
+            <section class="py-16 mb-24 relative rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent border border-white/5 p-8 md:p-12 overflow-hidden" data-aos="fade-up">
+                <div class="absolute -right-32 -bottom-32 w-96 h-96 bg-[#3341FF]/10 rounded-full blur-[120px] pointer-events-none"></div>
+                <div class="absolute -left-32 -top-32 w-96 h-96 bg-[#00D2FF]/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div>
+                        <h2 class="font-heading text-4xl md:text-5xl text-white mb-6 tracking-wider">OUR COMERCE TECH STACK.</h2>
+                        <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
+                            We don't rely on obsolete visual page builders that degrade your Core Web Vitals. We use high-precision engineering languages and modern static hosting frameworks to deliver elite rendering capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            {["Shopify Liquid", "Remix / Hydrogen", "React.js", "GraphQL", "Tailwind CSS v4", "TypeScript", "Node.js", "Vercel Edge"].map(tech => (
+                                <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-gray-300 tracking-wider">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div class="bg-black/40 border border-white/5 rounded-2xl p-6 md:p-8 font-mono text-xs text-gray-400">
+                        <div class="flex items-center gap-2 mb-4 border-b border-white/5 pb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                            <span class="text-[10px] text-gray-500 ml-2">shopify-hydrogen-client.ts</span>
+                        </div>
+                        <p class="text-blue-400">import <span class="text-white">{"{ createStorefrontClient }"}</span> from <span class="text-green-400">"@shopify/hydrogen"</span>;</p>
+                        <p class="text-gray-500 mt-2">// Initialize lightning-fast GraphQL Storefront API Client</p>
+                        <p class="text-blue-400">const <span class="text-purple-400">client</span> = <span class="text-[#00D2FF]">createStorefrontClient</span>({`{`}</p>
+                        <p class="pl-4 text-white">privateStorefrontToken: process.env.SHOPIFY_API_KEY,</p>
+                        <p class="pl-4 text-white">storeDomain: <span class="text-green-400">"hakooi-flagship.myshopify.com"</span>,</p>
+                        <p class="pl-4 text-white">storefrontApiVersion: <span class="text-green-400">"2026-04"</span>,</p>
+                        <p class="text-blue-400">{`});`}</p>
+                        <p class="text-gray-500 mt-2">// Query results returned in &lt; 80ms at Vercel Edge networks</p>
+                        <p class="text-[#00D2FF] mt-2">export const <span class="text-purple-400">queryShopify</span> = async (query, variables) =&gt; {`{`}</p>
+                        <p class="pl-4 text-blue-400">return await <span class="text-white">fetch</span>(client.getStorefrontApiUrl(), {`{`}</p>
+                        <p class="pl-8 text-white">method: <span class="text-green-400">"POST"</span>,</p>
+                        <p class="pl-8 text-white">headers: client.getPublicTokenHeaders(),</p>
+                        <p class="pl-8 text-white">body: JSON.stringify({`{ query, variables }`})</p>
+                        <p class="pl-4 text-blue-400">{`});`}</p>
+                        <p class="text-[#00D2FF]">{`};`}</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ SECTION -->
+            <section class="py-16 mb-24">
+                <div class="mb-16 text-center">
+                    <h2 class="font-heading text-4xl md:text-5xl text-white mb-4 tracking-wider">FREQUENTLY ASKED QUESTIONS.</h2>
+                    <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto space-y-4">
+                    {faqItems.map((item, index) => (
+                        <details class="group relative rounded-xl border border-white/5 bg-[#111115]/30 overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden" data-aos="fade-up">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
+                                <h3 class="font-heading text-lg md:text-xl text-white tracking-wider pr-4 group-hover:text-[#00D2FF] transition-colors">{item.q}</h3>
+                                <div class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform duration-300">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </summary>
+                            <div class="px-6 pb-6 pt-2 border-t border-white/5 text-gray-400 font-paragraph text-sm leading-relaxed">
+                                <p>{item.a}</p>
+                            </div>
+                        </details>
+                    ))}
+                </div>
+            </section>
+
+            <!-- CALL TO ACTION -->
+            <section class="py-20 text-center relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#3341FF]/10 to-[#3341FF]/2 border border-[#3341FF]/20 px-6 mb-24" data-aos="fade-up">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(51,65,255,0.15),transparent)] pointer-events-none"></div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="font-heading text-5xl md:text-7xl text-white mb-6">READY TO SCALE YOUR COMMERCE?</h2>
+                    <p class="text-gray-300 font-paragraph text-sm md:text-base leading-relaxed mb-10">
+                        Discuss your Shopify store architecture, headless options, or backend API requirements with our technical lead today.
+                    </p>
+                    <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-5 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] hover:opacity-90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_30px_rgba(51,65,255,0.4)] hover:scale-105">
+                        Schedule a Discovery Call
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    /* Details tag transition enhancements */
+    details[open] summary ~ * {
+        animation: slideDown 0.3s ease-out-expo;
+    }
+    
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
