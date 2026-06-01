@@ -193,24 +193,31 @@ const faqSchema = {
                             <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                            <span class="text-[10px] text-gray-500 ml-2">schema.prisma</span>
+                            <span class="text-[10px] text-gray-500 ml-2">services/inventory.go</span>
                         </div>
-                        <p class="text-blue-400">model <span class="text-white">Order</span> {`{`}</p>
-                        <p class="pl-4 text-white">id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;&nbsp;&nbsp;@id @default(uuid())</p>
-                        <p class="pl-4 text-white">orderNumber&nbsp;String&nbsp;&nbsp;&nbsp;@unique</p>
-                        <p class="pl-4 text-white">status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;&nbsp;&nbsp;// PENDING, SYNCED, FAILED</p>
-                        <p class="pl-4 text-white">totalAmount&nbsp;Decimal&nbsp;&nbsp;@db.Decimal(10, 2)</p>
-                        <p class="pl-4 text-white">items&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OrderItem[]</p>
-                        <p class="pl-4 text-white">createdAt&nbsp;&nbsp;&nbsp;DateTime&nbsp;@default(now())</p>
-                        <p class="text-blue-400">{`}`}</p>
+                        <p class="text-gray-500">// single UPDATE eliminates TOCTOU — atomic, one round trip</p>
+                        <p class="text-blue-400">func <span class="text-white">(s *InventoryService) Reserve(</span></p>
+                        <p class="pl-4 text-white">ctx context.Context,</p>
+                        <p class="pl-4 text-white">sku <span class="text-blue-400">string</span>, qty <span class="text-blue-400">int</span>,</p>
+                        <p class="text-white">) <span class="text-blue-400">error</span> {`{`}</p>
+                        <p class="pl-4 text-blue-400">const <span class="text-white">q = </span><span class="text-green-400">`</span></p>
+                        <p class="pl-8 text-green-400">UPDATE inventory</p>
+                        <p class="pl-8 text-green-400">SET&nbsp;&nbsp;&nbsp;available = available - $1,</p>
+                        <p class="pl-12 text-green-400">reserved&nbsp;&nbsp;= reserved&nbsp;&nbsp;+ $1</p>
+                        <p class="pl-8 text-green-400">WHERE sku&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= $2</p>
+                        <p class="pl-10 text-green-400">AND available &gt;= $1</p>
+                        <p class="pl-4 text-green-400">`</p>
                         <br/>
-                        <p class="text-blue-400">model <span class="text-white">InventoryItem</span> {`{`}</p>
-                        <p class="pl-4 text-white">id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;&nbsp;&nbsp;@id @default(uuid())</p>
-                        <p class="pl-4 text-white">sku&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;&nbsp;&nbsp;@unique</p>
-                        <p class="pl-4 text-white">available&nbsp;&nbsp;&nbsp;Int</p>
-                        <p class="pl-4 text-white">reserved&nbsp;&nbsp;&nbsp;&nbsp;Int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@default(0)</p>
-                        <p class="pl-4 text-white">updatedAt&nbsp;&nbsp;&nbsp;DateTime&nbsp;@updatedAt</p>
-                        <p class="text-blue-400">{`}`}</p>
+                        <p class="pl-4 text-white">res, err := s.db.ExecContext(ctx, q, qty, sku)</p>
+                        <p class="pl-4 text-blue-400">if <span class="text-white">err != </span><span class="text-blue-400">nil </span><span class="text-white">{`{`}</span></p>
+                        <p class="pl-8 text-blue-400">return <span class="text-white">err</span></p>
+                        <p class="pl-4 text-white">{`}`}</p>
+                        <br/>
+                        <p class="pl-4 text-blue-400">if <span class="text-white">n, _ := res.RowsAffected(); n == </span><span class="text-yellow-400">0</span><span class="text-white"> {`{`}</span></p>
+                        <p class="pl-8 text-blue-400">return <span class="text-white">ErrInsufficientStock</span></p>
+                        <p class="pl-4 text-white">{`}`}</p>
+                        <p class="pl-4 text-blue-400">return <span class="text-white">nil</span></p>
+                        <p class="text-white">{`}`}</p>
                     </div>
                 </div>
             </section>
