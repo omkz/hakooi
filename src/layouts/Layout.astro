@@ -8,6 +8,10 @@ import '../styles/global.css';
 
 // Bundle AOS CSS locally (eliminates render-blocking CDN request)
 import 'aos/dist/aos.css';
+
+// Vercel Web Analytics
+import { inject } from '@vercel/analytics';
+inject();
 ---
 
 <!doctype html>
