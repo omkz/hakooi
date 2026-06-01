@@ -195,22 +195,27 @@ const faqSchema = {
                             <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
                             <span class="text-[10px] text-gray-500 ml-2">rag-query.py</span>
                         </div>
-                        <p class="text-[#00D2FF]">import <span class="text-white">openai</span></p>
+                        <p class="text-[#00D2FF]">from <span class="text-white">openai</span> import <span class="text-[#00D2FF]">OpenAI</span></p>
                         <p class="text-[#00D2FF]">from <span class="text-white">pinecone</span> import <span class="text-[#00D2FF]">Pinecone</span></p>
-                        <p class="text-gray-500 mt-2"># Generate dynamic semantic text embedding</p>
-                        <p class="text-white">pc = Pinecone(api_key=os.environ[<span class="text-green-400">"PINECONE_KEY"</span>])</p>
-                        <p class="text-white">index = pc.Index(<span class="text-green-400">"hakooi-knowledge"</span>)</p>
+                        <p class="text-white mt-2">ai = OpenAI()&nbsp;&nbsp;pc = Pinecone()</p>
+                        <p class="text-white">index = pc.Index(<span class="text-green-400">"commerce-kb"</span>)</p>
                         <br/>
-                        <p class="text-[#00D2FF]">def <span class="text-[#00D2FF]">query_rag_kb</span>(user_prompt):</p>
-                        <p class="pl-4 text-white">res = openai.Embedding.create(</p>
-                        <p class="pl-8 text-white">input=[user_prompt],</p>
-                        <p class="pl-8 text-white">model=<span class="text-green-400">"text-embedding-3-small"</span></p>
-                        <p class="pl-4 text-white">)</p>
-                        <p class="pl-4 text-[#00D2FF]"># Query vector database index</p>
-                        <p class="pl-4 text-[#00D2FF]">embed = res[<span class="text-green-400">"data"</span>][0][<span class="text-green-400">"embedding"</span>]</p>
-                        <p class="pl-4 text-white">results = index.query(vector=embed, top_k=3, include_metadata=True)</p>
-                        <p class="pl-4 text-white">context = <span class="text-green-400">"\n"</span>.join([match.metadata[<span class="text-green-400">'text'</span>] for match in results.matches])</p>
-                        <p class="pl-4 text-white">return context</p>
+                        <p class="text-[#00D2FF]">def <span class="text-[#00D2FF]">rag_answer</span>(user_prompt: <span class="text-[#00D2FF]">str</span>) -&gt; <span class="text-[#00D2FF]">str</span>:</p>
+                        <p class="pl-4 text-gray-500"># embed query, retrieve context</p>
+                        <p class="pl-4 text-white">embed = ai.embeddings.create(</p>
+                        <p class="pl-8 text-white">input=user_prompt, model=<span class="text-green-400">"text-embedding-3-small"</span></p>
+                        <p class="pl-4 text-white">).data[0].embedding</p>
+                        <p class="pl-4 text-white">hits = index.query(vector=embed, top_k=<span class="text-yellow-400">3</span>, include_metadata=<span class="text-[#00D2FF]">True</span>)</p>
+                        <p class="pl-4 text-white">ctx = <span class="text-green-400">"\n"</span>.join(h.metadata[<span class="text-green-400">"text"</span>] <span class="text-[#00D2FF]">for</span> h <span class="text-[#00D2FF]">in</span> hits.matches)</p>
+                        <br/>
+                        <p class="pl-4 text-gray-500"># ground the answer in retrieved context</p>
+                        <p class="pl-4 text-blue-400">return <span class="text-white">ai.chat.completions.create(</span></p>
+                        <p class="pl-8 text-white">model=<span class="text-green-400">"gpt-4o-mini"</span>,</p>
+                        <p class="pl-8 text-white">messages=[</p>
+                        <p class="pl-12 text-white">{`{"role":"system","content":f"Answer using: {ctx}"}`},</p>
+                        <p class="pl-12 text-white">{`{"role":"user",  "content": user_prompt}`},</p>
+                        <p class="pl-8 text-white">],</p>
+                        <p class="pl-4 text-white">).choices[<span class="text-yellow-400">0</span>].message.content</p>
                     </div>
                 </div>
             </section>

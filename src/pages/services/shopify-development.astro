@@ -196,19 +196,20 @@ const faqSchema = {
                             <span class="text-[10px] text-gray-500 ml-2">shopify-hydrogen-client.ts</span>
                         </div>
                         <p class="text-blue-400">import <span class="text-white">{"{ createStorefrontClient }"}</span> from <span class="text-green-400">"@shopify/hydrogen"</span>;</p>
-                        <p class="text-gray-500 mt-2">// Initialize lightning-fast GraphQL Storefront API Client</p>
-                        <p class="text-blue-400">const <span class="text-purple-400">client</span> = <span class="text-[#00D2FF]">createStorefrontClient</span>({`{`}</p>
-                        <p class="pl-4 text-white">privateStorefrontToken: process.env.SHOPIFY_API_KEY,</p>
-                        <p class="pl-4 text-white">storeDomain: <span class="text-green-400">"hakooi-flagship.myshopify.com"</span>,</p>
+                        <p class="text-blue-400">const <span class="text-purple-400">{"{ storefront }"}</span> = <span class="text-[#00D2FF]">createStorefrontClient</span>({`{`}</p>
+                        <p class="pl-4 text-white">privateStorefrontToken: process.env.SHOPIFY_PRIVATE_TOKEN,</p>
+                        <p class="pl-4 text-white">storeDomain: process.env.SHOPIFY_STORE_DOMAIN,</p>
                         <p class="pl-4 text-white">storefrontApiVersion: <span class="text-green-400">"2026-04"</span>,</p>
                         <p class="text-blue-400">{`});`}</p>
-                        <p class="text-gray-500 mt-2">// Query results returned in &lt; 80ms at Vercel Edge networks</p>
-                        <p class="text-[#00D2FF] mt-2">export const <span class="text-purple-400">queryShopify</span> = async (query, variables) =&gt; {`{`}</p>
-                        <p class="pl-4 text-blue-400">return await <span class="text-white">fetch</span>(client.getStorefrontApiUrl(), {`{`}</p>
-                        <p class="pl-8 text-white">method: <span class="text-green-400">"POST"</span>,</p>
-                        <p class="pl-8 text-white">headers: client.getPublicTokenHeaders(),</p>
-                        <p class="pl-8 text-white">body: JSON.stringify({`{ query, variables }`})</p>
-                        <p class="pl-4 text-blue-400">{`});`}</p>
+                        <p class="text-gray-500 mt-2">// Type-safe product query via Storefront API</p>
+                        <p class="text-[#00D2FF] mt-2">export const <span class="text-purple-400">getProduct</span> = async (handle: <span class="text-[#00D2FF]">string</span>) =&gt; {`{`}</p>
+                        <p class="pl-4 text-blue-400">const <span class="text-white">{"{ product }"}</span> = await storefront.<span class="text-[#00D2FF]">query</span>({`{`}</p>
+                        <p class="pl-8 text-white">query: <span class="text-green-400">`query GetProduct($handle: String!) {`{`}</span></p>
+                        <p class="pl-12 text-green-400">product(handle: $handle) {"{ id title priceRange { minVariantPrice { amount } } }"}</p>
+                        <p class="pl-8 text-green-400">{`}`}</span>`,</p>
+                        <p class="pl-8 text-white">variables: {"{ handle }"},</p>
+                        <p class="pl-4 text-white">{`});`}</p>
+                        <p class="pl-4 text-blue-400">return <span class="text-white">product;</span></p>
                         <p class="text-[#00D2FF]">{`};`}</p>
                     </div>
                 </div>

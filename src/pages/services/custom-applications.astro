@@ -206,11 +206,16 @@ const faqSchema = {
                         <p class="pl-8 text-white">expand: [<span class="text-green-400">"latest_invoice.payment_intent"</span>],</p>
                         <p class="pl-4 text-blue-400">{`});`}</p>
                         <p class="text-[#00D2FF]">{`};`}</p>
-                        <p class="text-gray-500 mt-2">// Handle real-time webhook sync updates</p>
-                        <p class="text-[#00D2FF]">export const <span class="text-purple-400">handleStripeWebhook</span> = async (event) =&gt; {`{`}</p>
-                        <p class="pl-4 text-blue-400">if (event.type === <span class="text-green-400">"customer.subscription.deleted"</span>) {`{`}</p>
+                        <p class="text-gray-500 mt-2">// Verify signature before processing webhook</p>
+                        <p class="text-[#00D2FF]">export const <span class="text-purple-400">handleStripeWebhook</span> = async (req, res) =&gt; {`{`}</p>
+                        <p class="pl-4 text-blue-400">const <span class="text-white">event = stripe.webhooks.</span><span class="text-[#00D2FF]">constructEvent</span>(</p>
+                        <p class="pl-8 text-white">req.body,</p>
+                        <p class="pl-8 text-white">req.headers[<span class="text-green-400">"stripe-signature"</span>],</p>
+                        <p class="pl-8 text-white">process.env.STRIPE_WEBHOOK_SECRET,</p>
+                        <p class="pl-4 text-white">);</p>
+                        <p class="pl-4 text-blue-400">if <span class="text-white">(event.type === </span><span class="text-green-400">"customer.subscription.deleted"</span><span class="text-white">) {`{`}</span></p>
                         <p class="pl-8 text-blue-400">await <span class="text-[#00D2FF]">updateUserTenantAccess</span>(event.data.object.customer, false);</p>
-                        <p class="pl-4 text-blue-400">{`}`}</p>
+                        <p class="pl-4 text-white">{`}`}</p>
                         <p class="text-[#00D2FF]">{`};`}</p>
                     </div>
                 </div>
