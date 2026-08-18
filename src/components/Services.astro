@@ -27,13 +27,13 @@ const services = [
 ];
 ---
 
-<section id="services" class="py-24 px-6 relative overflow-hidden bg-[#0c0c0e]/40">
+<section id="services" class="scroll-mt-24 sm:scroll-mt-32 py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden bg-[#0c0c0e]/40">
     <!-- Radial Glow Background -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#3341FF]/5 rounded-full blur-[150px] pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto relative z-10">
-        <div class="mb-16">
-            <h2 class="font-heading text-5xl md:text-6xl text-white mb-4 tracking-wider">OUR SERVICES.</h2>
+        <div class="mb-12 sm:mb-16">
+            <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-4 tracking-wide sm:tracking-wider">OUR SERVICES.</h2>
             <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF]"></div>
         </div>
 
@@ -44,7 +44,7 @@ const services = [
                     <div class="absolute -inset-[1px] bg-gradient-to-b from-white/10 to-white/5 rounded-2xl group-hover:from-[#3341FF]/60 group-hover:to-[#00D2FF]/40 transition-all duration-500 z-0"></div>
                     
                     <!-- Inner Card Content (Glassmorphism bg) -->
-                    <div class="relative z-10 p-8 rounded-2xl bg-[#111115]/90 backdrop-blur-md flex flex-col h-full flex-grow transition-colors duration-500 group-hover:bg-[#0c0c0f]/95">
+                    <div class="relative z-10 min-w-0 p-5 sm:p-8 rounded-2xl bg-[#111115]/90 backdrop-blur-md flex flex-col h-full flex-grow transition-colors duration-500 group-hover:bg-[#0c0c0f]/95">
                         
                         <!-- Hover radial spotlight -->
                         <div class="absolute inset-0 bg-[radial-gradient(350px_circle_at_50%_0%,rgba(51,65,255,0.08),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl pointer-events-none"></div>
@@ -57,7 +57,7 @@ const services = [
                         </div>
 
                         <!-- Title -->
-                        <h3 class="font-heading text-2xl text-white mb-4 tracking-wider leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 transition-all duration-500">{service.title}</h3>
+                        <h3 class="font-heading text-2xl text-white mb-4 tracking-wide sm:tracking-wider leading-tight break-words group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 transition-all duration-500">{service.title}</h3>
                         
                         <!-- Description -->
                         <p class="text-gray-400 font-paragraph leading-relaxed text-sm flex-grow group-hover:text-gray-300 transition-colors duration-500">
