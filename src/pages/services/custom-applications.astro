@@ -5,48 +5,48 @@ import Footer from '../../components/Footer.astro';
 import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs.astro';
 
 // SEO details
-const title = "Custom Applications Development | Hakooi | Product Engineering Studio";
-const desc = "We engineer bespoke business applications, scalable SaaS platforms, and tailored internal operations tools designed for modern digital enterprise scalability.";
+const title = "Custom Software Development | Hakooi";
+const desc = "Custom software development for SaaS products, internal tools, customer portals, and business applications built around real operational needs.";
 
 const solutions = [
     {
-        title: "SaaS Platform Engineering",
-        desc: "Turn your business idea into a market-ready platform. We engineer secure, multi-tenant software architectures complete with recurring subscription billings (Stripe), role-based permissions, and fast customer frontends.",
-        features: ["Multi-tenant database isolation", "Stripe subscription billing models", "Robust REST/GraphQL API systems", "Instant user onboarding flows"]
+        title: "SaaS Product Development",
+        desc: "We design SaaS product architecture around user roles, product workflows, APIs, and billing requirements. Multi-tenant architecture and subscriptions are implemented when the product requires them.",
+        features: ["Multi-tenant architecture", "Authentication & permissions", "Subscription billing", "Product APIs"]
     },
     {
-        title: "Internal Operations Portals",
-        desc: "Stop wrestling with software that doesn't fit your company. We build custom internal CRMs, inventory managers, supply chain pipelines, and administrative toolkits optimized for your team's specific workflows.",
-        features: ["Tailored operational interfaces", "Automated CSV/Excel bulk parsers", "Real-time task synchronization", "High-security audit logging"]
+        title: "Internal Tools & Operations",
+        desc: "We build internal dashboards, admin systems, workflow tools, inventory and operations software, and import/export utilities around the way teams work.",
+        features: ["Custom operational workflows", "Admin dashboards", "Data import & export", "Audit trails"]
     },
     {
-        title: "Client & Customer Dashboards",
-        desc: "Deliver a premium self-service portal to your customers. We design real-time reporting dashboards, billing history portals, secure profile managers, and automated digital download systems.",
-        features: ["Interactive chart data charts", "Automated PDF receipt generation", "Secure client portal accesses", "Instant notification channels"]
+        title: "Customer Portals",
+        desc: "We create authenticated customer areas for account management, billing history, documents and downloads, reporting, and status views.",
+        features: ["Account management", "Reporting dashboards", "Billing & documents", "Notifications"]
     },
     {
-        title: "Scalable Full-Stack Engineering",
-        desc: "We build modern APIs using strict backend languages and deploy them on globally distributed serverless networks, guaranteeing sub-second response times and infinite cloud auto-scaling.",
-        features: ["High-speed query optimization", "TypeScript end-to-end type safety", "Edge-network globally hosted", "Continuous integration pipelines (CI/CD)"]
+        title: "APIs & Integrations",
+        desc: "We build backend APIs and integrations with third-party systems, using webhooks, asynchronous jobs, and external services where the workflow requires them.",
+        features: ["REST / GraphQL APIs", "Webhooks & background jobs", "Third-party integrations", "CI/CD & deployment"]
     }
 ];
 
 const faqItems = [
     {
         q: "What technologies do you use for building custom SaaS and business applications?",
-        a: "We select technologies based on each project's specific requirements. For rapid product development and rich convention-driven backends, we use Ruby on Rails — the same framework Shopify itself is built on. For high-concurrency microservices and data-intensive APIs, we use Golang for its exceptional throughput. Frontend portals and dashboards are built with React.js and Next.js, all backed by PostgreSQL and hosted on cloud platforms like AWS or Vercel."
+        a: "We choose technologies based on product requirements, team constraints, expected scale, and long-term maintenance. Depending on the application, that may include Ruby on Rails, React or Next.js, TypeScript, Go, PostgreSQL, Redis, and supporting cloud services."
     },
     {
         q: "How do you handle application security and sensitive customer data?",
-        a: "Security is built into our engineering lifecycle. We implement Role-Based Access Control (RBAC) to ensure users only see data they are authorized to access. We encrypt all passwords using bcrypt, secure all database traffic with TLS/SSL layers, implement CSRF/XSS protection, and run automated security vulnerability scans across all dependencies before any production deployment."
+        a: "We design security controls around each application's risks and data. Practical measures can include least-privilege access, secure authentication and authorization, appropriately hashed passwords, encrypted transport, dependency management, and audit logging where required. The exact implementation depends on the product and its operating environment."
     },
     {
         q: "Can you build complex, custom subscription billing systems?",
-        a: "Yes. We specialize in building robust, custom subscription layers using the Stripe Billing API. We support tiered pricing plans, metered usage-based billing, multi-currency invoicing, discount codes, and automatic dunning cycles to manage failed credit card charges via secure webhook integrations."
+        a: "We can implement subscription and usage-based billing with Stripe when the product requires it. Depending on the billing model, this can include recurring subscriptions, usage-based pricing, webhooks, and invoicing. Scope depends on the product, markets, and operational requirements."
     },
     {
         q: "Do you offer post-launch support and software maintenance?",
-        a: "Yes, we don't just hand over the code and walk away. We offer ongoing maintenance retainers and SLAs (Service Level Agreements) that cover active error monitoring (using Sentry), regular package and security dependency patches, performance optimization, and incremental UI feature releases as your business scales."
+        a: "Yes. We can provide ongoing maintenance, monitoring, dependency updates, bug fixes, and incremental product development after launch."
     }
 ];
 
@@ -85,7 +85,7 @@ const faqSchema = {
             <section class="py-16 sm:py-20 md:py-32 flex flex-col items-center text-center">
                 <div class="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#3341FF]/30 bg-[#3341FF]/5 text-[10px] sm:text-xs leading-relaxed tracking-[0.12em] sm:tracking-[0.2em] font-bold text-[#00D2FF] mb-8 uppercase" data-aos="fade-down">
                     <span class="w-2 h-2 shrink-0 rounded-full bg-[#00D2FF] animate-pulse"></span>
-                    Full-Stack Software Engineering
+                    CUSTOM SOFTWARE ENGINEERING
                 </div>
 
                 <h1 class="max-w-full font-heading text-[clamp(2.75rem,14vw,3.75rem)] sm:text-6xl md:text-8xl text-white tracking-normal sm:tracking-wider leading-[0.95] sm:leading-tight mb-8" data-aos="fade-up">
@@ -94,7 +94,7 @@ const faqSchema = {
                 </h1>
 
                 <p class="text-gray-400 font-paragraph text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 sm:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    We engineer bespoke, multi-tenant SaaS platforms, dedicated internal operations portals, high-security client dashboards, and auto-scaling full-stack web applications.
+                    We design and build SaaS products, internal tools, customer portals, and custom web applications around real business workflows.
                 </p>
 
                 <div class="flex w-full max-w-sm flex-col sm:w-auto sm:max-w-none sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
@@ -107,24 +107,24 @@ const faqSchema = {
                 </div>
             </section>
 
-            <!-- STATS SECTION -->
+            <!-- CAPABILITIES SECTION -->
             <section class="py-10 sm:py-12 border-y border-white/5 bg-[#111115]/20 backdrop-blur-md rounded-2xl mb-16 sm:mb-24" data-aos="fade-up">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-8 sm:gap-8 text-center">
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-[#00D2FF]">99.95%</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Uptime Guarantee</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#00D2FF]">SAAS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Product Development</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 md:border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-white">&lt; 150MS</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">API Latency</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">PORTALS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Customer Experiences</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-white">100%</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Intuitive UX</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">APIS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Systems Integration</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-[#3341FF]">AUTO</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Cloud Scaling</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#3341FF]">CLOUD</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Deployment & Operations</p>
                     </div>
                 </div>
             </section>
@@ -132,7 +132,7 @@ const faqSchema = {
             <!-- DETAILED SOLUTIONS -->
             <section id="solutions" class="scroll-mt-24 sm:scroll-mt-32 py-12 sm:py-16 mb-16 sm:mb-24">
                 <div class="mb-12 sm:mb-16 text-center md:text-left">
-                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">SOFTWARE ARCHITECTURE.</h2>
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">WHAT WE BUILD.</h2>
                     <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto md:mx-0"></div>
                 </div>
 
@@ -178,12 +178,12 @@ const faqSchema = {
 
                 <div class="grid min-w-0 grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center relative z-10">
                     <div>
-                        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">MODERN SOFTWARE STACK.</h2>
+                        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">PRODUCT ENGINEERING STACK.</h2>
                         <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
-                            We build using type-safe application structures, robust serverless routing, and modular component design patterns to ensure maximum long-term code maintainability.
+                            We choose technologies based on product requirements, team constraints, expected scale, and long-term maintainability.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["React.js / Next.js", "Ruby on Rails", "Golang", "TypeScript", "PostgreSQL", "Redis Cache", "Stripe Integration", "Docker & AWS Cloud"].map(tech => (
+                            {["Ruby on Rails", "React / Next.js", "TypeScript", "Golang", "PostgreSQL", "Redis", "Stripe", "Docker / AWS"].map(tech => (
                                 <span class="max-w-full break-words px-3 sm:px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs font-bold text-gray-300 tracking-wide sm:tracking-wider">
                                     {tech}
                                 </span>
@@ -199,13 +199,12 @@ const faqSchema = {
                         </div>
                         <p class="text-blue-400">import <span class="text-white">Stripe</span> from <span class="text-green-400">"stripe"</span>;</p>
                         <p class="text-blue-400">const <span class="text-purple-400">stripe</span> = <span class="text-white">new</span> <span class="text-[#00D2FF]">Stripe</span>(process.env.STRIPE_SECRET_KEY);</p>
-                        <p class="text-gray-500 mt-2">// Create dynamic multi-tenant customer subscription billing</p>
+                        <p class="text-gray-500 mt-2">// Create a subscription when the product requires billing</p>
                         <p class="text-[#00D2FF]">export const <span class="text-purple-400">createSubscription</span> = async (customerId, priceId) =&gt; {`{`}</p>
                         <p class="pl-4 text-blue-400">return await stripe.subscriptions.<span class="text-[#00D2FF]">create</span>({`{`}</p>
                         <p class="pl-8 text-white">customer: customerId,</p>
                         <p class="pl-8 text-white">items: [{`{ price: priceId }`}],</p>
                         <p class="pl-8 text-white">payment_behavior: <span class="text-green-400">"default_incomplete"</span>,</p>
-                        <p class="pl-8 text-white">expand: [<span class="text-green-400">"latest_invoice.payment_intent"</span>],</p>
                         <p class="pl-4 text-blue-400">{`});`}</p>
                         <p class="text-[#00D2FF]">{`};`}</p>
                         <p class="text-gray-500 mt-2">// Verify signature before processing webhook</p>
@@ -216,7 +215,7 @@ const faqSchema = {
                         <p class="pl-8 text-white">process.env.STRIPE_WEBHOOK_SECRET,</p>
                         <p class="pl-4 text-white">);</p>
                         <p class="pl-4 text-blue-400">if <span class="text-white">(event.type === </span><span class="text-green-400">"customer.subscription.deleted"</span><span class="text-white">) {`{`}</span></p>
-                        <p class="pl-8 text-blue-400">await <span class="text-[#00D2FF]">updateUserTenantAccess</span>(event.data.object.customer, false);</p>
+                        <p class="pl-8 text-blue-400">await <span class="text-[#00D2FF]">updateSubscriptionAccess</span>(event.data.object.customer, false);</p>
                         <p class="pl-4 text-white">{`}`}</p>
                         <p class="text-[#00D2FF]">{`};`}</p>
                     </div>
@@ -253,9 +252,9 @@ const faqSchema = {
             <section class="py-12 sm:py-20 text-center relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#3341FF]/10 to-[#3341FF]/2 border border-[#3341FF]/20 px-4 sm:px-6 mb-16 sm:mb-24" data-aos="fade-up">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(51,65,255,0.15),transparent)] pointer-events-none"></div>
                 <div class="relative z-10 max-w-2xl mx-auto">
-                    <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">BUILD YOUR DIGITAL FLAGSHIP SOFTWARE.</h2>
+                    <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">LET'S BUILD YOUR PRODUCT.</h2>
                     <p class="text-gray-300 font-paragraph text-sm md:text-base leading-relaxed mb-10">
-                        Let's engineer an application custom-tailored around your business workflows, multi-tenant requirements, or SaaS aspirations.
+                        Have a SaaS product, internal tool, customer portal, or custom application to build? Let's discuss the product and technical requirements.
                     </p>
                     <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto px-5 sm:px-10 py-5 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] hover:opacity-90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_30px_rgba(51,65,255,0.4)] hover:scale-105">
                         Schedule a Discovery Call
