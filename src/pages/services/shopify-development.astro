@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs.astro';
 
 // SEO details
 const title = "Shopify Development Services | Hakooi | Commerce Engineering Studio";
@@ -64,9 +65,10 @@ const faqSchema = {
 };
 ---
 
-<Layout title={title}>
+<Layout title={title} description={desc}>
     <!-- FAQ Schema Injection -->
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+    <ServiceBreadcrumbs currentPage="Shopify Development Services" />
 
     <Navbar />
 
@@ -223,7 +225,7 @@ const faqSchema = {
                 </div>
 
                 <div class="max-w-3xl mx-auto space-y-4">
-                    {faqItems.map((item, index) => (
+                    {faqItems.map((item) => (
                         <details class="group relative rounded-xl border border-white/5 bg-[#111115]/30 overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden" data-aos="fade-up">
                             <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
                                 <h3 class="font-heading text-lg md:text-xl text-white tracking-wider pr-4 group-hover:text-[#00D2FF] transition-colors">{item.q}</h3>

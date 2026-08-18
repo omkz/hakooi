@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "@fontsource/bebas-neue": "^5.2.7",
     "@fontsource/montserrat": "^5.2.8",
     "@tailwindcss/vite": "^4.2.4",
@@ -20,6 +21,8 @@
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.8"
+    "@astrojs/check": "^0.9.10",
+    "@types/aos": "^3.0.8",
+    "typescript": "^6.0.3"
   }
 }
