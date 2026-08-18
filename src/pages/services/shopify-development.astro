@@ -5,48 +5,48 @@ import Footer from '../../components/Footer.astro';
 import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs.astro';
 
 // SEO details
-const title = "Shopify Development Services | Hakooi | Product Engineering Studio";
-const desc = "We engineer flagship Shopify storefronts, dynamic custom themes, and high-performance headless commerce systems. Maximize conversion and speed with bespoke Shopify development.";
+const title = "Shopify Development Services | Hakooi";
+const desc = "Custom Shopify development for growing brands: themes, headless storefronts, app integrations, migrations, and performance optimization.";
 
 const solutions = [
     {
-        title: "Bespoke Liquid Themes",
-        desc: "100% custom Shopify 2.0 themes crafted line-by-line. No bloated page builders, no unnecessary apps. We build with clean JSON templates and modular native sections for absolute editing freedom.",
-        features: ["Tailored UI/UX design", "Fully responsive and accessible", "Native OS 2.0 theme editor compatibility", "Zero external app dependencies"]
+        title: "Custom Shopify Themes",
+        desc: "We build custom Shopify themes in Liquid with modular sections and blocks, responsive behavior, accessible frontend patterns, and an editing experience tailored to merchant workflows.",
+        features: ["Custom Liquid theme development", "Modular sections and blocks", "Responsive, accessible frontend", "Maintainable merchant editing"]
     },
     {
-        title: "Headless Commerce (Hydrogen)",
-        desc: "Take performance to the absolute limit. Using Shopify Hydrogen, Remix, React, and GraphQL, we decouple your frontend from Shopify's backend to deliver sub-second page loads and limitless design possibilities.",
-        features: ["Sub-second page transitions", "Vercel or Netlify globally edge-hosted", "Advanced dynamic animations", "Omnichannel API architecture"]
+        title: "Headless Shopify",
+        desc: "We build custom storefront experiences with Hydrogen and Shopify's Storefront API, with CMS integrations when product and content requirements call for them.",
+        features: ["Hydrogen storefront development", "Shopify Storefront API", "Custom frontend experiences", "CMS integration when appropriate"]
     },
     {
-        title: "Custom App & API Integrations",
-        desc: "Connect your storefront to ERPs, CRMs, WMS, or bespoke inventory systems. We write robust private apps and serverless middleware to automate processes and sync real-time data.",
-        features: ["Robust webhook infrastructure", "SAP, NetSuite, and Salesforce integrations", "Custom product configurators", "Tailored checkout extensions"]
+        title: "Custom Apps & Integrations",
+        desc: "We build custom Shopify apps and middleware that connect commerce data with ERP, WMS, CRM, and other operational systems using supported APIs and webhooks.",
+        features: ["GraphQL Admin API and webhooks", "ERP, WMS, and CRM integrations", "Custom operational workflows", "Shopify Functions for commerce logic"]
     },
     {
-        title: "Core Web Vitals & Optimization",
-        desc: "Don't let slow loading kill your sales. We perform deep auditing, image pipeline optimization, JavaScript minification, and code pruning to push your Shopify speed scores into the high 90s.",
-        features: ["LCP & CLS stabilization", "Render-blocking script elimination", "Dynamic lazy-loading strategies", "Continuous monitoring setups"]
+        title: "Performance & Core Web Vitals",
+        desc: "We audit and improve Core Web Vitals by optimizing images, reducing JavaScript, reviewing Liquid and theme code, measuring third-party app impact, and setting up monitoring.",
+        features: ["Core Web Vitals audits", "Image and asset optimization", "Liquid and JavaScript optimization", "Third-party impact and monitoring"]
     }
 ];
 
 const faqItems = [
     {
         q: "Why should we choose a custom Shopify theme over a pre-made template?",
-        a: "Pre-made templates are built to serve thousands of stores. Consequently, they are bloated with unused CSS, heavy JavaScript, and rigid settings that slow down your site and limit your design. A custom theme by Hakooi is engineered from scratch using Shopify Liquid — the same Ruby on Rails-rooted template engine that powers Shopify itself. For advanced app extensions and Wasm-based checkout UIs, we work in Rust, giving your store elite performance, a unique conversion-focused UX, and a tailor-made Shopify editor interface for your operations team."
+        a: "A quality pre-made theme can be a practical starting point. Custom Shopify themes are useful when a brand needs distinctive UX, custom merchandising behavior, tighter performance control, or sections and editor workflows tailored to its content and operations. We build these themes with Liquid, Shopify's templating language."
     },
     {
         q: "What is Headless Commerce, and does my store need it?",
-        a: "Headless commerce separates your frontend (what customers see) from your Shopify backend. We build the frontend using React (Remix/Hydrogen) and connect to Shopify via the Storefront API. You should consider headless if you need total design freedom, extreme speed (< 1s load times), dynamic interactions that Liquid can't support, or if you want to pull content seamlessly from external headless CMSs like Sanity or Strapi."
+        a: "Headless Shopify separates the storefront experience from Shopify's commerce backend. Hydrogen uses the Storefront API to support custom frontend and content experiences. It makes sense when product, UX, content, or integration requirements justify the additional architecture and ongoing maintenance; it is not the default choice for every store."
     },
     {
-        q: "How do you ensure zero-downtime migrations from other platforms?",
-        a: "Migrating from Magento, WooCommerce, or Salesforce is a delicate process. We follow a strict migration playbook: we replicate your catalog database, preserve URL structures to prevent SEO ranking loss, map 301 redirects, securely migrate customer passwords, and run comprehensive parallel environment testing before pointing the primary domain to Shopify."
+        q: "How do you approach migrations from other commerce platforms?",
+        a: "We scope, map, test, and validate each migration before launch. Customer records can be migrated, while catalog and order data depend on the source platform, requirements, and migration tools. We map important URLs with redirects, but customer passwords generally cannot be transferred because they are encrypted by the originating platform; customers may need to activate or create Shopify credentials."
     },
     {
         q: "Can you build custom applications that integrate with our existing ERP?",
-        a: "Yes. We build custom private Shopify apps using Remix, Node.js, and Shopify's App Bridge. Whether you need to integrate a custom warehouse management system (WMS), synchronize complex pricing structures from SAP or NetSuite, or build a unique frontend product builder, we write secure, middleware integrations that communicate seamlessly with Shopify's Admin API."
+        a: "Yes. We build custom Shopify apps and middleware around the GraphQL Admin API, using webhooks for event-driven updates where appropriate. Integrations can connect ERP, WMS, CRM, pricing, inventory, and operational workflows. For checkout work, Checkout UI Extensions handle supported UI customizations and Shopify Functions handle supported backend commerce logic; available extension points depend on the merchant's Shopify plan."
     }
 ];
 
@@ -85,7 +85,7 @@ const faqSchema = {
             <section class="py-16 sm:py-20 md:py-32 flex flex-col items-center text-center">
                 <div class="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#3341FF]/30 bg-[#3341FF]/5 text-[10px] sm:text-xs leading-relaxed tracking-[0.12em] sm:tracking-[0.2em] font-bold text-[#00D2FF] mb-8 uppercase" data-aos="fade-down">
                     <span class="w-2 h-2 shrink-0 rounded-full bg-[#00D2FF] animate-pulse"></span>
-                    Flagship Commerce Engineering
+                    SHOPIFY PRODUCT ENGINEERING
                 </div>
 
                 <h1 class="max-w-full font-heading text-[clamp(2.75rem,14vw,3.75rem)] sm:text-6xl md:text-8xl text-white tracking-normal sm:tracking-wider leading-[0.95] sm:leading-tight mb-8" data-aos="fade-up">
@@ -94,7 +94,7 @@ const faqSchema = {
                 </h1>
 
                 <p class="text-gray-400 font-paragraph text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 sm:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    We engineer elite Shopify storefronts, dynamic custom themes, and bespoke headless commerce architectures designed for high conversion, flawless aesthetics, and sub-second loading speeds.
+                    We design and build custom Shopify storefronts, themes, headless experiences, and integrations for brands that need more than an off-the-shelf setup.
                 </p>
 
                 <div class="flex w-full max-w-sm flex-col sm:w-auto sm:max-w-none sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
@@ -107,24 +107,24 @@ const faqSchema = {
                 </div>
             </section>
 
-            <!-- STATS SECTION -->
+            <!-- CAPABILITIES SECTION -->
             <section class="py-10 sm:py-12 border-y border-white/5 bg-[#111115]/20 backdrop-blur-md rounded-2xl mb-16 sm:mb-24" data-aos="fade-up">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-8 sm:gap-8 text-center">
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-[#00D2FF]">&lt; 1.2S</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Avg. Load Time</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#00D2FF]">LIQUID</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Custom Themes</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 md:border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-white">+25%</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Avg. Conversion Lift</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">HYDROGEN</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Headless Storefronts</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-white">95+</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Mobile Speed Score</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">APIS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Apps &amp; Integrations</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-[#3341FF]">100%</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Bespoke Codebase</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#3341FF]">CWV</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Performance Monitoring</p>
                     </div>
                 </div>
             </section>
@@ -132,7 +132,7 @@ const faqSchema = {
             <!-- DETAILED SOLUTIONS -->
             <section id="solutions" class="scroll-mt-24 sm:scroll-mt-32 py-12 sm:py-16 mb-16 sm:mb-24">
                 <div class="mb-12 sm:mb-16 text-center md:text-left">
-                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">ENGINEERED TO OUTPERFORM.</h2>
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">SHOPIFY SOLUTIONS.</h2>
                     <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto md:mx-0"></div>
                 </div>
 
@@ -180,10 +180,10 @@ const faqSchema = {
                     <div>
                         <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">OUR COMMERCE TECH STACK.</h2>
                         <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
-                            We don't rely on obsolete visual page builders that degrade your Core Web Vitals. We use high-precision engineering languages and modern static hosting frameworks to deliver elite rendering capabilities.
+                            We select Shopify-native tools and supporting application technologies based on storefront, integration, checkout, and operational requirements.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["Shopify Liquid", "Ruby on Rails", "Rust (Wasm Extensions)", "Remix / Hydrogen", "React.js", "GraphQL", "TypeScript", "Vercel Edge"].map(tech => (
+                            {["Shopify Liquid", "Shopify Storefront API", "GraphQL Admin API", "Hydrogen", "Shopify Functions", "TypeScript", "Ruby on Rails", "Webhooks"].map(tech => (
                                 <span class="max-w-full break-words px-3 sm:px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs font-bold text-gray-300 tracking-wide sm:tracking-wider">
                                     {tech}
                                 </span>
@@ -195,24 +195,24 @@ const faqSchema = {
                             <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                            <span class="text-[10px] text-gray-500 ml-2">shopify-hydrogen-client.ts</span>
+                            <span class="text-[10px] text-gray-500 ml-2">product-query.graphql</span>
                         </div>
-                        <p class="text-blue-400">import <span class="text-white">{"{ createStorefrontClient }"}</span> from <span class="text-green-400">"@shopify/hydrogen"</span>;</p>
-                        <p class="text-blue-400">const <span class="text-purple-400">{"{ storefront }"}</span> = <span class="text-[#00D2FF]">createStorefrontClient</span>({`{`}</p>
-                        <p class="pl-4 text-white">privateStorefrontToken: process.env.SHOPIFY_PRIVATE_TOKEN,</p>
-                        <p class="pl-4 text-white">storeDomain: process.env.SHOPIFY_STORE_DOMAIN,</p>
-                        <p class="pl-4 text-white">storefrontApiVersion: <span class="text-green-400">"2026-04"</span>,</p>
-                        <p class="text-blue-400">{`});`}</p>
-                        <p class="text-gray-500 mt-2">// Type-safe product query via Storefront API</p>
-                        <p class="text-[#00D2FF] mt-2">export const <span class="text-purple-400">getProduct</span> = async (handle: <span class="text-[#00D2FF]">string</span>) =&gt; {`{`}</p>
-                        <p class="pl-4 text-blue-400">const <span class="text-white">{"{ product }"}</span> = await storefront.<span class="text-[#00D2FF]">query</span>({`{`}</p>
-                        <p class="pl-8 text-white">query: <span class="text-green-400">`query GetProduct($handle: String!) {`{`}</span></p>
-                        <p class="pl-12 text-green-400">product(handle: $handle) {"{ id title priceRange { minVariantPrice { amount } } }"}</p>
-                        <p class="pl-8 text-green-400">{`}`}</span>`,</p>
-                        <p class="pl-8 text-white">variables: {"{ handle }"},</p>
-                        <p class="pl-4 text-white">{`});`}</p>
-                        <p class="pl-4 text-blue-400">return <span class="text-white">product;</span></p>
-                        <p class="text-[#00D2FF]">{`};`}</p>
+                        <p class="text-blue-400">query <span class="text-purple-400">ProductByHandle</span>($handle: <span class="text-[#00D2FF]">String!</span>) {`{`}</p>
+                        <p class="pl-4 text-white">product(handle: $handle) {`{`}</p>
+                        <p class="pl-8 text-green-400">id</p>
+                        <p class="pl-8 text-green-400">title</p>
+                        <p class="pl-8 text-white">featuredImage {`{`}</p>
+                        <p class="pl-12 text-green-400">url</p>
+                        <p class="pl-12 text-green-400">altText</p>
+                        <p class="pl-8 text-white">{`}`}</p>
+                        <p class="pl-8 text-white">priceRange {`{`}</p>
+                        <p class="pl-12 text-white">minVariantPrice {`{`}</p>
+                        <p class="pl-16 text-green-400">amount</p>
+                        <p class="pl-16 text-green-400">currencyCode</p>
+                        <p class="pl-12 text-white">{`}`}</p>
+                        <p class="pl-8 text-white">{`}`}</p>
+                        <p class="pl-4 text-white">{`}`}</p>
+                        <p class="text-blue-400">{`}`}</p>
                     </div>
                 </div>
             </section>
