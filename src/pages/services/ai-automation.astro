@@ -180,10 +180,10 @@ const faqSchema = {
                     <div>
                         <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">AI TECH STACK.</h2>
                         <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
-                            We choose models, retrieval systems, application frameworks, and infrastructure based on product requirements, data, latency, privacy, reliability, and cost. Providers and tools vary by engagement.
+                            We choose models, orchestration frameworks, databases, and infrastructure based on product requirements, data, latency, privacy, reliability, and cost. Providers and tools vary by engagement.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["OpenAI / Anthropic APIs", "Python / TypeScript", "PostgreSQL + pgvector", "Vector databases", "Tool calling / structured outputs", "Webhooks / queues", "Docker", "AWS / cloud infrastructure"].map(tech => (
+                            {["OpenAI / Anthropic APIs", "Python / TypeScript", "LangGraph", "pgvector / Pinecone / Qdrant", "Tool calling / structured outputs", "Evals / observability", "Webhooks / queues", "Docker / AWS"].map(tech => (
                                 <span class="max-w-full break-words px-3 sm:px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs font-bold text-gray-300 tracking-wide sm:tracking-wider">
                                     {tech}
                                 </span>
