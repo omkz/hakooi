@@ -33,15 +33,15 @@ const solutions = [
 
 const faqItems = [
     {
-        q: "What technologies do you use for building custom SaaS and business applications?",
-        a: "We choose technologies based on product requirements, team constraints, expected scale, and long-term maintenance. Depending on the application, that may include Ruby on Rails, React or Next.js, TypeScript, Go, PostgreSQL, Redis, and supporting cloud services."
+        q: "What technologies do you use for product development?",
+        a: "We choose technologies based on product requirements, team constraints, expected scale, and long-term maintenance. Depending on the product, that may include Ruby on Rails, Python, React or Next.js, TypeScript, PostgreSQL, Redis, and supporting cloud services."
     },
     {
         q: "How do you handle application security and sensitive customer data?",
         a: "We design security controls around each application's risks and data. Practical measures can include least-privilege access, secure authentication and authorization, appropriately hashed passwords, encrypted transport, dependency management, and audit logging where required. The exact implementation depends on the product and its operating environment."
     },
     {
-        q: "Can you build complex, custom subscription billing systems?",
+        q: "Can you implement subscription and usage-based billing?",
         a: "We can implement subscription and usage-based billing with Stripe when the product requires it. Depending on the billing model, this can include recurring subscriptions, usage-based pricing, webhooks, and invoicing. Scope depends on the product, markets, and operational requirements."
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
 <Layout title={title} description={desc}>
     <!-- FAQ Schema Injection -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
-    <ServiceBreadcrumbs currentPage="Custom Applications Development" />
+    <ServiceBreadcrumbs currentPage="Product Development" />
 
     <Navbar />
 
@@ -85,16 +85,16 @@ const faqSchema = {
             <section class="py-16 sm:py-20 md:py-32 flex flex-col items-center text-center">
                 <div class="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#3341FF]/30 bg-[#3341FF]/5 text-[10px] sm:text-xs leading-relaxed tracking-[0.12em] sm:tracking-[0.2em] font-bold text-[#00D2FF] mb-8 uppercase" data-aos="fade-down">
                     <span class="w-2 h-2 shrink-0 rounded-full bg-[#00D2FF] animate-pulse"></span>
-                    CUSTOM SOFTWARE ENGINEERING
+                    PRODUCT DEVELOPMENT
                 </div>
 
                 <h1 class="max-w-full font-heading text-[clamp(2.75rem,14vw,3.75rem)] sm:text-6xl md:text-8xl text-white tracking-normal sm:tracking-wider leading-[0.95] sm:leading-tight mb-8" data-aos="fade-up">
-                    CUSTOM<br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3341FF] to-[#00D2FF]">APPLICATIONS.</span>
+                    SOFTWARE<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3341FF] to-[#00D2FF]">PRODUCTS.</span>
                 </h1>
 
                 <p class="text-gray-400 font-paragraph text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 sm:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    We design and build SaaS products, internal tools, customer portals, and custom web applications around real business workflows.
+                    We design and build SaaS products, business applications, internal tools, customer portals, and APIs around real workflows and product requirements.
                 </p>
 
                 <div class="flex w-full max-w-sm flex-col sm:w-auto sm:max-w-none sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
@@ -115,16 +115,16 @@ const faqSchema = {
                         <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Product Development</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 md:border-r border-white/5 last:border-0">
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">TOOLS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Internal Operations</p>
+                    </div>
+                    <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
                         <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">PORTALS</p>
                         <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Customer Experiences</p>
                     </div>
-                    <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">APIS</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Systems Integration</p>
-                    </div>
                     <div class="min-w-0 p-2 sm:p-4 last:border-0">
-                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#3341FF]">CLOUD</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Deployment & Operations</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#3341FF]">APIS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Systems Integration</p>
                     </div>
                 </div>
             </section>
@@ -180,10 +180,10 @@ const faqSchema = {
                     <div>
                         <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">PRODUCT ENGINEERING STACK.</h2>
                         <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
-                            We choose technologies based on product requirements, team constraints, expected scale, and long-term maintainability.
+                            We choose technologies based on product requirements, team constraints, expected scale, and long-term maintainability. The stack varies by engagement.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["Ruby on Rails", "React / Next.js", "TypeScript", "Golang", "PostgreSQL", "Redis", "Stripe", "Docker / AWS"].map(tech => (
+                            {["Ruby on Rails", "Python", "React / Next.js", "TypeScript", "PostgreSQL", "Redis", "Stripe", "Docker / AWS"].map(tech => (
                                 <span class="max-w-full break-words px-3 sm:px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs font-bold text-gray-300 tracking-wide sm:tracking-wider">
                                     {tech}
                                 </span>
@@ -195,29 +195,20 @@ const faqSchema = {
                             <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                            <span class="text-[10px] text-gray-500 ml-2">stripe-billing.ts</span>
+                            <span class="text-[10px] text-gray-500 ml-2">product-workflow.ts</span>
                         </div>
-                        <p class="text-blue-400">import <span class="text-white">Stripe</span> from <span class="text-green-400">"stripe"</span>;</p>
-                        <p class="text-blue-400">const <span class="text-purple-400">stripe</span> = <span class="text-white">new</span> <span class="text-[#00D2FF]">Stripe</span>(process.env.STRIPE_SECRET_KEY);</p>
-                        <p class="text-gray-500 mt-2">// Create a subscription when the product requires billing</p>
-                        <p class="text-[#00D2FF]">export const <span class="text-purple-400">createSubscription</span> = async (customerId, priceId) =&gt; {`{`}</p>
-                        <p class="pl-4 text-blue-400">return await stripe.subscriptions.<span class="text-[#00D2FF]">create</span>({`{`}</p>
-                        <p class="pl-8 text-white">customer: customerId,</p>
-                        <p class="pl-8 text-white">items: [{`{ price: priceId }`}],</p>
-                        <p class="pl-8 text-white">payment_behavior: <span class="text-green-400">"default_incomplete"</span>,</p>
-                        <p class="pl-4 text-blue-400">{`});`}</p>
-                        <p class="text-[#00D2FF]">{`};`}</p>
-                        <p class="text-gray-500 mt-2">// Verify signature before processing webhook</p>
-                        <p class="text-[#00D2FF]">export const <span class="text-purple-400">handleStripeWebhook</span> = async (req, res) =&gt; {`{`}</p>
-                        <p class="pl-4 text-blue-400">const <span class="text-white">event = stripe.webhooks.</span><span class="text-[#00D2FF]">constructEvent</span>(</p>
-                        <p class="pl-8 text-white">req.body,</p>
-                        <p class="pl-8 text-white">req.headers[<span class="text-green-400">"stripe-signature"</span>],</p>
-                        <p class="pl-8 text-white">process.env.STRIPE_WEBHOOK_SECRET,</p>
-                        <p class="pl-4 text-white">);</p>
-                        <p class="pl-4 text-blue-400">if <span class="text-white">(event.type === </span><span class="text-green-400">"customer.subscription.deleted"</span><span class="text-white">) {`{`}</span></p>
-                        <p class="pl-8 text-blue-400">await <span class="text-[#00D2FF]">updateSubscriptionAccess</span>(event.data.object.customer, false);</p>
-                        <p class="pl-4 text-white">{`}`}</p>
-                        <p class="text-[#00D2FF]">{`};`}</p>
+                        <p class="text-gray-500">// Create a workspace through the product service</p>
+                        <p class="text-blue-400">app.<span class="text-[#00D2FF]">post</span>(<span class="text-green-400">"/workspaces"</span>, async (req, res) =&gt; {`{`}</p>
+                        <p class="pl-4 text-blue-400">const <span class="text-white">workspace</span> = await workspaceService.<span class="text-[#00D2FF]">create</span>({`{`}</p>
+                        <p class="pl-8 text-white">name: req.body.name,</p>
+                        <p class="pl-8 text-white">ownerId: req.user.id,</p>
+                        <p class="pl-4 text-white">{`});`}</p>
+                        <p class="text-gray-500 mt-2 pl-4">// Run follow-up work outside the request</p>
+                        <p class="pl-4 text-blue-400">await jobs.<span class="text-[#00D2FF]">enqueue</span>(<span class="text-green-400">"workspace.created"</span>, {`{`}</p>
+                        <p class="pl-8 text-white">workspaceId: workspace.id,</p>
+                        <p class="pl-4 text-white">{`});`}</p>
+                        <p class="pl-4 text-blue-400">return res.<span class="text-[#00D2FF]">status</span>(201).<span class="text-[#00D2FF]">json</span>(workspace);</p>
+                        <p class="text-blue-400">{`});`}</p>
                     </div>
                 </div>
             </section>
@@ -254,7 +245,7 @@ const faqSchema = {
                 <div class="relative z-10 max-w-2xl mx-auto">
                     <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">LET'S BUILD YOUR PRODUCT.</h2>
                     <p class="text-gray-300 font-paragraph text-sm md:text-base leading-relaxed mb-10">
-                        Have a SaaS product, internal tool, customer portal, or custom application to build? Let's discuss the product and technical requirements.
+                        Have a SaaS product, business application, internal tool, or other software product to build? Let's discuss the product and technical requirements.
                     </p>
                     <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto px-5 sm:px-10 py-5 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] hover:opacity-90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_30px_rgba(51,65,255,0.4)] hover:scale-105">
                         Schedule a Discovery Call
