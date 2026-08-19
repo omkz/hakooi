@@ -1,33 +1,49 @@
 ---
 interface Props {
 	currentPage: string;
+	parentPage?: {
+		name: string;
+		path: string;
+	};
 }
 
-const { currentPage } = Astro.props;
+const { currentPage, parentPage } = Astro.props;
 const siteUrl = Astro.site ?? new URL(Astro.url.origin);
+const itemListElement = [
+	{
+		'@type': 'ListItem',
+		position: 1,
+		name: 'Home',
+		item: new URL('/', siteUrl).href
+	},
+	{
+		'@type': 'ListItem',
+		position: 2,
+		name: 'Services',
+		item: new URL('/#services', siteUrl).href
+	}
+];
+
+if (parentPage) {
+	itemListElement.push({
+		'@type': 'ListItem',
+		position: 3,
+		name: parentPage.name,
+		item: new URL(parentPage.path, siteUrl).href
+	});
+}
+
+itemListElement.push({
+	'@type': 'ListItem',
+	position: itemListElement.length + 1,
+	name: currentPage,
+	item: new URL(Astro.url.pathname, siteUrl).href
+});
+
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',
-	itemListElement: [
-		{
-			'@type': 'ListItem',
-			position: 1,
-			name: 'Home',
-			item: new URL('/', siteUrl).href
-		},
-		{
-			'@type': 'ListItem',
-			position: 2,
-			name: 'Services',
-			item: new URL('/#services', siteUrl).href
-		},
-		{
-			'@type': 'ListItem',
-			position: 3,
-			name: currentPage,
-			item: new URL(Astro.url.pathname, siteUrl).href
-		}
-	]
+	itemListElement
 };
 ---
 

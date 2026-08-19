@@ -68,7 +68,10 @@ const faqSchema = {
 <Layout title={title} description={desc}>
     <!-- FAQ Schema Injection -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
-    <ServiceBreadcrumbs currentPage="Shopify Development Services" />
+    <ServiceBreadcrumbs
+        currentPage="Shopify Development"
+        parentPage={{ name: "Commerce Engineering", path: "/services/commerce-engineering/" }}
+    />
 
     <Navbar />
 
@@ -105,6 +108,10 @@ const faqSchema = {
                         View Solutions ↓
                     </a>
                 </div>
+
+                <p class="text-gray-500 font-paragraph text-xs sm:text-sm leading-relaxed mt-8 max-w-2xl" data-aos="fade-up" data-aos-delay="250">
+                    Part of <a href="/services/commerce-engineering" class="text-[#00D2FF] hover:text-white transition-colors">Commerce Engineering</a>. Need custom order, inventory, product data, or operations software? <a href="/services/commerce-systems" class="text-[#00D2FF] hover:text-white transition-colors">Explore Custom Commerce →</a>
+                </p>
             </section>
 
             <!-- CAPABILITIES SECTION -->

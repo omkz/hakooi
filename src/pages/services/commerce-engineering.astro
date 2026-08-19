@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs.astro';
+
+const title = "Commerce Engineering | Hakooi";
+const desc = "Commerce engineering for Shopify and custom commerce systems, including storefronts, apps, integrations, orders, inventory, product data, and backend operations.";
+
+const commercePaths = [
+    {
+        title: "SHOPIFY DEVELOPMENT",
+        desc: "Shopify storefronts, custom themes, headless commerce, apps, migrations, performance optimization, and integrations with external business systems.",
+        features: [
+            "Custom themes and storefronts",
+            "Headless Shopify",
+            "Custom apps and integrations",
+            "Platform migrations",
+            "Performance optimization"
+        ],
+        cta: "Explore Shopify Development",
+        href: "/services/shopify-development"
+    },
+    {
+        title: "CUSTOM COMMERCE",
+        desc: "Custom commerce applications and backend systems for businesses whose workflows, integrations, or operational requirements go beyond a standard commerce platform.",
+        features: [
+            "Custom storefronts",
+            "Commerce APIs",
+            "Product catalogs",
+            "Order management",
+            "Inventory workflows",
+            "Pricing and promotions",
+            "Payments integration",
+            "ERP / WMS / CRM integrations",
+            "Background jobs and event-driven workflows"
+        ],
+        cta: "Explore Custom Commerce",
+        href: "/services/commerce-systems"
+    }
+];
+---
+
+<Layout title={title} description={desc}>
+    <ServiceBreadcrumbs currentPage="Commerce Engineering" />
+
+    <Navbar />
+
+    <main class="relative overflow-hidden pt-28">
+        <!-- Grid/Dot Background -->
+        <div class="fixed inset-0 z-0 pointer-events-none opacity-20">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+            <div class="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#3341FF]/20 to-transparent blur-[120px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- HERO SECTION -->
+            <section class="py-16 sm:py-20 md:py-32 flex flex-col items-center text-center">
+                <div class="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#3341FF]/30 bg-[#3341FF]/5 text-[10px] sm:text-xs leading-relaxed tracking-[0.12em] sm:tracking-[0.2em] font-bold text-[#00D2FF] mb-8 uppercase" data-aos="fade-down">
+                    <span class="w-2 h-2 shrink-0 rounded-full bg-[#00D2FF] animate-pulse"></span>
+                    COMMERCE ENGINEERING
+                </div>
+
+                <h1 class="max-w-full font-heading text-[clamp(2.75rem,14vw,3.75rem)] sm:text-6xl md:text-8xl text-white tracking-normal sm:tracking-wider leading-[0.95] sm:leading-tight mb-8" data-aos="fade-up">
+                    COMMERCE<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3341FF] to-[#00D2FF]">ENGINEERING.</span>
+                </h1>
+
+                <p class="text-gray-400 font-paragraph text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 sm:mb-12" data-aos="fade-up" data-aos-delay="100">
+                    We design and build commerce systems across Shopify and custom software, connecting storefronts, orders, inventory, product data, payments, and business operations.
+                </p>
+
+                <div class="flex w-full max-w-sm flex-col sm:w-auto sm:max-w-none sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 sm:px-8 py-4 bg-[#3341FF] hover:bg-[#3341FF]/90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_20px_rgba(51,65,255,0.3)] hover:scale-105">
+                        Schedule a Discovery Call
+                    </a>
+                    <a href="#paths" class="w-full sm:w-auto px-5 sm:px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold tracking-widest text-xs uppercase transition-all hover:scale-105">
+                        Explore Commerce Paths ↓
+                    </a>
+                </div>
+            </section>
+
+            <!-- COMMERCE PATHS -->
+            <section id="paths" class="scroll-mt-24 sm:scroll-mt-32 py-12 sm:py-16 mb-16 sm:mb-24">
+                <div class="max-w-3xl mb-12 sm:mb-16 text-center md:text-left">
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">TWO COMMERCE PATHS.</h2>
+                    <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto md:mx-0 mb-6"></div>
+                    <p class="text-gray-400 font-paragraph text-sm sm:text-base leading-relaxed">
+                        Shopify is often the right foundation for a commerce product. Custom commerce systems make sense when specific workflows, data models, or integrations require additional software. We choose the architecture around the business and operational requirements.
+                    </p>
+                </div>
+
+                <div class="grid min-w-0 grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                    {commercePaths.map((path, index) => (
+                        <article class="group relative min-w-0 rounded-2xl transition-all duration-500 hover:-translate-y-1" data-aos="fade-up" data-aos-delay={index * 100}>
+                            <div class="absolute -inset-[1px] bg-gradient-to-b from-white/10 to-white/5 rounded-2xl group-hover:from-[#3341FF]/40 group-hover:to-[#00D2FF]/20 transition-all duration-500 z-0"></div>
+
+                            <div class="relative z-10 min-w-0 p-5 sm:p-8 rounded-2xl bg-[#111115]/90 backdrop-blur-md h-full flex flex-col">
+                                <div class="flex min-w-0 items-start justify-between gap-4 mb-6">
+                                    <h3 class="min-w-0 font-heading text-2xl sm:text-3xl md:text-4xl text-white tracking-wide break-words">{path.title}</h3>
+                                    <div class="w-8 h-8 shrink-0 rounded-lg bg-[#3341FF]/10 flex items-center justify-center text-xs font-bold text-[#00D2FF] group-hover:bg-[#3341FF] group-hover:text-white transition-all duration-300">
+                                        0{index + 1}
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-6">
+                                    {path.desc}
+                                </p>
+
+                                <ul class="space-y-3 pt-4 border-t border-white/5 mb-8 flex-grow">
+                                    {path.features.map((feature) => (
+                                        <li class="flex min-w-0 items-start gap-3 text-xs text-gray-300">
+                                            <svg class="w-4 h-4 text-[#00D2FF] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span class="min-w-0 break-words font-bold tracking-wide uppercase text-[10px]">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                <a href={path.href} class="inline-flex items-center justify-center sm:justify-start gap-2 text-[#00D2FF] hover:text-white font-bold tracking-widest text-xs uppercase transition-colors">
+                                    {path.cta}
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
+
+            <!-- CALL TO ACTION -->
+            <section class="py-12 sm:py-20 text-center relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#3341FF]/10 to-[#3341FF]/2 border border-[#3341FF]/20 px-4 sm:px-6 mb-16 sm:mb-24" data-aos="fade-up">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(51,65,255,0.15),transparent)] pointer-events-none"></div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">LET'S BUILD YOUR<br/>COMMERCE SYSTEM.</h2>
+                    <p class="text-gray-300 font-paragraph text-sm md:text-base leading-relaxed mb-10">
+                        Tell us about the storefronts, operations, data, and integrations involved. We'll help determine whether Shopify, custom commerce software, or a combination is the right fit.
+                    </p>
+                    <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto px-5 sm:px-10 py-5 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] hover:opacity-90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_30px_rgba(51,65,255,0.4)] hover:scale-105">
+                        Schedule a Discovery Call
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
