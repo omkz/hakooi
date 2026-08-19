@@ -11,8 +11,8 @@ const desc = "Custom AI applications, agents, RAG systems, document processing, 
 const solutions = [
     {
         title: "AI Applications & Agents",
-        desc: "We build AI features, conversational interfaces, and multi-step agent workflows inside software products, selecting models and human approval points around the product requirements.",
-        features: ["LLM application development", "Tool & API integration", "Agent workflows", "Human-in-the-loop controls"]
+        desc: "We build AI features and agent workflows as software systems that combine models, tools, APIs, and application state. Multi-step execution and human approval points are designed around product requirements.",
+        features: ["AI application development", "Tool & API integration", "Multi-step agent workflows", "Human-in-the-loop controls"]
     },
     {
         title: "Knowledge & RAG Systems",
@@ -26,8 +26,8 @@ const solutions = [
     },
     {
         title: "Workflow Automation",
-        desc: "We connect webhooks, background jobs, commerce and CRM systems, notifications, support workflows, and approval steps, using AI for classification or routing where it adds value.",
-        features: ["Event-driven workflows", "AI classification & routing", "System integrations", "Human approval & escalation"]
+        desc: "We automate workflows with APIs, webhooks, queues, background jobs, and business rules, adding AI for classification, extraction, drafting, routing, or decision support when it is useful.",
+        features: ["APIs, webhooks & queues", "Business rules & background jobs", "AI-assisted workflow steps", "Human approval & escalation"]
     }
 ];
 
@@ -37,8 +37,8 @@ const faqItems = [
         a: "We reduce incorrect answers through techniques such as retrieval, constrained prompts, structured outputs, validation, access controls, evaluations, and human escalation. For high-risk workflows, AI output should be reviewed or validated before an action is performed."
     },
     {
-        q: "Can you automate workflows inside our existing Shopify or custom commerce backend?",
-        a: "Yes. Workflows can respond to webhooks, scheduled events, user actions, or API events. Depending on the process, they can support classification, document processing, drafting, routing, notifications, data synchronization, and human approval steps across Shopify or other business systems."
+        q: "Can you add automation to our existing software and business systems?",
+        a: "Yes. Workflows can respond to webhooks, scheduled events, user actions, or API events. Deterministic steps can use APIs, queues, background jobs, and business rules, while AI can support classification, document processing, drafting, routing, and decision support where appropriate. Human approval can be included when the workflow or risk requires it."
     },
     {
         q: "What vector databases and embedding models do you use?",
@@ -68,7 +68,7 @@ const faqSchema = {
 <Layout title={title} description={desc}>
     <!-- FAQ Schema Injection -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
-    <ServiceBreadcrumbs currentPage="AI Development & Automation" />
+    <ServiceBreadcrumbs currentPage="AI & Automation" />
 
     <Navbar />
 
@@ -94,7 +94,7 @@ const faqSchema = {
                 </h1>
 
                 <p class="text-gray-400 font-paragraph text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 sm:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    We build AI-powered applications, agents, knowledge systems, document workflows, and automations connected to real products, data, and business systems.
+                    We engineer AI applications, agents, knowledge systems, document workflows, and automation connected to real software, data, and business processes.
                 </p>
 
                 <div class="flex w-full max-w-sm flex-col sm:w-auto sm:max-w-none sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
@@ -132,7 +132,7 @@ const faqSchema = {
             <!-- DETAILED SOLUTIONS -->
             <section id="solutions" class="scroll-mt-24 sm:scroll-mt-32 py-12 sm:py-16 mb-16 sm:mb-24">
                 <div class="mb-12 sm:mb-16 text-center md:text-left">
-                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">AI SOLUTIONS.</h2>
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">WHAT WE BUILD.</h2>
                     <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto md:mx-0"></div>
                 </div>
 
@@ -180,10 +180,10 @@ const faqSchema = {
                     <div>
                         <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">AI TECH STACK.</h2>
                         <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
-                            We choose models, retrieval systems, application frameworks, and infrastructure based on the product, data, latency, privacy, and cost requirements.
+                            We choose models, retrieval systems, application frameworks, and infrastructure based on product requirements, data, latency, privacy, reliability, and cost. Providers and tools vary by engagement.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["OpenAI / Anthropic APIs", "Python / TypeScript", "PostgreSQL + pgvector", "Vector databases", "Model tool calling", "Webhooks / queues", "Docker", "AWS / cloud infrastructure"].map(tech => (
+                            {["OpenAI / Anthropic APIs", "Python / TypeScript", "PostgreSQL + pgvector", "Vector databases", "Tool calling / structured outputs", "Webhooks / queues", "Docker", "AWS / cloud infrastructure"].map(tech => (
                                 <span class="max-w-full break-words px-3 sm:px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs font-bold text-gray-300 tracking-wide sm:tracking-wider">
                                     {tech}
                                 </span>
@@ -205,9 +205,10 @@ const faqSchema = {
                         <p class="pl-8 text-white">filters=<span class="text-purple-400">access_scope</span>(user),</p>
                         <p class="pl-8 text-white">limit=<span class="text-yellow-400">5</span>,</p>
                         <p class="pl-4 text-white">)</p>
+                        <p class="pl-4 text-white">context = <span class="text-purple-400">build_context</span>(documents)</p>
                         <br/>
                         <p class="pl-4 text-white">draft = model.generate(</p>
-                        <p class="pl-8 text-white">prompt=<span class="text-purple-400">build_prompt</span>(question, documents),</p>
+                        <p class="pl-8 text-white">prompt=<span class="text-purple-400">build_prompt</span>(question, context),</p>
                         <p class="pl-8 text-white">schema=<span class="text-[#00D2FF]">AnswerWithSources</span>,</p>
                         <p class="pl-4 text-white">)</p>
                         <p class="pl-4 text-blue-400">return <span class="text-purple-400">validate_response</span>(draft, documents)</p>
@@ -247,7 +248,7 @@ const faqSchema = {
                 <div class="relative z-10 max-w-2xl mx-auto">
                     <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">LET'S BUILD WITH AI.</h2>
                     <p class="text-gray-300 font-paragraph text-sm md:text-base leading-relaxed mb-10">
-                        Have an AI product, agent workflow, knowledge system, or automation idea? Let's discuss where AI adds real value and how it should connect to your software and data.
+                        Tell us what you're trying to automate or build. We'll help determine where AI, deterministic software, or a combination makes sense.
                     </p>
                     <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto px-5 sm:px-10 py-5 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] hover:opacity-90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_30px_rgba(51,65,255,0.4)] hover:scale-105">
                         Schedule a Discovery Call
