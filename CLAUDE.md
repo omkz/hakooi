@@ -16,7 +16,7 @@ No test suite is configured. TypeScript checking uses `astro check` (available v
 
 Single-page marketing site for **Hakooi** (an Ecommerce Growth Studio). Built with **Astro 6** + **Tailwind CSS v4** (via `@tailwindcss/vite` Vite plugin — no `tailwind.config.*` file; config lives in `astro.config.mjs`).
 
-**Page composition** (`src/pages/index.astro`): one route that composes all section components in order: `Navbar → Hero → Services → Work → Process → Team → TechStack → Footer`.
+**Page composition** (`src/pages/index.astro`): one route that composes all section components in order: `Navbar → Hero → Services → Process → Team → TechStack → Footer`.
 
 **Layout** (`src/layouts/Layout.astro`): wraps every page with the `<head>` (SEO tags, Google Fonts — Bebas Neue + Montserrat, AOS animation library from CDN), a full-screen noise texture overlay (`z-[9999]`), and global CSS variables (`--hakooi-blue: #3341FF`, `--deep-black: #0a0a0a`).
 
