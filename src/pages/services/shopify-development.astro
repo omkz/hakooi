@@ -5,36 +5,36 @@ import Footer from '../../components/Footer.astro';
 import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs.astro';
 
 // SEO details
-const title = "Shopify Development Services | Hakooi";
-const desc = "Custom Shopify development for growing brands: themes, headless storefronts, app integrations, migrations, and performance optimization.";
+const title = "Shopify Development & Engineering | Hakooi";
+const desc = "Shopify engineering for custom apps, integrations, headless storefronts, migrations, commerce workflows, and performance optimization.";
 
 const solutions = [
     {
-        title: "Custom Shopify Themes",
-        desc: "We build custom Shopify themes in Liquid with modular sections and blocks, responsive behavior, accessible frontend patterns, and an editing experience tailored to merchant workflows.",
-        features: ["Custom Liquid theme development", "Modular sections and blocks", "Responsive, accessible frontend", "Maintainable merchant editing"]
+        title: "Custom Apps & Integrations",
+        desc: "We build custom Shopify apps, middleware, and background jobs around the GraphQL Admin API, webhooks, Shopify Functions, and merchant-specific operational workflows.",
+        features: ["GraphQL Admin API & webhooks", "ERP / WMS / CRM integrations", "Middleware & background jobs", "Shopify Functions & merchant workflows"]
     },
     {
         title: "Headless Shopify",
-        desc: "We build custom storefront experiences with Hydrogen and Shopify's Storefront API, with CMS integrations when product and content requirements call for them.",
-        features: ["Hydrogen storefront development", "Shopify Storefront API", "Custom frontend experiences", "CMS integration when appropriate"]
+        desc: "We use Hydrogen and Shopify's Storefront API when a product needs more control over the frontend experience, content architecture, integrations, or application behavior. Headless is selected only when its added architecture is justified.",
+        features: ["Hydrogen storefront development", "Storefront API integration", "CMS and content architecture", "Custom application behavior"]
     },
     {
-        title: "Custom Apps & Integrations",
-        desc: "We build custom Shopify apps and middleware that connect commerce data with ERP, WMS, CRM, and other operational systems using supported APIs and webhooks.",
-        features: ["GraphQL Admin API and webhooks", "ERP, WMS, and CRM integrations", "Custom operational workflows", "Shopify Functions for commerce logic"]
+        title: "Migrations & Commerce Integration",
+        desc: "We plan and implement migrations to Shopify across storefronts, product catalogs, variants, customer records, supported order history, redirects, and external integrations.",
+        features: ["Products & variant migration", "Customer & supported order data", "URL redirects & SEO mapping", "Integration & storefront migration"]
     },
     {
-        title: "Performance & Core Web Vitals",
-        desc: "We audit and improve Core Web Vitals by optimizing images, reducing JavaScript, reviewing Liquid and theme code, measuring third-party app impact, and setting up monitoring.",
-        features: ["Core Web Vitals audits", "Image and asset optimization", "Liquid and JavaScript optimization", "Third-party impact and monitoring"]
+        title: "Themes & Performance",
+        desc: "We build custom Liquid themes when merchant workflows or storefront requirements call for them, and improve performance through theme, image, JavaScript, and third-party app analysis.",
+        features: ["Liquid sections & blocks", "Responsive, accessible frontend", "Core Web Vitals optimization", "Third-party impact & monitoring"]
     }
 ];
 
 const faqItems = [
     {
-        q: "Why should we choose a custom Shopify theme over a pre-made template?",
-        a: "A quality pre-made theme can be a practical starting point. Custom Shopify themes are useful when a brand needs distinctive UX, custom merchandising behavior, tighter performance control, or sections and editor workflows tailored to its content and operations. We build these themes with Liquid, Shopify's templating language."
+        q: "Can you build custom applications that integrate with our existing ERP?",
+        a: "Yes. We build custom Shopify apps and middleware around the GraphQL Admin API, using webhooks for event-driven updates where appropriate. Integrations can connect ERP, WMS, CRM, pricing, inventory, and operational workflows. For checkout work, Checkout UI Extensions handle supported UI customizations and Shopify Functions handle supported backend commerce logic; available extension points depend on the merchant's Shopify plan."
     },
     {
         q: "What is Headless Commerce, and does my store need it?",
@@ -45,8 +45,8 @@ const faqItems = [
         a: "We scope, map, test, and validate each migration before launch. Customer records can be migrated, while catalog and order data depend on the source platform, requirements, and migration tools. We map important URLs with redirects, but customer passwords generally cannot be transferred because they are encrypted by the originating platform; customers may need to activate or create Shopify credentials."
     },
     {
-        q: "Can you build custom applications that integrate with our existing ERP?",
-        a: "Yes. We build custom Shopify apps and middleware around the GraphQL Admin API, using webhooks for event-driven updates where appropriate. Integrations can connect ERP, WMS, CRM, pricing, inventory, and operational workflows. For checkout work, Checkout UI Extensions handle supported UI customizations and Shopify Functions handle supported backend commerce logic; available extension points depend on the merchant's Shopify plan."
+        q: "Why should we choose a custom Shopify theme over a pre-made template?",
+        a: "A quality pre-made theme can be a practical starting point. Custom Shopify themes are useful when a brand needs distinctive UX, custom merchandising behavior, tighter performance control, or sections and editor workflows tailored to its content and operations. We build these themes with Liquid, Shopify's templating language."
     }
 ];
 
@@ -69,7 +69,7 @@ const faqSchema = {
     <!-- FAQ Schema Injection -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
     <ServiceBreadcrumbs
-        currentPage="Shopify Development"
+        currentPage="Shopify Engineering"
         parentPage={{ name: "Commerce Engineering", path: "/services/commerce-engineering/" }}
     />
 
@@ -83,21 +83,21 @@ const faqSchema = {
         </div>
 
         <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
-            
+
             <!-- HERO SECTION -->
             <section class="py-16 sm:py-20 md:py-32 flex flex-col items-center text-center">
                 <div class="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#3341FF]/30 bg-[#3341FF]/5 text-[10px] sm:text-xs leading-relaxed tracking-[0.12em] sm:tracking-[0.2em] font-bold text-[#00D2FF] mb-8 uppercase" data-aos="fade-down">
                     <span class="w-2 h-2 shrink-0 rounded-full bg-[#00D2FF] animate-pulse"></span>
-                    SHOPIFY PRODUCT ENGINEERING
+                    SHOPIFY ENGINEERING
                 </div>
 
                 <h1 class="max-w-full font-heading text-[clamp(2.75rem,14vw,3.75rem)] sm:text-6xl md:text-8xl text-white tracking-normal sm:tracking-wider leading-[0.95] sm:leading-tight mb-8" data-aos="fade-up">
                     SHOPIFY<br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3341FF] to-[#00D2FF]">DEVELOPMENT.</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3341FF] to-[#00D2FF]">ENGINEERING.</span>
                 </h1>
 
                 <p class="text-gray-400 font-paragraph text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 sm:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    We design and build custom Shopify storefronts, themes, headless experiences, and integrations for brands that need more than an off-the-shelf setup.
+                    We engineer Shopify storefronts, custom apps, integrations, migrations, and commerce systems for businesses that need more than basic store setup.
                 </p>
 
                 <div class="flex w-full max-w-sm flex-col sm:w-auto sm:max-w-none sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
@@ -118,20 +118,20 @@ const faqSchema = {
             <section class="py-10 sm:py-12 border-y border-white/5 bg-[#111115]/20 backdrop-blur-md rounded-2xl mb-16 sm:mb-24" data-aos="fade-up">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-8 sm:gap-8 text-center">
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#00D2FF]">LIQUID</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Custom Themes</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#00D2FF]">APPS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Custom Integrations</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 md:border-r border-white/5 last:border-0">
-                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">HYDROGEN</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Headless Storefronts</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">HEADLESS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Storefront Architecture</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">APIS</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Apps &amp; Integrations</p>
+                        <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-white">MIGRATIONS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Platform Transitions</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 last:border-0">
                         <p class="font-heading text-[clamp(1.25rem,6.5vw,2.25rem)] md:text-2xl lg:text-4xl xl:text-5xl whitespace-nowrap text-[#3341FF]">CWV</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Performance Monitoring</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Themes &amp; Performance</p>
                     </div>
                 </div>
             </section>
@@ -139,7 +139,7 @@ const faqSchema = {
             <!-- DETAILED SOLUTIONS -->
             <section id="solutions" class="scroll-mt-24 sm:scroll-mt-32 py-12 sm:py-16 mb-16 sm:mb-24">
                 <div class="mb-12 sm:mb-16 text-center md:text-left">
-                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">SHOPIFY SOLUTIONS.</h2>
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">SHOPIFY ENGINEERING SERVICES.</h2>
                     <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto md:mx-0"></div>
                 </div>
 
@@ -148,7 +148,7 @@ const faqSchema = {
                         <div class="group relative min-w-0 rounded-2xl transition-all duration-500 hover:-translate-y-1" data-aos="fade-up" data-aos-delay={index * 50}>
                             <!-- Glow Border -->
                             <div class="absolute -inset-[1px] bg-gradient-to-b from-white/10 to-white/5 rounded-2xl group-hover:from-[#3341FF]/40 group-hover:to-[#00D2FF]/20 transition-all duration-500 z-0"></div>
-                            
+
                             <!-- Inner Content -->
                             <div class="relative z-10 min-w-0 p-5 sm:p-8 rounded-2xl bg-[#111115]/90 backdrop-blur-md h-full flex flex-col justify-between">
                                 <div>
@@ -185,7 +185,7 @@ const faqSchema = {
 
                 <div class="grid min-w-0 grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center relative z-10">
                     <div>
-                        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">OUR COMMERCE TECH STACK.</h2>
+                        <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">SHOPIFY ENGINEERING STACK.</h2>
                         <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
                             We select Shopify-native tools and supporting application technologies based on storefront, integration, checkout, and operational requirements.
                         </p>
@@ -254,9 +254,9 @@ const faqSchema = {
             <section class="py-12 sm:py-20 text-center relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#3341FF]/10 to-[#3341FF]/2 border border-[#3341FF]/20 px-4 sm:px-6 mb-16 sm:mb-24" data-aos="fade-up">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(51,65,255,0.15),transparent)] pointer-events-none"></div>
                 <div class="relative z-10 max-w-2xl mx-auto">
-                    <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">READY TO SCALE YOUR COMMERCE?</h2>
+                    <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">LET'S BUILD YOUR<br/>SHOPIFY SYSTEM.</h2>
                     <p class="text-gray-300 font-paragraph text-sm md:text-base leading-relaxed mb-10">
-                        Discuss your Shopify store architecture, headless options, or backend API requirements with our technical lead today.
+                        Need a custom app, migration, integration, headless storefront, or operational workflow? Let's discuss the technical requirements.
                     </p>
                     <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto px-5 sm:px-10 py-5 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] hover:opacity-90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_30px_rgba(51,65,255,0.4)] hover:scale-105">
                         Schedule a Discovery Call
@@ -275,7 +275,7 @@ const faqSchema = {
     details[open] summary ~ * {
         animation: slideDown 0.3s ease-out-expo;
     }
-    
+
     @keyframes slideDown {
         0% {
             opacity: 0;
