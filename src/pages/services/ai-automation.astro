@@ -5,48 +5,48 @@ import Footer from '../../components/Footer.astro';
 import ServiceBreadcrumbs from '../../components/ServiceBreadcrumbs.astro';
 
 // SEO details
-const title = "AI & Intelligent Business Automation | Hakooi | Product Engineering Studio";
-const desc = "We engineer custom LLM integrations, event-driven background workflow automations, intelligent document parsing, and automated vector search systems.";
+const title = "AI Development & Automation | Hakooi";
+const desc = "Custom AI applications, agents, RAG systems, document processing, and workflow automation integrated with real business software and data.";
 
 const solutions = [
     {
-        title: "Custom LLM & Agentic Systems",
-        desc: "Supercharge your business with custom-tailored LLM pipelines. We build intelligent agentic systems using OpenAI and Anthropic models, custom-curated with your company knowledge bases using Vector DBs.",
-        features: ["Retrieval-Augmented Generation (RAG)", "Autonomous backend agentic workflows", "Custom vector embedding pipelines", "Semantic search implementation"]
+        title: "AI Applications & Agents",
+        desc: "We build AI features, conversational interfaces, and multi-step agent workflows inside software products, selecting models and human approval points around the product requirements.",
+        features: ["LLM application development", "Tool & API integration", "Agent workflows", "Human-in-the-loop controls"]
     },
     {
-        title: "Event-Driven Workflow Automation",
-        desc: "Eliminate repetitive manual data entry. We write robust backend triggers that connect your storefronts, CRMs, shipping carriers, and chat tools (Slack/Teams) into lightning-fast serverless pipelines.",
-        features: ["Real-time webhook routing layers", "Automated email/SMS notification flows", "Automatic error-logging reporting", "Multi-system background syncs"]
+        title: "Knowledge & RAG Systems",
+        desc: "We build retrieval systems that use internal documents and data to support semantic search and source-aware responses, with access controls where required.",
+        features: ["Retrieval-Augmented Generation", "Semantic search", "Document indexing", "Source-aware responses"]
     },
     {
-        title: "Intelligent Document Parsing (OCR)",
-        desc: "Transform messy paper trails into clean structured database assets. We write intelligent document pipelines to automatically extract data from invoices, packing slips, PDFs, and vendor catalog feeds.",
-        features: ["Structured JSON output mapping", "Advanced AI-powered OCR engines", "Automated double-entry verification", "Real-time ledger updates"]
+        title: "Document AI & Data Extraction",
+        desc: "We extract structured data from PDFs, images, invoices, forms, catalogs, and receipts, with validation and review workflows matched to document quality and risk.",
+        features: ["Document extraction", "Structured JSON output", "Validation workflows", "Human review when required"]
     },
     {
-        title: "Smart AI Customer Support",
-        desc: "Deploy highly-secure, context-aware AI support systems. Our custom support pipelines resolve up to 70% of customer questions, track order shipments, and assist with return flows with absolute safety.",
-        features: ["Strict systemic guardrail filters", "Real-time Shopify API actions", "Intelligent human-handoff rules", "Multi-language support ready"]
+        title: "Workflow Automation",
+        desc: "We connect webhooks, background jobs, commerce and CRM systems, notifications, support workflows, and approval steps, using AI for classification or routing where it adds value.",
+        features: ["Event-driven workflows", "AI classification & routing", "System integrations", "Human approval & escalation"]
     }
 ];
 
 const faqItems = [
     {
-        q: "How do you prevent the AI from 'hallucinating' or giving incorrect answers to our customers?",
-        a: "We implement Retrieval-Augmented Generation (RAG) combined with strict systemic guardrails. Rather than letting the model answer freely from its general public training, we force the AI to first query a private Vector Database containing only your official policies and catalog details. The AI is structurally constrained to ONLY answer using the facts retrieved from your database, and if the info isn't found, it gracefully routes the conversation to a human support agent."
+        q: "How do you reduce incorrect AI answers?",
+        a: "We reduce incorrect answers through techniques such as retrieval, constrained prompts, structured outputs, validation, access controls, evaluations, and human escalation. For high-risk workflows, AI output should be reviewed or validated before an action is performed."
     },
     {
         q: "Can you automate workflows inside our existing Shopify or custom commerce backend?",
-        a: "Yes. We write serverless automation scripts that trigger on standard commerce webhooks (e.g. order paid, inventory low). We can build workflows that automatically tag and categorize newly imported products, flag high-risk fraud orders based on historical data patterns, or automatically draft and queue personalized marketing emails for VIP shoppers."
+        a: "Yes. Workflows can respond to webhooks, scheduled events, user actions, or API events. Depending on the process, they can support classification, document processing, drafting, routing, notifications, data synchronization, and human approval steps across Shopify or other business systems."
     },
     {
         q: "What vector databases and embedding models do you use?",
-        a: "We choose robust, industry-standard solutions. For database vectors, we use PGVector (extending our PostgreSQL schemas) or dedicated managed vector stores like Pinecone for rapid semantic lookup. We generate semantic text embeddings using OpenAI's `text-embedding-3-small` or Cohere's multilingual embedding models, guaranteeing high semantic matching accuracy in less than 50 milliseconds."
+        a: "Technology is selected based on dataset size, retrieval requirements, language support, hosting constraints, cost, and the application's existing stack. Options may include PostgreSQL with pgvector, managed vector databases, and embedding APIs from model providers."
     },
     {
-        q: "Is our proprietary company and customer data secure when using LLMs?",
-        a: "Absolutely. We route all queries through enterprise-grade API endpoints that explicitly guarantee in their terms of service that your inputs, documents, and customer prompts will **never** be stored or used to train public foundational LLM models. All vector databases are hosted in isolated virtual private clouds (VPCs) under strict end-to-end data encryption."
+        q: "How do you approach data privacy when using AI providers?",
+        a: "Data handling depends on the model provider, API plan, enabled features, retention settings, and deployment architecture. We design integrations around the client's privacy and security requirements and review provider data controls before production use. The architecture may include access controls, data minimization, encryption in transit, appropriate retention configuration, separation of sensitive data, or private infrastructure where requirements justify it."
     }
 ];
 
@@ -68,7 +68,7 @@ const faqSchema = {
 <Layout title={title} description={desc}>
     <!-- FAQ Schema Injection -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
-    <ServiceBreadcrumbs currentPage="AI & Intelligent Business Automation" />
+    <ServiceBreadcrumbs currentPage="AI Development & Automation" />
 
     <Navbar />
 
@@ -85,16 +85,16 @@ const faqSchema = {
             <section class="py-16 sm:py-20 md:py-32 flex flex-col items-center text-center">
                 <div class="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#3341FF]/30 bg-[#3341FF]/5 text-[10px] sm:text-xs leading-relaxed tracking-[0.12em] sm:tracking-[0.2em] font-bold text-[#00D2FF] mb-8 uppercase" data-aos="fade-down">
                     <span class="w-2 h-2 shrink-0 rounded-full bg-[#00D2FF] animate-pulse"></span>
-                    Cognitive Workflow Automation
+                    AI PRODUCT ENGINEERING
                 </div>
 
                 <h1 class="max-w-full font-heading text-[clamp(2.75rem,14vw,3.75rem)] sm:text-6xl md:text-8xl text-white tracking-normal sm:tracking-wider leading-[0.95] sm:leading-tight mb-8" data-aos="fade-up">
-                    AI & BUSINESS<br/>
+                    AI &<br/>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3341FF] to-[#00D2FF]">AUTOMATION.</span>
                 </h1>
 
                 <p class="text-gray-400 font-paragraph text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 sm:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    We build context-aware AI agents, custom vector-embedded RAG pipelines, intelligent document parsers, and event-driven automation frameworks that save thousands of operational hours.
+                    We build AI-powered applications, agents, knowledge systems, document workflows, and automations connected to real products, data, and business systems.
                 </p>
 
                 <div class="flex w-full max-w-sm flex-col sm:w-auto sm:max-w-none sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="200">
@@ -102,29 +102,29 @@ const faqSchema = {
                         Schedule a Discovery Call
                     </a>
                     <a href="#solutions" class="w-full sm:w-auto px-5 sm:px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold tracking-widest text-xs uppercase transition-all hover:scale-105">
-                        Explore Cognitive Workflows ↓
+                        Explore Solutions ↓
                     </a>
                 </div>
             </section>
 
-            <!-- STATS SECTION -->
+            <!-- CAPABILITIES SECTION -->
             <section class="py-10 sm:py-12 border-y border-white/5 bg-[#111115]/20 backdrop-blur-md rounded-2xl mb-16 sm:mb-24" data-aos="fade-up">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-8 sm:gap-8 text-center">
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-[#00D2FF]">500+</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Hours Saved / Mo</p>
+                        <p class="font-heading text-[clamp(1rem,5vw,2rem)] md:text-lg lg:text-3xl xl:text-4xl whitespace-nowrap text-[#00D2FF]">AGENTS</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Tool-Using Workflows</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 md:border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-white">99.2%</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Parsing Accuracy</p>
+                        <p class="font-heading text-[clamp(1rem,5vw,2rem)] md:text-lg lg:text-3xl xl:text-4xl whitespace-nowrap text-white">RAG</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Knowledge Retrieval</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 border-r border-white/5 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-white">&lt; 1.5S</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Processing Time</p>
+                        <p class="font-heading text-[clamp(1rem,5vw,2rem)] md:text-lg lg:text-3xl xl:text-4xl whitespace-nowrap text-white">DOCUMENT AI</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Data Extraction</p>
                     </div>
                     <div class="min-w-0 p-2 sm:p-4 last:border-0">
-                        <p class="font-heading text-3xl sm:text-4xl md:text-5xl whitespace-nowrap text-[#3341FF]">-70%</p>
-                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Support Overhead</p>
+                        <p class="font-heading text-[clamp(1rem,5vw,2rem)] md:text-lg lg:text-3xl xl:text-4xl whitespace-nowrap text-[#3341FF]">AUTOMATION</p>
+                        <p class="text-gray-400 text-[10px] sm:text-xs leading-relaxed tracking-wider uppercase font-bold mt-2">Connected Systems</p>
                     </div>
                 </div>
             </section>
@@ -132,7 +132,7 @@ const faqSchema = {
             <!-- DETAILED SOLUTIONS -->
             <section id="solutions" class="scroll-mt-24 sm:scroll-mt-32 py-12 sm:py-16 mb-16 sm:mb-24">
                 <div class="mb-12 sm:mb-16 text-center md:text-left">
-                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">COGNITIVE SOLUTIONS.</h2>
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-wide sm:tracking-wider break-words">AI SOLUTIONS.</h2>
                     <div class="h-[3px] w-20 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] mx-auto md:mx-0"></div>
                 </div>
 
@@ -180,10 +180,10 @@ const faqSchema = {
                     <div>
                         <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-6 tracking-wide sm:tracking-wider break-words">AI TECH STACK.</h2>
                         <p class="text-gray-400 font-paragraph text-sm leading-relaxed mb-8">
-                            We don't build generic wrappers. We write custom API routes, optimize embedding queues, and secure vector databases using modern, reliable technologies.
+                            We choose models, retrieval systems, application frameworks, and infrastructure based on the product, data, latency, privacy, and cost requirements.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            {["OpenAI & Anthropic APIs", "Vector DBs (Pinecone / PGVector)", "Python / TypeScript", "Golang", "Cloudflare Workers", "AWS Lambda / SQS", "Docker Containers", "PostgreSQL + PGVector"].map(tech => (
+                            {["OpenAI / Anthropic APIs", "Python / TypeScript", "PostgreSQL + pgvector", "Vector databases", "Model tool calling", "Webhooks / queues", "Docker", "AWS / cloud infrastructure"].map(tech => (
                                 <span class="max-w-full break-words px-3 sm:px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs font-bold text-gray-300 tracking-wide sm:tracking-wider">
                                     {tech}
                                 </span>
@@ -195,29 +195,22 @@ const faqSchema = {
                             <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                            <span class="text-[10px] text-gray-500 ml-2">rag-query.py</span>
+                            <span class="text-[10px] text-gray-500 ml-2">rag-pipeline.py</span>
                         </div>
-                        <p class="text-[#00D2FF]">from <span class="text-white">openai</span> import <span class="text-[#00D2FF]">OpenAI</span></p>
-                        <p class="text-[#00D2FF]">from <span class="text-white">pinecone</span> import <span class="text-[#00D2FF]">Pinecone</span></p>
-                        <p class="text-white mt-2">ai = OpenAI()&nbsp;&nbsp;pc = Pinecone()</p>
-                        <p class="text-white">index = pc.Index(<span class="text-green-400">"commerce-kb"</span>)</p>
+                        <p class="text-gray-500"># Provider-agnostic retrieval and generation flow</p>
+                        <p class="text-[#00D2FF]">def <span class="text-purple-400">answer_question</span>(question: <span class="text-[#00D2FF]">str</span>, user: <span class="text-[#00D2FF]">User</span>) -&gt; <span class="text-[#00D2FF]">Answer</span>:</p>
+                        <p class="pl-4 text-gray-500"># Retrieve relevant context before generation</p>
+                        <p class="pl-4 text-white">documents = retriever.search(</p>
+                        <p class="pl-8 text-white">query=question,</p>
+                        <p class="pl-8 text-white">filters=<span class="text-purple-400">access_scope</span>(user),</p>
+                        <p class="pl-8 text-white">limit=<span class="text-yellow-400">5</span>,</p>
+                        <p class="pl-4 text-white">)</p>
                         <br/>
-                        <p class="text-[#00D2FF]">def <span class="text-[#00D2FF]">rag_answer</span>(user_prompt: <span class="text-[#00D2FF]">str</span>) -&gt; <span class="text-[#00D2FF]">str</span>:</p>
-                        <p class="pl-4 text-gray-500"># embed query, retrieve context</p>
-                        <p class="pl-4 text-white">embed = ai.embeddings.create(</p>
-                        <p class="pl-8 text-white">input=user_prompt, model=<span class="text-green-400">"text-embedding-3-small"</span></p>
-                        <p class="pl-4 text-white">).data[0].embedding</p>
-                        <p class="pl-4 text-white">hits = index.query(vector=embed, top_k=<span class="text-yellow-400">3</span>, include_metadata=<span class="text-[#00D2FF]">True</span>)</p>
-                        <p class="pl-4 text-white">ctx = <span class="text-green-400">"\n"</span>.join(h.metadata[<span class="text-green-400">"text"</span>] <span class="text-[#00D2FF]">for</span> h <span class="text-[#00D2FF]">in</span> hits.matches)</p>
-                        <br/>
-                        <p class="pl-4 text-gray-500"># ground the answer in retrieved context</p>
-                        <p class="pl-4 text-blue-400">return <span class="text-white">ai.chat.completions.create(</span></p>
-                        <p class="pl-8 text-white">model=<span class="text-green-400">"gpt-4o-mini"</span>,</p>
-                        <p class="pl-8 text-white">messages=[</p>
-                        <p class="pl-12 text-white">{`{"role":"system","content":f"Answer using: {ctx}"}`},</p>
-                        <p class="pl-12 text-white">{`{"role":"user",  "content": user_prompt}`},</p>
-                        <p class="pl-8 text-white">],</p>
-                        <p class="pl-4 text-white">).choices[<span class="text-yellow-400">0</span>].message.content</p>
+                        <p class="pl-4 text-white">draft = model.generate(</p>
+                        <p class="pl-8 text-white">prompt=<span class="text-purple-400">build_prompt</span>(question, documents),</p>
+                        <p class="pl-8 text-white">schema=<span class="text-[#00D2FF]">AnswerWithSources</span>,</p>
+                        <p class="pl-4 text-white">)</p>
+                        <p class="pl-4 text-blue-400">return <span class="text-purple-400">validate_response</span>(draft, documents)</p>
                     </div>
                 </div>
             </section>
@@ -252,9 +245,9 @@ const faqSchema = {
             <section class="py-12 sm:py-20 text-center relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#3341FF]/10 to-[#3341FF]/2 border border-[#3341FF]/20 px-4 sm:px-6 mb-16 sm:mb-24" data-aos="fade-up">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(51,65,255,0.15),transparent)] pointer-events-none"></div>
                 <div class="relative z-10 max-w-2xl mx-auto">
-                    <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">INTELLECTUALIZE YOUR OPERATIONS.</h2>
+                    <h2 class="max-w-full break-words font-heading text-[clamp(2.5rem,12vw,3rem)] md:text-7xl leading-tight text-white mb-6">LET'S BUILD WITH AI.</h2>
                     <p class="text-gray-300 font-paragraph text-sm md:text-base leading-relaxed mb-10">
-                        Let's consult on how context-aware AI agents, serverless data extraction pipelines, and automated integrations can optimize your workflow.
+                        Have an AI product, agent workflow, knowledge system, or automation idea? Let's discuss where AI adds real value and how it should connect to your software and data.
                     </p>
                     <a href="https://calendly.com/hakooi" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto px-5 sm:px-10 py-5 bg-gradient-to-r from-[#3341FF] to-[#00D2FF] hover:opacity-90 text-white rounded-full font-bold tracking-widest text-xs uppercase transition-all shadow-[0_0_30px_rgba(51,65,255,0.4)] hover:scale-105">
                         Schedule a Discovery Call
